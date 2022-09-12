@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated diagramaAbstracta -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="diagramaAbstracta.presentation.DiagramaAbstractaModelWizardID"
+            name="%_UI_DiagramaAbstractaModelWizard_label"
+            class="diagramaAbstracta.presentation.DiagramaAbstractaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DiagramaAbstractaModelFile.gif">
+         <description>%_UI_DiagramaAbstractaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated diagramaAbstracta -->
+      <editor
+            id="diagramaAbstracta.presentation.DiagramaAbstractaEditorID"
+            name="%_UI_DiagramaAbstractaEditor_label"
+            icon="icons/full/obj16/DiagramaAbstractaModelFile.gif"
+            extensions="diagramaabstracta"
+            class="diagramaAbstracta.presentation.DiagramaAbstractaEditor"
+            contributorClass="diagramaAbstracta.presentation.DiagramaAbstractaActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

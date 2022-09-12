@@ -1,0 +1,70 @@
+@namespace(uri="diagramaAbstracta", prefix="diagramaAbstracta")
+@gmf
+package diagramaAbstracta;
+
+class MBSPaquete  {
+	
+	attr String nombre;
+	attr String ruta;
+	val MBSClase[*] listaClases;
+	val MBSPaquete[*] listaPaquetes;
+}
+
+class MBSClase  {
+	
+	attr String idClase;
+	attr String nombre;
+	attr String estereotipo;
+	attr String modificadorAcceso;
+	attr boolean abstracta;
+	attr String descripcion;
+	
+	val MBSAtributo[*] atributos;
+	val MBSMetodo[*] metodos;
+	val MBSRelacion [*]listaRelaciones;
+	
+}
+
+class MBSMetodo {
+	
+	attr String nombre;	
+	attr boolean static;
+	attr String modificadorAcceso;
+	attr String tipoRetorno;
+	attr String semantica;
+	
+	val MBSParametro[*] listaParametros;
+}
+
+class MBSAtributo {
+	
+	attr String nombre;
+	attr String tipo;
+	attr String modificadorAcesso;
+	attr String ValorDefecto;
+	attr boolean constante;
+	attr boolean static;	
+	
+}
+
+class MBSParametro {
+	
+	attr String nombre;
+	attr String tipo;
+
+}
+
+class MBSRelacion {
+  
+    ref MBSClase source;
+    ref MBSClase target;
+    attr String nombre;
+    attr String tipo;
+    attr String multiplicidaA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr String navegabilidadA;
+    attr String navegabilidadB;
+       
+}

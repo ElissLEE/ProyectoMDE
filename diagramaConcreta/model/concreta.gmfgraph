@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="diagConcreta">
+  <figures name="Default">
+    <descriptors name="MBSPaqueteFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSPaqueteFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MBSPaqueteLabelFigure" text="MBSPaquete"/>
+      </actualFigure>
+      <accessors accessor="getFigureMBSPaqueteLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MBSClaseFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSClaseFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="240" green="255" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MBSClaseLabelFigure" text="MBSClase">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="MBSClaseAtributosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="MBSClaseMetodosCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureMBSClaseLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getMBSClaseAtributosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors accessor="getMBSClaseMetodosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="MBSMetodoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSMetodoFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="240" green="255" blue="255"/>
+        <preferredSize dx="150" dy="15"/>
+        <children xsi:type="gmfgraph:Label" name="MBSMetodoLabelFigure" text="MBSMetodo"/>
+      </actualFigure>
+      <accessors accessor="getFigureMBSMetodoLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MBSAtributoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSAtributoFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="240" green="255" blue="255"/>
+        <preferredSize dx="150" dy="15"/>
+        <children xsi:type="gmfgraph:Label" name="MBSAtributoLabelFigure" text="MBSAtributo"/>
+      </actualFigure>
+      <accessors accessor="getFigureMBSAtributoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MBSParametroFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSParametroFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MBSParametroLabelFigure" text="MBSParametro"/>
+      </actualFigure>
+      <accessors accessor="getFigureMBSParametroLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MBSRelacionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MBSRelacionFigure" lineWidth="2"/>
+    </descriptors>
+  </figures>
+  <nodes name="MBSPaquete" figure="MBSPaqueteFigure"/>
+  <nodes name="MBSClase" figure="MBSClaseFigure"/>
+  <nodes name="MBSMetodo" figure="MBSMetodoFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="15"/>
+    </facets>
+  </nodes>
+  <nodes name="MBSAtributo" figure="MBSAtributoFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="15"/>
+    </facets>
+  </nodes>
+  <nodes name="MBSParametro" figure="MBSParametroFigure"/>
+  <connections name="MBSRelacion" figure="MBSRelacionFigure"/>
+  <compartments name="MBSClaseAtributosCompartment" figure="MBSClaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="MBSClaseMetodosCompartment" figure="MBSClaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels name="MBSPaqueteLabel" figure="MBSPaqueteFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="MBSClaseLabel" figure="MBSClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="MBSMetodoLabel" figure="MBSMetodoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="MBSAtributoLabel" figure="MBSAtributoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="MBSParametroLabel" figure="MBSParametroFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+</gmfgraph:Canvas>
