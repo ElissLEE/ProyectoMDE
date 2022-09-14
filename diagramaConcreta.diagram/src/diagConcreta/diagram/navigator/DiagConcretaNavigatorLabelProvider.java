@@ -271,12 +271,17 @@ public class DiagConcretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getMBSRelacion_4001Text(View view) {
-		diagConcreta.MBSRelacion domainModelElement = (diagConcreta.MBSRelacion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombre();
+		IParser parser = diagConcreta.diagram.providers.DiagConcretaParserProvider.getParser(
+				diagConcreta.diagram.providers.DiagConcretaElementTypes.MBSRelacion_4001,
+				view.getElement() != null ? view.getElement() : view,
+				diagConcreta.diagram.part.DiagConcretaVisualIDRegistry
+						.getType(diagConcreta.diagram.edit.parts.MBSRelacionLabelNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			diagConcreta.diagram.part.DiagConcretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

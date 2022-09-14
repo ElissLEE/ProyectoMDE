@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see diagConcreta.DiagConcretaPackage#getMBSClase()
- * @model annotation="gmf.node label='nombre' color='240,255,255'"
+ * @model annotation="gmf.node label='nombre' size='150,150' color='240,255,255'"
  * @generated
  */
 public interface MBSClase extends EObject {

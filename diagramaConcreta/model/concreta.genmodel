@@ -58,12 +58,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSRelacion/target"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/tipo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/multiplicidaA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/multiplicidadA"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/multiplicidadB"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/rolA"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/rolB"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/navegabilidadA"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/navegabilidadB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/labelName"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -59,6 +59,9 @@ public class DiagConcretaEditPartFactory implements EditPartFactory {
 			case diagConcreta.diagram.edit.parts.MBSRelacionEditPart.VISUAL_ID:
 				return new diagConcreta.diagram.edit.parts.MBSRelacionEditPart(view);
 
+			case diagConcreta.diagram.edit.parts.MBSRelacionLabelNameEditPart.VISUAL_ID:
+				return new diagConcreta.diagram.edit.parts.MBSRelacionLabelNameEditPart(view);
+
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

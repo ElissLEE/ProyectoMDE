@@ -26,12 +26,13 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getTipo <em>Tipo</em>}</li>
- *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getMultiplicidaA <em>Multiplicida A</em>}</li>
+ *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getRolA <em>Rol A</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getRolB <em>Rol B</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getNavegabilidadB <em>Navegabilidad B</em>}</li>
+ *   <li>{@link diagConcreta.impl.MBSRelacionImpl#getLabelName <em>Label Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,24 +99,24 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	protected String tipo = TIPO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMultiplicidaA() <em>Multiplicida A</em>}' attribute.
+	 * The default value of the '{@link #getMultiplicidadA() <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMultiplicidaA()
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MULTIPLICIDA_A_EDEFAULT = null;
+	protected static final String MULTIPLICIDAD_A_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMultiplicidaA() <em>Multiplicida A</em>}' attribute.
+	 * The cached value of the '{@link #getMultiplicidadA() <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMultiplicidaA()
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 * @ordered
 	 */
-	protected String multiplicidaA = MULTIPLICIDA_A_EDEFAULT;
+	protected String multiplicidadA = MULTIPLICIDAD_A_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMultiplicidadB() <em>Multiplicidad B</em>}' attribute.
@@ -216,6 +217,26 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @ordered
 	 */
 	protected String navegabilidadB = NAVEGABILIDAD_B_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLabelName() <em>Label Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabelName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LABEL_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLabelName() <em>Label Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabelName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String labelName = LABEL_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -359,8 +380,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMultiplicidaA() {
-		return multiplicidaA;
+	public String getMultiplicidadA() {
+		return multiplicidadA;
 	}
 
 	/**
@@ -368,11 +389,11 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMultiplicidaA(String newMultiplicidaA) {
-		String oldMultiplicidaA = multiplicidaA;
-		multiplicidaA = newMultiplicidaA;
+	public void setMultiplicidadA(String newMultiplicidadA) {
+		String oldMultiplicidadA = multiplicidadA;
+		multiplicidadA = newMultiplicidadA;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A, oldMultiplicidaA, multiplicidaA));
+			eNotify(new ENotificationImpl(this, Notification.SET, DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A, oldMultiplicidadA, multiplicidadA));
 	}
 
 	/**
@@ -485,6 +506,27 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLabelName() {
+		return labelName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabelName(String newLabelName) {
+		String oldLabelName = labelName;
+		labelName = newLabelName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DiagConcretaPackage.MBS_RELACION__LABEL_NAME, oldLabelName, labelName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -498,8 +540,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return getNombre();
 			case DiagConcretaPackage.MBS_RELACION__TIPO:
 				return getTipo();
-			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				return getMultiplicidaA();
+			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				return getMultiplicidadA();
 			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				return getMultiplicidadB();
 			case DiagConcretaPackage.MBS_RELACION__ROL_A:
@@ -510,6 +552,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return getNavegabilidadA();
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				return getNavegabilidadB();
+			case DiagConcretaPackage.MBS_RELACION__LABEL_NAME:
+				return getLabelName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -534,8 +578,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case DiagConcretaPackage.MBS_RELACION__TIPO:
 				setTipo((String)newValue);
 				return;
-			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				setMultiplicidaA((String)newValue);
+			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				setMultiplicidadA((String)newValue);
 				return;
 			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				setMultiplicidadB((String)newValue);
@@ -551,6 +595,9 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return;
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				setNavegabilidadB((String)newValue);
+				return;
+			case DiagConcretaPackage.MBS_RELACION__LABEL_NAME:
+				setLabelName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -576,8 +623,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case DiagConcretaPackage.MBS_RELACION__TIPO:
 				setTipo(TIPO_EDEFAULT);
 				return;
-			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				setMultiplicidaA(MULTIPLICIDA_A_EDEFAULT);
+			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				setMultiplicidadA(MULTIPLICIDAD_A_EDEFAULT);
 				return;
 			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				setMultiplicidadB(MULTIPLICIDAD_B_EDEFAULT);
@@ -593,6 +640,9 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return;
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				setNavegabilidadB(NAVEGABILIDAD_B_EDEFAULT);
+				return;
+			case DiagConcretaPackage.MBS_RELACION__LABEL_NAME:
+				setLabelName(LABEL_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -614,8 +664,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case DiagConcretaPackage.MBS_RELACION__TIPO:
 				return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
-			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				return MULTIPLICIDA_A_EDEFAULT == null ? multiplicidaA != null : !MULTIPLICIDA_A_EDEFAULT.equals(multiplicidaA);
+			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				return MULTIPLICIDAD_A_EDEFAULT == null ? multiplicidadA != null : !MULTIPLICIDAD_A_EDEFAULT.equals(multiplicidadA);
 			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				return MULTIPLICIDAD_B_EDEFAULT == null ? multiplicidadB != null : !MULTIPLICIDAD_B_EDEFAULT.equals(multiplicidadB);
 			case DiagConcretaPackage.MBS_RELACION__ROL_A:
@@ -626,6 +676,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return NAVEGABILIDAD_A_EDEFAULT == null ? navegabilidadA != null : !NAVEGABILIDAD_A_EDEFAULT.equals(navegabilidadA);
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				return NAVEGABILIDAD_B_EDEFAULT == null ? navegabilidadB != null : !NAVEGABILIDAD_B_EDEFAULT.equals(navegabilidadB);
+			case DiagConcretaPackage.MBS_RELACION__LABEL_NAME:
+				return LABEL_NAME_EDEFAULT == null ? labelName != null : !LABEL_NAME_EDEFAULT.equals(labelName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -644,8 +696,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 		result.append(nombre);
 		result.append(", tipo: ");
 		result.append(tipo);
-		result.append(", multiplicidaA: ");
-		result.append(multiplicidaA);
+		result.append(", multiplicidadA: ");
+		result.append(multiplicidadA);
 		result.append(", multiplicidadB: ");
 		result.append(multiplicidadB);
 		result.append(", rolA: ");
@@ -656,6 +708,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 		result.append(navegabilidadA);
 		result.append(", navegabilidadB: ");
 		result.append(navegabilidadB);
+		result.append(", labelName: ");
+		result.append(labelName);
 		result.append(')');
 		return result.toString();
 	}

@@ -30,7 +30,7 @@ class MBSPaquete  {
 	val MBSPaquete[*] listaPaquetes;
 }
 
-@gmf.node(label = "nombre", color ="240,255,255")
+@gmf.node(label = "nombre", size ="150,150", color ="240,255,255")
 class MBSClase  {
 
 	attr String nombre;
@@ -46,7 +46,7 @@ class MBSClase  {
 
 }
 
-@gmf.node(label = "nombre", color ="240,255,255", size ="150,15", margin = "0", border.color = "255,255,255")
+@gmf.node(label = "nombre", color ="240,255,255", size ="100,15", margin = "0", border.color = "255,255,255")
 class MBSMetodo {
 	
 	attr String nombre;	
@@ -58,7 +58,7 @@ class MBSMetodo {
 	val MBSParametro[*] listaParametros;
 }
 
-@gmf.node(label = "nombre",color ="240,255,255",size ="150,15", margin = "0", border.color = "255,255,255")
+@gmf.node(label = "nombre", color ="240,255,255", size ="100,15", margin = "0", border.color = "255,255,255")
 class MBSAtributo {
 	
 	attr String nombre;
@@ -78,18 +78,19 @@ class MBSParametro {
 
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2")
+@gmf.link(source="source", target="target", style="solid", width="2", label="labelName")
 class MBSRelacion {
    
     ref MBSClase source;
     ref MBSClase target;
     attr String nombre;
     attr String tipo;
-    attr String multiplicidaA;
+    attr String multiplicidadA;
     attr String multiplicidadB;
     attr String rolA;
     attr String rolB;
     attr String navegabilidadA;
     attr String navegabilidadB;
+    attr String labelName;
 
 }

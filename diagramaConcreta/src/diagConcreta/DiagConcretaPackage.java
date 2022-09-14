@@ -541,13 +541,13 @@ public interface DiagConcretaPackage extends EPackage {
 	int MBS_RELACION__TIPO = 3;
 
 	/**
-	 * The feature id for the '<em><b>Multiplicida A</b></em>' attribute.
+	 * The feature id for the '<em><b>Multiplicidad A</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__MULTIPLICIDA_A = 4;
+	int MBS_RELACION__MULTIPLICIDAD_A = 4;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad B</b></em>' attribute.
@@ -595,13 +595,22 @@ public interface DiagConcretaPackage extends EPackage {
 	int MBS_RELACION__NAVEGABILIDAD_B = 9;
 
 	/**
+	 * The feature id for the '<em><b>Label Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_RELACION__LABEL_NAME = 10;
+
+	/**
 	 * The number of structural features of the '<em>MBS Relacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION_FEATURE_COUNT = 10;
+	int MBS_RELACION_FEATURE_COUNT = 11;
 
 
 	/**
@@ -1103,15 +1112,15 @@ public interface DiagConcretaPackage extends EPackage {
 	EAttribute getMBSRelacion_Tipo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link diagConcreta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}'.
+	 * Returns the meta object for the attribute '{@link diagConcreta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicida A</em>'.
-	 * @see diagConcreta.MBSRelacion#getMultiplicidaA()
+	 * @return the meta object for the attribute '<em>Multiplicidad A</em>'.
+	 * @see diagConcreta.MBSRelacion#getMultiplicidadA()
 	 * @see #getMBSRelacion()
 	 * @generated
 	 */
-	EAttribute getMBSRelacion_MultiplicidaA();
+	EAttribute getMBSRelacion_MultiplicidadA();
 
 	/**
 	 * Returns the meta object for the attribute '{@link diagConcreta.MBSRelacion#getMultiplicidadB <em>Multiplicidad B</em>}'.
@@ -1167,6 +1176,17 @@ public interface DiagConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMBSRelacion_NavegabilidadB();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagConcreta.MBSRelacion#getLabelName <em>Label Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label Name</em>'.
+	 * @see diagConcreta.MBSRelacion#getLabelName()
+	 * @see #getMBSRelacion()
+	 * @generated
+	 */
+	EAttribute getMBSRelacion_LabelName();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1575,12 +1595,12 @@ public interface DiagConcretaPackage extends EPackage {
 		EAttribute MBS_RELACION__TIPO = eINSTANCE.getMBSRelacion_Tipo();
 
 		/**
-		 * The meta object literal for the '<em><b>Multiplicida A</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Multiplicidad A</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MBS_RELACION__MULTIPLICIDA_A = eINSTANCE.getMBSRelacion_MultiplicidaA();
+		EAttribute MBS_RELACION__MULTIPLICIDAD_A = eINSTANCE.getMBSRelacion_MultiplicidadA();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad B</b></em>' attribute feature.
@@ -1621,6 +1641,14 @@ public interface DiagConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_RELACION__NAVEGABILIDAD_B = eINSTANCE.getMBSRelacion_NavegabilidadB();
+
+		/**
+		 * The meta object literal for the '<em><b>Label Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MBS_RELACION__LABEL_NAME = eINSTANCE.getMBSRelacion_LabelName();
 
 	}
 

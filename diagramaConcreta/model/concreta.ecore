@@ -34,6 +34,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="MBSClase">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
+      <details key="size" value="150,150"/>
       <details key="color" value="240,255,255"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -54,7 +55,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="color" value="240,255,255"/>
-      <details key="size" value="150,15"/>
+      <details key="size" value="100,15"/>
       <details key="margin" value="0"/>
       <details key="border.color" value="255,255,255"/>
     </eAnnotations>
@@ -70,7 +71,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="color" value="240,255,255"/>
-      <details key="size" value="150,15"/>
+      <details key="size" value="100,15"/>
       <details key="margin" value="0"/>
       <details key="border.color" value="255,255,255"/>
     </eAnnotations>
@@ -94,16 +95,18 @@
       <details key="target" value="target"/>
       <details key="style" value="solid"/>
       <details key="width" value="2"/>
+      <details key="label" value="labelName"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidaA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

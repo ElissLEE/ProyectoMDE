@@ -102,6 +102,13 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//MBSRelacion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MBSRelacionLabel"/>
+      <features
+          href="concreta.ecore#//MBSRelacion/labelName"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//MBSDiagramaClases/listaRelaciones"/>
     <tool

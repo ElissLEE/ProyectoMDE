@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see diagConcreta.DiagConcretaPackage#getMBSMetodo()
- * @model annotation="gmf.node label='nombre' color='240,255,255' size='150,15' margin='0' border.color='255,255,255'"
+ * @model annotation="gmf.node label='nombre' color='240,255,255' size='100,15' margin='0' border.color='255,255,255'"
  * @generated
  */
 public interface MBSMetodo extends EObject {

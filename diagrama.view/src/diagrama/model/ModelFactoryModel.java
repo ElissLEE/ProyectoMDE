@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import diagConcreta.DiagConcretaFactory;
 import diagConcreta.DiagConcretaPackage;
+import diagramaAbstracta.DiagramaAbstractaFactory;
+import diagramaAbstracta.DiagramaAbstractaPackage;
 import diagConcreta.MBSClase;
 import diagConcreta.MBSDiagramaClases;
 import diagConcreta.MBSPaquete;
@@ -26,7 +28,7 @@ public class ModelFactoryModel {
 	//------------------------------  Singleton ------------------------------------------------
 	ModelFactory modelFactory = DiagConcretaFactory.eINSTANCE.createModelFactory();
 	ModelFactory modelFactoryConcreta;
-	ModelFactory modelFactoryAbstracta;
+	diagramaAbstracta.ModelFactory modelFactoryAbstracta;
 
 	public ModelFactoryModel() {
 		// TODO Auto-generated constructor stub
@@ -52,7 +54,7 @@ public class ModelFactoryModel {
 		//1. CON LA SIGUIENTE RUTA (platform:/resource) SE CARGAR EL RECURSO CUANDO SE HACE UNA NUEVA INSTANCIA DE ECLIPSE, EN DONDE SE CREA UN PROYECTO(test)
 		//QUE CONTIENE LAS PRODUCCIONES, DONDE SE ESPECIFICA QUE RECURSO CARGAR
 
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.diagconcreta");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/concreta.diagconcreta");
 
 		//2.CON LA SIGUIENTE RUTA (platform:/plugin/) SE CARGAR EL RECURSO DE ALGUNOS DE LOS PLUGINS(whoownme.model) EN LOS QUE SE ESTA TRABJANDO EN EL WORKSPACE
 		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/plugin/whoownme.model/resource/model.whoownme");
@@ -76,9 +78,9 @@ public class ModelFactoryModel {
 	
 	public diagramaAbstracta.ModelFactory cargarAbstracta() {
 		
-		ModelFactory modelFactory = null;
+		diagramaAbstracta.ModelFactory modelFactory = null;
 
-		DiagConcretaPackage whoownmePackage =  DiagConcretaPackage.eINSTANCE;
+		DiagramaAbstractaPackage whoownmePackage =  DiagramaAbstractaPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
 		//EXISTEN 3 FORMAS DE CARGAR EL RECURSO
@@ -86,7 +88,7 @@ public class ModelFactoryModel {
 		//1. CON LA SIGUIENTE RUTA (platform:/resource) SE CARGAR EL RECURSO CUANDO SE HACE UNA NUEVA INSTANCIA DE ECLIPSE, EN DONDE SE CREA UN PROYECTO(test)
 		//QUE CONTIENE LAS PRODUCCIONES, DONDE SE ESPECIFICA QUE RECURSO CARGAR
 
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.diagramaabstracta");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/abstracta.diagramaabstracta");
 
 		//2.CON LA SIGUIENTE RUTA (platform:/plugin/) SE CARGAR EL RECURSO DE ALGUNOS DE LOS PLUGINS(whoownme.model) EN LOS QUE SE ESTA TRABJANDO EN EL WORKSPACE
 		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/plugin/whoownme.model/resource/model.whoownme");
@@ -98,7 +100,7 @@ public class ModelFactoryModel {
 
 		try {
 			resource.load(null);
-			modelFactory = (ModelFactory)resource.getContents().get(0);
+			modelFactory = (diagramaAbstracta.ModelFactory)resource.getContents().get(0);
 			System.out.println("loaded: " + modelFactory);
 		}
 		catch (java.io.IOException e) {
@@ -113,44 +115,38 @@ public class ModelFactoryModel {
 		modelFactoryConcreta = cargarConcreta();
 		modelFactoryAbstracta = cargarAbstracta();
 		
-		//Crear paquetes
+		//Crear paquetes (Determinar si hay que crear paquetes)
 		for (MBSDiagramaClases diagrama : modelFactoryConcreta.getListaDiagramas()) {
 			
 			for (MBSPaquete paquete : diagrama.getListaPaquetes()) {
 				
-				crearPaquete(paquete);
+//				crearPaquete(paquete);
 			}
 		}
 	}
 
-	private void crearPaquete(MBSPaquete paquete) {
-		
-		String ruta = paquete.getRuta();
-		
-		String[] split=ruta.split("/");
-		
-		for(int i=0;i<split.length;i++) {
-			String nombrePaquete = split[0];
-			MBSPaquete paqueteAux = obtenerPaquete(nombrePaquete);
-			if(paqueteAux != null) {
-				//Crear paquete
-			}
-		}
-		
-	}
+//	private void crearPaquete(MBSPaquete paquete) {
+//		
+//		String ruta = paquete.getRuta();
+//		
+//		String[] split=ruta.split("/");
+//		
+//		for(int i=0;i<split.length;i++) {
+//			String nombrePaquete = split[i];
+//			MBSPaquete paqueteAux = obtenerPaquete(nombrePaquete);
+//			if(paqueteAux != null) {
+//				//Crear paquete
+//			}
+//		}
+//		
+//	}
 
-	private MBSPaquete obtenerPaquete(String nombrePaquete) {
-		
-		for (iterable_type iterable_element : iterable) {
-			
-		}
-	}
-
-	private ModelFactory cargarConcreta() {
-		
-		ModelFactory modelFactory = cargar("model.diagconcreta");
-		return modelFactory;
-	}
+//	private MBSPaquete obtenerPaquete(String nombrePaquete) {
+//		
+//		for (iterable_type iterable_element : modelFactoryAbstracta.getListaDiagramas()) {
+//			
+//		}
+//	}
 	
 //	private ModelFactory cargarAbstracta() {
 //		

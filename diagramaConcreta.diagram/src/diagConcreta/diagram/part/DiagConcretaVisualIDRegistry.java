@@ -198,6 +198,11 @@ public class DiagConcretaVisualIDRegistry {
 				return true;
 			}
 			break;
+		case diagConcreta.diagram.edit.parts.MBSRelacionEditPart.VISUAL_ID:
+			if (diagConcreta.diagram.edit.parts.MBSRelacionLabelNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		}
 		return false;
 	}

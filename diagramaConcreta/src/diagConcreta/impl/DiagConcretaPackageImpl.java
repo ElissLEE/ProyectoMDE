@@ -563,7 +563,7 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSRelacion_MultiplicidaA() {
+	public EAttribute getMBSRelacion_MultiplicidadA() {
 		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -610,6 +610,15 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 	 */
 	public EAttribute getMBSRelacion_NavegabilidadB() {
 		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMBSRelacion_LabelName() {
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -693,12 +702,13 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 		createEReference(mbsRelacionEClass, MBS_RELACION__TARGET);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NOMBRE);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__TIPO);
-		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDA_A);
+		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDAD_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_B);
+		createEAttribute(mbsRelacionEClass, MBS_RELACION__LABEL_NAME);
 	}
 
 	/**
@@ -784,12 +794,13 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 		initEReference(getMBSRelacion_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_MultiplicidaA(), ecorePackage.getEString(), "multiplicidaA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_MultiplicidadA(), ecorePackage.getEString(), "multiplicidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolA(), ecorePackage.getEString(), "rolA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_LabelName(), ecorePackage.getEString(), "labelName", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -856,6 +867,7 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 		   source, 
 		   new String[] {
 			 "label", "nombre",
+			 "size", "150,150",
 			 "color", "240,255,255"
 		   });	
 		addAnnotation
@@ -864,7 +876,7 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 		   new String[] {
 			 "label", "nombre",
 			 "color", "240,255,255",
-			 "size", "150,15",
+			 "size", "100,15",
 			 "margin", "0",
 			 "border.color", "255,255,255"
 		   });	
@@ -874,7 +886,7 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 		   new String[] {
 			 "label", "nombre",
 			 "color", "240,255,255",
-			 "size", "150,15",
+			 "size", "100,15",
 			 "margin", "0",
 			 "border.color", "255,255,255"
 		   });	
@@ -921,7 +933,8 @@ public class DiagConcretaPackageImpl extends EPackageImpl implements DiagConcret
 			 "source", "source",
 			 "target", "target",
 			 "style", "solid",
-			 "width", "2"
+			 "width", "2",
+			 "label", "labelName"
 		   });
 	}
 

@@ -17,16 +17,17 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagConcreta.MBSRelacion#getTarget <em>Target</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getTipo <em>Tipo</em>}</li>
- *   <li>{@link diagConcreta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}</li>
+ *   <li>{@link diagConcreta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getRolA <em>Rol A</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getRolB <em>Rol B</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link diagConcreta.MBSRelacion#getNavegabilidadB <em>Navegabilidad B</em>}</li>
+ *   <li>{@link diagConcreta.MBSRelacion#getLabelName <em>Label Name</em>}</li>
  * </ul>
  *
  * @see diagConcreta.DiagConcretaPackage#getMBSRelacion()
- * @model annotation="gmf.link source='source' target='target' style='solid' width='2'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2' label='labelName'"
  * @generated
  */
 public interface MBSRelacion extends EObject {
@@ -135,30 +136,30 @@ public interface MBSRelacion extends EObject {
 	void setTipo(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Multiplicida A</b></em>' attribute.
+	 * Returns the value of the '<em><b>Multiplicidad A</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Multiplicida A</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Multiplicidad A</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Multiplicida A</em>' attribute.
-	 * @see #setMultiplicidaA(String)
-	 * @see diagConcreta.DiagConcretaPackage#getMBSRelacion_MultiplicidaA()
+	 * @return the value of the '<em>Multiplicidad A</em>' attribute.
+	 * @see #setMultiplicidadA(String)
+	 * @see diagConcreta.DiagConcretaPackage#getMBSRelacion_MultiplicidadA()
 	 * @model
 	 * @generated
 	 */
-	String getMultiplicidaA();
+	String getMultiplicidadA();
 
 	/**
-	 * Sets the value of the '{@link diagConcreta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}' attribute.
+	 * Sets the value of the '{@link diagConcreta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Multiplicida A</em>' attribute.
-	 * @see #getMultiplicidaA()
+	 * @param value the new value of the '<em>Multiplicidad A</em>' attribute.
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 */
-	void setMultiplicidaA(String value);
+	void setMultiplicidadA(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicidad B</b></em>' attribute.
@@ -289,5 +290,31 @@ public interface MBSRelacion extends EObject {
 	 * @generated
 	 */
 	void setNavegabilidadB(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Label Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Label Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Label Name</em>' attribute.
+	 * @see #setLabelName(String)
+	 * @see diagConcreta.DiagConcretaPackage#getMBSRelacion_LabelName()
+	 * @model
+	 * @generated
+	 */
+	String getLabelName();
+
+	/**
+	 * Sets the value of the '{@link diagConcreta.MBSRelacion#getLabelName <em>Label Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Label Name</em>' attribute.
+	 * @see #getLabelName()
+	 * @generated
+	 */
+	void setLabelName(String value);
 
 } // MBSRelacion

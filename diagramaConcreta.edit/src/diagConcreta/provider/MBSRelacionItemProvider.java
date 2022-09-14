@@ -64,12 +64,13 @@ public class MBSRelacionItemProvider
 			addTargetPropertyDescriptor(object);
 			addNombrePropertyDescriptor(object);
 			addTipoPropertyDescriptor(object);
-			addMultiplicidaAPropertyDescriptor(object);
+			addMultiplicidadAPropertyDescriptor(object);
 			addMultiplicidadBPropertyDescriptor(object);
 			addRolAPropertyDescriptor(object);
 			addRolBPropertyDescriptor(object);
 			addNavegabilidadAPropertyDescriptor(object);
 			addNavegabilidadBPropertyDescriptor(object);
+			addLabelNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -163,19 +164,19 @@ public class MBSRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Multiplicida A feature.
+	 * This adds a property descriptor for the Multiplicidad A feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMultiplicidaAPropertyDescriptor(Object object) {
+	protected void addMultiplicidadAPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MBSRelacion_multiplicidaA_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_multiplicidaA_feature", "_UI_MBSRelacion_type"),
-				 DiagConcretaPackage.Literals.MBS_RELACION__MULTIPLICIDA_A,
+				 getString("_UI_MBSRelacion_multiplicidadA_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_multiplicidadA_feature", "_UI_MBSRelacion_type"),
+				 DiagConcretaPackage.Literals.MBS_RELACION__MULTIPLICIDAD_A,
 				 true,
 				 false,
 				 false,
@@ -295,6 +296,28 @@ public class MBSRelacionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Label Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSRelacion_labelName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_labelName_feature", "_UI_MBSRelacion_type"),
+				 DiagConcretaPackage.Literals.MBS_RELACION__LABEL_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MBSRelacion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,7 +336,7 @@ public class MBSRelacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MBSRelacion)object).getNombre();
+		String label = ((MBSRelacion)object).getLabelName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MBSRelacion_type") :
 			getString("_UI_MBSRelacion_type") + " " + label;
@@ -334,12 +357,13 @@ public class MBSRelacionItemProvider
 		switch (notification.getFeatureID(MBSRelacion.class)) {
 			case DiagConcretaPackage.MBS_RELACION__NOMBRE:
 			case DiagConcretaPackage.MBS_RELACION__TIPO:
-			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDA_A:
+			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_A:
 			case DiagConcretaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 			case DiagConcretaPackage.MBS_RELACION__ROL_A:
 			case DiagConcretaPackage.MBS_RELACION__ROL_B:
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_A:
 			case DiagConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
+			case DiagConcretaPackage.MBS_RELACION__LABEL_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

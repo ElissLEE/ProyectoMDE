@@ -100,6 +100,25 @@ public class DiagConcretaParserProvider extends AbstractProvider implements IPar
 	/**
 	* @generated
 	*/
+	private IParser mBSRelacionLabelName_6001Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMBSRelacionLabelName_6001Parser() {
+		if (mBSRelacionLabelName_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					diagConcreta.DiagConcretaPackage.eINSTANCE.getMBSRelacion_LabelName() };
+			diagConcreta.diagram.parsers.MessageFormatParser parser = new diagConcreta.diagram.parsers.MessageFormatParser(
+					features);
+			mBSRelacionLabelName_6001Parser = parser;
+		}
+		return mBSRelacionLabelName_6001Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case diagConcreta.diagram.edit.parts.MBSClaseNombreEditPart.VISUAL_ID:
@@ -110,6 +129,8 @@ public class DiagConcretaParserProvider extends AbstractProvider implements IPar
 			return getMBSAtributoNombre_5001Parser();
 		case diagConcreta.diagram.edit.parts.MBSMetodoNombreEditPart.VISUAL_ID:
 			return getMBSMetodoNombre_5002Parser();
+		case diagConcreta.diagram.edit.parts.MBSRelacionLabelNameEditPart.VISUAL_ID:
+			return getMBSRelacionLabelName_6001Parser();
 		}
 		return null;
 	}
