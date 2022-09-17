@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link diagramaAbstracta.impl.MBSAtributoImpl#getModificadorAcesso <em>Modificador Acesso</em>}</li>
  *   <li>{@link diagramaAbstracta.impl.MBSAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
  *   <li>{@link diagramaAbstracta.impl.MBSAtributoImpl#isConstante <em>Constante</em>}</li>
- *   <li>{@link diagramaAbstracta.impl.MBSAtributoImpl#isStatic <em>Static</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,26 +129,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * @ordered
 	 */
 	protected boolean constante = CONSTANTE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean STATIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean static_ = STATIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -280,27 +259,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isStatic() {
-		return static_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStatic(boolean newStatic) {
-		boolean oldStatic = static_;
-		static_ = newStatic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DiagramaAbstractaPackage.MBS_ATRIBUTO__STATIC, oldStatic, static_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -314,8 +272,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return getValorDefecto();
 			case DiagramaAbstractaPackage.MBS_ATRIBUTO__CONSTANTE:
 				return isConstante();
-			case DiagramaAbstractaPackage.MBS_ATRIBUTO__STATIC:
-				return isStatic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -342,9 +298,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return;
 			case DiagramaAbstractaPackage.MBS_ATRIBUTO__CONSTANTE:
 				setConstante((Boolean)newValue);
-				return;
-			case DiagramaAbstractaPackage.MBS_ATRIBUTO__STATIC:
-				setStatic((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -373,9 +326,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 			case DiagramaAbstractaPackage.MBS_ATRIBUTO__CONSTANTE:
 				setConstante(CONSTANTE_EDEFAULT);
 				return;
-			case DiagramaAbstractaPackage.MBS_ATRIBUTO__STATIC:
-				setStatic(STATIC_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -398,8 +348,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return VALOR_DEFECTO_EDEFAULT == null ? valorDefecto != null : !VALOR_DEFECTO_EDEFAULT.equals(valorDefecto);
 			case DiagramaAbstractaPackage.MBS_ATRIBUTO__CONSTANTE:
 				return constante != CONSTANTE_EDEFAULT;
-			case DiagramaAbstractaPackage.MBS_ATRIBUTO__STATIC:
-				return static_ != STATIC_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -424,8 +372,6 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 		result.append(valorDefecto);
 		result.append(", constante: ");
 		result.append(constante);
-		result.append(", static: ");
-		result.append(static_);
 		result.append(')');
 		return result.toString();
 	}

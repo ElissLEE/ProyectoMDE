@@ -7,30 +7,30 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated diagramaAbstracta -->
+      <!-- @generated abstracta -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="diagramaAbstracta.presentation.DiagramaAbstractaModelWizardID"
-            name="%_UI_DiagramaAbstractaModelWizard_label"
-            class="diagramaAbstracta.presentation.DiagramaAbstractaModelWizard"
+            id="abstracta.presentation.AbstractaModelWizardID"
+            name="%_UI_AbstractaModelWizard_label"
+            class="abstracta.presentation.AbstractaModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/DiagramaAbstractaModelFile.gif">
-         <description>%_UI_DiagramaAbstractaModelWizard_description</description>
+            icon="icons/full/obj16/AbstractaModelFile.gif">
+         <description>%_UI_AbstractaModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated diagramaAbstracta -->
+      <!-- @generated abstracta -->
       <editor
-            id="diagramaAbstracta.presentation.DiagramaAbstractaEditorID"
-            name="%_UI_DiagramaAbstractaEditor_label"
-            icon="icons/full/obj16/DiagramaAbstractaModelFile.gif"
-            extensions="diagramaabstracta"
-            class="diagramaAbstracta.presentation.DiagramaAbstractaEditor"
-            contributorClass="diagramaAbstracta.presentation.DiagramaAbstractaActionBarContributor">
+            id="abstracta.presentation.AbstractaEditorID"
+            name="%_UI_AbstractaEditor_label"
+            icon="icons/full/obj16/AbstractaModelFile.gif"
+            extensions="abstracta"
+            class="abstracta.presentation.AbstractaEditor"
+            contributorClass="abstracta.presentation.AbstractaActionBarContributor">
       </editor>
    </extension>
 

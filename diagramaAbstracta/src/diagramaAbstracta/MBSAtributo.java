@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagramaAbstracta.MBSAtributo#getModificadorAcesso <em>Modificador Acesso</em>}</li>
  *   <li>{@link diagramaAbstracta.MBSAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  *   <li>{@link diagramaAbstracta.MBSAtributo#isConstante <em>Constante</em>}</li>
- *   <li>{@link diagramaAbstracta.MBSAtributo#isStatic <em>Static</em>}</li>
  * </ul>
  *
  * @see diagramaAbstracta.DiagramaAbstractaPackage#getMBSAtributo()
@@ -155,31 +154,5 @@ public interface MBSAtributo extends EObject {
 	 * @generated
 	 */
 	void setConstante(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Static</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Static</em>' attribute.
-	 * @see #setStatic(boolean)
-	 * @see diagramaAbstracta.DiagramaAbstractaPackage#getMBSAtributo_Static()
-	 * @model
-	 * @generated
-	 */
-	boolean isStatic();
-
-	/**
-	 * Sets the value of the '{@link diagramaAbstracta.MBSAtributo#isStatic <em>Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Static</em>' attribute.
-	 * @see #isStatic()
-	 * @generated
-	 */
-	void setStatic(boolean value);
 
 } // MBSAtributo

@@ -3,10 +3,9 @@
 package diagramaAbstracta.impl;
 
 import diagramaAbstracta.DiagramaAbstractaPackage;
-import diagramaAbstracta.MBSAtributo;
 import diagramaAbstracta.MBSMetodo;
-
 import diagramaAbstracta.MBSParametro;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link diagramaAbstracta.impl.MBSMetodoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagramaAbstracta.impl.MBSMetodoImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link diagramaAbstracta.impl.MBSMetodoImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link diagramaAbstracta.impl.MBSMetodoImpl#getTipoRetorno <em>Tipo Retorno</em>}</li>
  *   <li>{@link diagramaAbstracta.impl.MBSMetodoImpl#getSemantica <em>Semantica</em>}</li>
@@ -61,26 +59,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 	 * @ordered
 	 */
 	protected String nombre = NOMBRE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean STATIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean static_ = STATIC_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getModificadorAcceso() <em>Modificador Acceso</em>}' attribute.
@@ -197,27 +175,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isStatic() {
-		return static_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStatic(boolean newStatic) {
-		boolean oldStatic = static_;
-		static_ = newStatic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DiagramaAbstractaPackage.MBS_METODO__STATIC, oldStatic, static_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getModificadorAcceso() {
 		return modificadorAcceso;
 	}
@@ -312,8 +269,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 		switch (featureID) {
 			case DiagramaAbstractaPackage.MBS_METODO__NOMBRE:
 				return getNombre();
-			case DiagramaAbstractaPackage.MBS_METODO__STATIC:
-				return isStatic();
 			case DiagramaAbstractaPackage.MBS_METODO__MODIFICADOR_ACCESO:
 				return getModificadorAcceso();
 			case DiagramaAbstractaPackage.MBS_METODO__TIPO_RETORNO:
@@ -337,9 +292,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 		switch (featureID) {
 			case DiagramaAbstractaPackage.MBS_METODO__NOMBRE:
 				setNombre((String)newValue);
-				return;
-			case DiagramaAbstractaPackage.MBS_METODO__STATIC:
-				setStatic((Boolean)newValue);
 				return;
 			case DiagramaAbstractaPackage.MBS_METODO__MODIFICADOR_ACCESO:
 				setModificadorAcceso((String)newValue);
@@ -369,9 +321,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 			case DiagramaAbstractaPackage.MBS_METODO__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
-			case DiagramaAbstractaPackage.MBS_METODO__STATIC:
-				setStatic(STATIC_EDEFAULT);
-				return;
 			case DiagramaAbstractaPackage.MBS_METODO__MODIFICADOR_ACCESO:
 				setModificadorAcceso(MODIFICADOR_ACCESO_EDEFAULT);
 				return;
@@ -398,8 +347,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 		switch (featureID) {
 			case DiagramaAbstractaPackage.MBS_METODO__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case DiagramaAbstractaPackage.MBS_METODO__STATIC:
-				return static_ != STATIC_EDEFAULT;
 			case DiagramaAbstractaPackage.MBS_METODO__MODIFICADOR_ACCESO:
 				return MODIFICADOR_ACCESO_EDEFAULT == null ? modificadorAcceso != null : !MODIFICADOR_ACCESO_EDEFAULT.equals(modificadorAcceso);
 			case DiagramaAbstractaPackage.MBS_METODO__TIPO_RETORNO:
@@ -424,8 +371,6 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nombre: ");
 		result.append(nombre);
-		result.append(", static: ");
-		result.append(static_);
 		result.append(", modificadorAcceso: ");
 		result.append(modificadorAcceso);
 		result.append(", tipoRetorno: ");

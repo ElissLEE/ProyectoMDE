@@ -4,12 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: diagramaConcreta.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: diagConcreta.diagram.part.DiagConcretaDiagramEditorPlugin
+Bundle-Activator: concreta.diagram.part.ConcretaDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: diagConcreta.diagram.edit.parts,
- diagConcreta.diagram.part,
- diagConcreta.diagram.providers
+Export-Package: concreta.diagram.edit.parts,
+ concreta.diagram.part,
+ concreta.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,

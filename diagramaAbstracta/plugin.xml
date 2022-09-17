@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated diagramaAbstracta -->
+      <!-- @generated abstracta -->
       <package
-            uri="diagramaAbstracta"
-            class="diagramaAbstracta.DiagramaAbstractaPackage"/>
+            uri="abstracta"
+            class="abstracta.AbstractaPackage"/>
    </extension>
 
 </plugin>

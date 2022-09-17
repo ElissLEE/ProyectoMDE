@@ -10,8 +10,8 @@ import diagramaAbstracta.MBSMetodo;
 import diagramaAbstracta.MBSPaquete;
 import diagramaAbstracta.MBSParametro;
 import diagramaAbstracta.MBSRelacion;
-
 import diagramaAbstracta.ModelFactory;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -330,7 +330,7 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSMetodo_Static() {
+	public EAttribute getMBSMetodo_ModificadorAcceso() {
 		return (EAttribute)mbsMetodoEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -339,7 +339,7 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSMetodo_ModificadorAcceso() {
+	public EAttribute getMBSMetodo_TipoRetorno() {
 		return (EAttribute)mbsMetodoEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -348,7 +348,7 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSMetodo_TipoRetorno() {
+	public EAttribute getMBSMetodo_Semantica() {
 		return (EAttribute)mbsMetodoEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -357,17 +357,8 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSMetodo_Semantica() {
-		return (EAttribute)mbsMetodoEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getMBSMetodo_ListaParametros() {
-		return (EReference)mbsMetodoEClass.getEStructuralFeatures().get(5);
+		return (EReference)mbsMetodoEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -422,15 +413,6 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 	 */
 	public EAttribute getMBSAtributo_Constante() {
 		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSAtributo_Static() {
-		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -611,7 +593,6 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 
 		mbsMetodoEClass = createEClass(MBS_METODO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__NOMBRE);
-		createEAttribute(mbsMetodoEClass, MBS_METODO__STATIC);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__MODIFICADOR_ACCESO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__TIPO_RETORNO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__SEMANTICA);
@@ -623,7 +604,6 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__MODIFICADOR_ACESSO);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__VALOR_DEFECTO);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__CONSTANTE);
-		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__STATIC);
 
 		mbsParametroEClass = createEClass(MBS_PARAMETRO);
 		createEAttribute(mbsParametroEClass, MBS_PARAMETRO__NOMBRE);
@@ -696,7 +676,6 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 
 		initEClass(mbsMetodoEClass, MBSMetodo.class, "MBSMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSMetodo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSMetodo_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSMetodo_ModificadorAcceso(), ecorePackage.getEString(), "modificadorAcceso", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSMetodo_TipoRetorno(), ecorePackage.getEString(), "tipoRetorno", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSMetodo_Semantica(), ecorePackage.getEString(), "semantica", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -708,7 +687,6 @@ public class DiagramaAbstractaPackageImpl extends EPackageImpl implements Diagra
 		initEAttribute(getMBSAtributo_ModificadorAcesso(), ecorePackage.getEString(), "modificadorAcesso", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_ValorDefecto(), ecorePackage.getEString(), "ValorDefecto", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_Constante(), ecorePackage.getEBoolean(), "constante", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSAtributo_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsParametroEClass, MBSParametro.class, "MBSParametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

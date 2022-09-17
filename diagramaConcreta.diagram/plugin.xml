@@ -7,13 +7,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="diagconcreta_diagram"/>
+      <fileTypes type="text" extension="concreta_diagram"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="diagconcreta_diagram"
+         type="concreta_diagram"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,14 +21,14 @@
    <extension point="org.eclipse.ui.editors" id="gmf-editor">
       <?gmfgen generated="true"?>
       <editor
-         id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID"
+         id="concreta.diagram.part.ConcretaDiagramEditorID"
          name="%editorName"
-         icon="icons/obj16/DiagConcretaDiagramFile.gif"
-         extensions="diagconcreta_diagram"
+         icon="icons/obj16/ConcretaDiagramFile.gif"
+         extensions="concreta_diagram"
          default="true"
-         class="diagConcreta.diagram.part.DiagConcretaDiagramEditor"
-         matchingStrategy="diagConcreta.diagram.part.DiagConcretaMatchingStrategy"
-         contributorClass="diagConcreta.diagram.part.DiagConcretaDiagramActionBarContributor">
+         class="concreta.diagram.part.ConcretaDiagramEditor"
+         matchingStrategy="concreta.diagram.part.ConcretaMatchingStrategy"
+         contributorClass="concreta.diagram.part.ConcretaDiagramActionBarContributor">
       </editor>
    </extension>
    
@@ -36,7 +36,7 @@
       <?gmfgen generated="true"?>
       <context
          description="%context.description"
-         id="diagConcreta.diagram.ui.diagramContext"
+         id="concreta.diagram.ui.diagramContext"
          name="%context.name"
          parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
       </context>
@@ -46,10 +46,10 @@
       <?gmfgen generated="true"?>
   	  <wizard
   	     name="%newWizardName"
-  	     icon="icons/obj16/DiagConcretaDiagramFile.gif"
+  	     icon="icons/obj16/ConcretaDiagramFile.gif"
   	     category="org.eclipse.ui.Examples"
-  	     class="diagConcreta.diagram.part.DiagConcretaCreationWizard"
-  	     id="diagConcreta.diagram.part.DiagConcretaCreationWizardID">
+  	     class="concreta.diagram.part.ConcretaCreationWizard"
+  	     id="concreta.diagram.part.ConcretaCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
@@ -58,11 +58,11 @@
       <?gmfgen generated="true"?>
       <objectContribution
             id="diagramaConcreta.diagram.InitDiagram"
-            nameFilter="*.diagconcreta"
+            nameFilter="*.concreta"
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
-               class="diagConcreta.diagram.part.DiagConcretaInitDiagramFileAction"
+               class="concreta.diagram.part.ConcretaInitDiagramFileAction"
                menubarPath="additions"
                enablesFor="1"
                id="diagramaConcreta.diagram.InitDiagramAction">
@@ -74,9 +74,9 @@
       <?gmfgen generated="true"?>
       <GlobalActionHandlerProvider
          class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
-         id="DiagConcretaPresentation">
+         id="ConcretaPresentation">
          <Priority name="Lowest"/>
-         <ViewId id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID">
+         <ViewId id="concreta.diagram.part.ConcretaDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="delete"/>
             </ElementType>
@@ -91,9 +91,9 @@
       </GlobalActionHandlerProvider>
       <GlobalActionHandlerProvider
          class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
-         id="DiagConcretaPresentationPrint">
+         id="ConcretaPresentationPrint">
          <Priority name="Lowest"/>
-         <ViewId id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID">
+         <ViewId id="concreta.diagram.part.ConcretaDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="print"/>
             </ElementType>
@@ -101,9 +101,9 @@
       </GlobalActionHandlerProvider>
       <GlobalActionHandlerProvider
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
-         id="DiagConcretaPresentationIDE">
+         id="ConcretaPresentationIDE">
          <Priority name="Lowest"/>
-         <ViewId id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID">
+         <ViewId id="concreta.diagram.part.ConcretaDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="bookmark"/>
             </ElementType>
@@ -111,9 +111,9 @@
       </GlobalActionHandlerProvider>
       <GlobalActionHandlerProvider
             class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
-            id="DiagConcretaRender">
+            id="ConcretaRender">
          <Priority name="Lowest"/>
-         <ViewId id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID">
+         <ViewId id="concreta.diagram.part.ConcretaDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="cut"/>
                <GlobalActionId actionId="copy"/>
@@ -126,13 +126,13 @@
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
       <?gmfgen generated="true"?>
-      <MarkerNavigationProvider class="diagConcreta.diagram.providers.DiagConcretaMarkerNavigationProvider">
+      <MarkerNavigationProvider class="concreta.diagram.providers.ConcretaMarkerNavigationProvider">
          <MarkerType name="diagramaConcreta.diagram.diagnostic"/>
          <Priority name="Lowest"/>
       </MarkerNavigationProvider>
    </extension>
 
-   <extension id="diagnostic" name="DiagConcreta Plugin problems" point="org.eclipse.core.resources.markers">
+   <extension id="diagnostic" name="Concreta Plugin problems" point="org.eclipse.core.resources.markers">
       <?gmfgen generated="true"?>
       <super type="org.eclipse.core.resources.problemmarker"/>
       <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
@@ -141,7 +141,7 @@
 
    <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
       <?gmfgen generated="true"?>
-      <decoratorProvider class="diagConcreta.diagram.providers.DiagConcretaValidationDecoratorProvider">
+      <decoratorProvider class="concreta.diagram.providers.ConcretaValidationDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
          <context decoratorTargets="PRIMARY_VIEW"/>
@@ -150,7 +150,7 @@
 
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
-      <initializer class="diagConcreta.diagram.preferences.DiagramPreferenceInitializer"/>
+      <initializer class="concreta.diagram.preferences.DiagramPreferenceInitializer"/>
    </extension>
 
    <extension point="org.eclipse.ui.preferencePages" id="prefpages">
@@ -158,31 +158,31 @@
       <page
             id="diagramaConcreta.diagram.general"
             name="%prefpage.diagramaConcreta.diagram.general"
-            class="diagConcreta.diagram.preferences.DiagramGeneralPreferencePage">
+            class="concreta.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
             id="diagramaConcreta.diagram.appearance"
             name="%prefpage.diagramaConcreta.diagram.appearance"
             category="diagramaConcreta.diagram.general"
-            class="diagConcreta.diagram.preferences.DiagramAppearancePreferencePage">
+            class="concreta.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
             id="diagramaConcreta.diagram.connections"
             name="%prefpage.diagramaConcreta.diagram.connections"
             category="diagramaConcreta.diagram.general"
-            class="diagConcreta.diagram.preferences.DiagramConnectionsPreferencePage">
+            class="concreta.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
             id="diagramaConcreta.diagram.printing"
             name="%prefpage.diagramaConcreta.diagram.printing"
             category="diagramaConcreta.diagram.general"
-            class="diagConcreta.diagram.preferences.DiagramPrintingPreferencePage">
+            class="concreta.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
             id="diagramaConcreta.diagram.rulersAndGrid"
             name="%prefpage.diagramaConcreta.diagram.rulersAndGrid"
             category="diagramaConcreta.diagram.general"
-            class="diagConcreta.diagram.preferences.DiagramRulersAndGridPreferencePage">
+            class="concreta.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
    </extension>
 
@@ -190,7 +190,7 @@
       <?gmfgen generated="true"?>
       <propertyContributor
             contributorId="diagramaConcreta.diagram"
-            labelProvider="diagConcreta.diagram.sheet.DiagConcretaSheetLabelProvider">
+            labelProvider="concreta.diagram.sheet.ConcretaSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
          <propertyCategory category="extra"/>
@@ -241,40 +241,40 @@
          <propertySection
             id="property.section.domain" 
             tab="property.tab.domain"
-            class="diagConcreta.diagram.sheet.DiagConcretaPropertySection">
+            class="concreta.diagram.sheet.ConcretaPropertySection">
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
-            <input type="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+            <input type="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
          </propertySection>
       </propertySections>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
       <?gmfgen generated="true"?>
-      <viewProvider class="diagConcreta.diagram.providers.DiagConcretaViewProvider">
+      <viewProvider class="concreta.diagram.providers.ConcretaViewProvider">
          <Priority name="Lowest"/>
          <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
-            <method name="getType()" value="diagConcreta"/>
+            <method name="getType()" value="concreta"/>
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="DiagConcreta"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Concreta"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
       </viewProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
       <?gmfgen generated="true"?>
-      <editpartProvider class="diagConcreta.diagram.providers.DiagConcretaEditPartProvider">
+      <editpartProvider class="concreta.diagram.providers.ConcretaEditPartProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
-            <method name="getType()" value="DiagConcreta"/>
+            <method name="getType()" value="Concreta"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
             <method name="getType()" value="2001,2002,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001"/>
+            <method name="getType()" value="4001,4002,4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5003,5004,5001,5002"/>
@@ -289,29 +289,29 @@
    
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="diagConcreta.diagram.providers.assistants.DiagConcretaModelingAssistantProviderOfMBSDiagramaClasesEditPart">
+      <modelingAssistantProvider class="concreta.diagram.providers.assistants.ConcretaModelingAssistantProviderOfMBSDiagramaClasesEditPart">
          <Priority name="Lowest"/>
-         <object class="diagConcreta.diagram.edit.parts.MBSDiagramaClasesEditPart" id="MBSDiagramaClases_1000"/>
+         <object class="concreta.diagram.edit.parts.MBSDiagramaClasesEditPart" id="MBSDiagramaClases_1000"/>
          <context elements="MBSDiagramaClases_1000"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagConcreta.diagram.providers.assistants.DiagConcretaModelingAssistantProviderOfMBSClaseEditPart">
+            <modelingAssistantProvider class="concreta.diagram.providers.assistants.ConcretaModelingAssistantProviderOfMBSClaseEditPart">
          <Priority name="Lowest"/>
-         <object class="diagConcreta.diagram.edit.parts.MBSClaseEditPart" id="MBSClase_2001"/>
+         <object class="concreta.diagram.edit.parts.MBSClaseEditPart" id="MBSClase_2001"/>
          <context elements="MBSClase_2001"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagConcreta.diagram.providers.assistants.DiagConcretaModelingAssistantProviderOfMBSPaqueteEditPart">
+            <modelingAssistantProvider class="concreta.diagram.providers.assistants.ConcretaModelingAssistantProviderOfMBSPaqueteEditPart">
          <Priority name="Lowest"/>
-         <object class="diagConcreta.diagram.edit.parts.MBSPaqueteEditPart" id="MBSPaquete_2002"/>
+         <object class="concreta.diagram.edit.parts.MBSPaqueteEditPart" id="MBSPaquete_2002"/>
          <context elements="MBSPaquete_2002"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagConcreta.diagram.providers.assistants.DiagConcretaModelingAssistantProviderOfMBSAtributoEditPart">
+            <modelingAssistantProvider class="concreta.diagram.providers.assistants.ConcretaModelingAssistantProviderOfMBSAtributoEditPart">
          <Priority name="Lowest"/>
-         <object class="diagConcreta.diagram.edit.parts.MBSAtributoEditPart" id="MBSAtributo_3001"/>
+         <object class="concreta.diagram.edit.parts.MBSAtributoEditPart" id="MBSAtributo_3001"/>
          <context elements="MBSAtributo_3001"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagConcreta.diagram.providers.assistants.DiagConcretaModelingAssistantProviderOfMBSMetodoEditPart">
+            <modelingAssistantProvider class="concreta.diagram.providers.assistants.ConcretaModelingAssistantProviderOfMBSMetodoEditPart">
          <Priority name="Lowest"/>
-         <object class="diagConcreta.diagram.edit.parts.MBSMetodoEditPart" id="MBSMetodo_3002"/>
+         <object class="concreta.diagram.edit.parts.MBSMetodoEditPart" id="MBSMetodo_3002"/>
          <context elements="MBSMetodo_3002"/>
       </modelingAssistantProvider>
       
@@ -320,21 +320,21 @@
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
-      <IconProvider class="diagConcreta.diagram.providers.DiagConcretaIconProvider">
+      <IconProvider class="concreta.diagram.providers.ConcretaIconProvider">
          <Priority name="Low"/>
       </IconProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
       <?gmfgen generated="true"?>
-      <ParserProvider class="diagConcreta.diagram.providers.DiagConcretaParserProvider">
+      <ParserProvider class="concreta.diagram.providers.ConcretaParserProvider">
          <Priority name="Lowest"/>
       </ParserProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
       <?gmfgen generated="true"?>
-      <decoratorProvider class="diagConcreta.diagram.providers.DiagConcretaShortcutsDecoratorProvider">
+      <decoratorProvider class="concreta.diagram.providers.ConcretaShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
             <method name="getType()" value="2001,2002"/>
@@ -345,64 +345,84 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSDiagramaClases_1000"
                name="%metatype.name.MBSDiagramaClases_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSDiagramaClases"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSDiagramaClasesEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSDiagramaClasesEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSClase_2001"
                name="%metatype.name.MBSClase_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSClase"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSClaseEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSClaseEditHelper">
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSPaquete_2002"
                name="%metatype.name.MBSPaquete_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSPaquete"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSPaqueteEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSPaqueteEditHelper">
             <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSAtributo_3001"
                name="%metatype.name.MBSAtributo_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSAtributo"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSAtributoEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSAtributoEditHelper">
             <param name="semanticHint" value="3001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSMetodo_3002"
                name="%metatype.name.MBSMetodo_3002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSMetodo"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSMetodoEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSMetodoEditHelper">
             <param name="semanticHint" value="3002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="diagConcreta">
+      <metamodel nsURI="concreta">
          <metamodelType
                id="diagramaConcreta.diagram.MBSRelacion_4001"
                name="%metatype.name.MBSRelacion_4001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MBSRelacion"
-               edithelper="diagConcreta.diagram.edit.helpers.MBSRelacionEditHelper">
+               edithelper="concreta.diagram.edit.helpers.MBSRelacionEditHelper">
             <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="concreta">
+         <metamodelType
+               id="diagramaConcreta.diagram.MBSHerencia_4002"
+               name="%metatype.name.MBSHerencia_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MBSHerencia"
+               edithelper="concreta.diagram.edit.helpers.MBSHerenciaEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="concreta">
+         <metamodelType
+               id="diagramaConcreta.diagram.MBSContainment_4003"
+               name="%metatype.name.MBSContainment_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MBSContainment"
+               edithelper="concreta.diagram.edit.helpers.MBSContainmentEditHelper">
+            <param name="semanticHint" value="4003"/>
          </metamodelType>
       </metamodel>
    </extension>
@@ -423,6 +443,8 @@
          <elementType ref="diagramaConcreta.diagram.MBSAtributo_3001"/>
          <elementType ref="diagramaConcreta.diagram.MBSMetodo_3002"/>
          <elementType ref="diagramaConcreta.diagram.MBSRelacion_4001"/>
+         <elementType ref="diagramaConcreta.diagram.MBSHerencia_4002"/>
+         <elementType ref="diagramaConcreta.diagram.MBSContainment_4003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -433,7 +455,7 @@
            type="org.eclipse.emf.common.ui.URIEditorInput"
            namespace="diagramaConcreta.diagram"
            properties="isURIEditorInput"
-           class="diagConcreta.diagram.part.DiagConcretaUriEditorInputTester">
+           class="concreta.diagram.part.ConcretaUriEditorInputTester">
        </propertyTester>
    </extension>
 
@@ -444,7 +466,7 @@
            type="org.eclipse.gmf.runtime.notation.View"
            namespace="diagramaConcreta.diagram"
            properties="isShortcut"
-           class="diagConcreta.diagram.part.DiagConcretaShortcutPropertyTester">
+           class="concreta.diagram.part.ConcretaShortcutPropertyTester">
        </propertyTester>
    </extension>
 
@@ -470,17 +492,17 @@
             id="diagramaConcreta.diagram.resourceContent" 
             name="%navigatorContentName" 
             priority="normal" 
-            contentProvider="diagConcreta.diagram.navigator.DiagConcretaNavigatorContentProvider" 
-            labelProvider="diagConcreta.diagram.navigator.DiagConcretaNavigatorLabelProvider"
-            icon="icons/obj16/DiagConcretaDiagramFile.gif"
+            contentProvider="concreta.diagram.navigator.ConcretaNavigatorContentProvider" 
+            labelProvider="concreta.diagram.navigator.ConcretaNavigatorLabelProvider"
+            icon="icons/obj16/ConcretaDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="diagconcreta_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="concreta_diagram"/>
                </and>
-               <instanceof value="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+               <instanceof value="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
            	   <adapt type="org.eclipse.gmf.runtime.notation.View">
            	      <test property="diagramaConcreta.diagram.isShortcut"/>
            	   </adapt>
@@ -488,7 +510,7 @@
          </triggerPoints>
          <possibleChildren>
             <or>
-         	   <instanceof value="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+         	   <instanceof value="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
            	   <adapt type="org.eclipse.gmf.runtime.notation.View">
            	      <test property="diagramaConcreta.diagram.isShortcut"/>
            	   </adapt>
@@ -496,14 +518,14 @@
          </possibleChildren>
          <commonSorter 
                id="diagramaConcreta.diagram.navigatorSorter" 
-               class="diagConcreta.diagram.navigator.DiagConcretaNavigatorSorter">
+               class="concreta.diagram.navigator.ConcretaNavigatorSorter">
             <parentExpression>
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="diagconcreta_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="concreta_diagram"/>
                   </and>
-                  <instanceof value="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+                  <instanceof value="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
                </or>
             </parentExpression>
          </commonSorter>
@@ -512,29 +534,29 @@
             id="diagramaConcreta.diagram.domainResourceContent" 
             name="%domainNavigatorContentName" 
             priority="normal" 
-            contentProvider="diagConcreta.diagram.navigator.DiagConcretaDomainNavigatorContentProvider" 
-            labelProvider="diagConcreta.diagram.navigator.DiagConcretaDomainNavigatorLabelProvider"
-            icon="icons/obj16/DiagConcretaDiagramFile.gif"
+            contentProvider="concreta.diagram.navigator.ConcretaDomainNavigatorContentProvider" 
+            labelProvider="concreta.diagram.navigator.ConcretaDomainNavigatorLabelProvider"
+            icon="icons/obj16/ConcretaDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="diagconcreta"/>
+        	      <test property="org.eclipse.core.resources.extension" value="concreta"/>
                </and>
-               <instanceof value="diagConcreta.diagram.navigator.DiagConcretaDomainNavigatorItem"/>
+               <instanceof value="concreta.diagram.navigator.ConcretaDomainNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
-            <instanceof value="diagConcreta.diagram.navigator.DiagConcretaDomainNavigatorItem"/>
+            <instanceof value="concreta.diagram.navigator.ConcretaDomainNavigatorItem"/>
          </possibleChildren>
       </navigatorContent>
       <actionProvider
             id="diagramaConcreta.diagram.navigatorActionProvider"
-            class="diagConcreta.diagram.navigator.DiagConcretaNavigatorActionProvider">
+            class="concreta.diagram.navigator.ConcretaNavigatorActionProvider">
          <enablement>
             <or>
-               <instanceof value="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+               <instanceof value="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
            	   <adapt type="org.eclipse.gmf.runtime.notation.View">
            	      <test property="diagramaConcreta.diagram.isShortcut"/>
            	   </adapt>
@@ -547,7 +569,7 @@
       <?gmfgen generated="true"?>
       <linkHelper
             id="diagramaConcreta.diagram.navigatorLinkHelper"
-            class="diagConcreta.diagram.navigator.DiagConcretaNavigatorLinkHelper">
+            class="concreta.diagram.navigator.ConcretaNavigatorLinkHelper">
          <editorInputEnablement>
             <and>
                <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
@@ -555,7 +577,7 @@
             </and>
          </editorInputEnablement>
          <selectionEnablement>
-            <instanceof value="diagConcreta.diagram.navigator.DiagConcretaAbstractNavigatorItem"/>
+            <instanceof value="concreta.diagram.navigator.ConcretaAbstractNavigatorItem"/>
          </selectionEnablement>
       </linkHelper>
    </extension>
@@ -563,17 +585,17 @@
       <?gmfgen generated="true"?>
       <command
          categoryId="org.eclipse.ui.category.edit"
-         defaultHandler="diagConcreta.diagram.part.DiagConcretaDiagramUpdateCommand"
+         defaultHandler="concreta.diagram.part.ConcretaDiagramUpdateCommand"
          description="%update.diagram.description"
-         id="diagConcreta.diagram.updateDiagram"
+         id="concreta.diagram.updateDiagram"
          name="%update.diagram.name"/>
    </extension>
    
    <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
       <?gmfgen generated="true"?>
       <key 
-         commandId="diagConcreta.diagram.updateDiagram"
-         contextId="diagConcreta.diagram.ui.diagramContext"
+         commandId="concreta.diagram.updateDiagram"
+         contextId="concreta.diagram.ui.diagramContext"
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
@@ -588,9 +610,9 @@
          <command commandId="diagramaConcreta.diagram.LoadResourceAction">
             <visibleWhen>
                <and>
-                  <with variable="activePartId"><equals value="diagConcreta.diagram.part.DiagConcretaDiagramEditorID"/></with>
+                  <with variable="activePartId"><equals value="concreta.diagram.part.ConcretaDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="diagConcreta.diagram.edit.parts.MBSDiagramaClasesEditPart"/>
+                     <instanceof value="concreta.diagram.edit.parts.MBSDiagramaClasesEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>
@@ -600,11 +622,11 @@
 
    <extension point="org.eclipse.ui.commands" id="menu-commands">
       <?gmfgen generated="true"?>
-      <category id="diagConcreta.diagram.part.DiagConcretaDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <category id="concreta.diagram.part.ConcretaDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
       <command id="diagramaConcreta.diagram.LoadResourceAction"
          name="Load Resource"
-         categoryId="diagConcreta.diagram.part.DiagConcretaDiagramEditorID"
-         defaultHandler="diagConcreta.diagram.part.LoadResourceAction"/>
+         categoryId="concreta.diagram.part.ConcretaDiagramEditorID"
+         defaultHandler="concreta.diagram.part.LoadResourceAction"/>
    </extension>
 
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">

@@ -4,9 +4,9 @@
     <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSDiagramaClasesEditHelper"/>
     <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
-    <containsShortcutsTo>diagConcreta</containsShortcutsTo>
-    <shortcutsProvidedFor>diagConcreta</shortcutsProvidedFor>
-    <domainDiagramElement href="concreta.genmodel#//diagConcreta/MBSDiagramaClases"/>
+    <containsShortcutsTo>concreta</containsShortcutsTo>
+    <shortcutsProvidedFor>concreta</shortcutsProvidedFor>
+    <domainDiagramElement href="concreta.genmodel#//concreta/MBSDiagramaClases"/>
     <childNodes visualID="3001" editPartClassName="MBSAtributoEditPart" itemSemanticEditPolicyClassName="MBSAtributoItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSAtributoCanonicalEditPolicy" graphicalNodeEditPolicyClassName="MBSAtributoGraphicalNodeEditPolicy" createCommandClassName="MBSAtributoCreateCommand" containers="//@diagram/@compartments.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSAtributoEditHelper"/>
@@ -15,15 +15,15 @@
         <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="100" height="15"/>
       </viewmap>
       <modelFacet>
-        <metaClass href="concreta.genmodel#//diagConcreta/MBSAtributo"/>
-        <containmentMetaFeature href="concreta.genmodel#//diagConcreta/MBSClase/atributos"/>
-        <childMetaFeature href="concreta.genmodel#//diagConcreta/MBSClase/atributos"/>
+        <metaClass href="concreta.genmodel#//concreta/MBSAtributo"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSClase/atributos"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSClase/atributos"/>
       </modelFacet>
       <labels visualID="5001" editPartClassName="MBSAtributoNombreEditPart" itemSemanticEditPolicyClassName="MBSAtributoNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMBSAtributoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//diagConcreta/MBSAtributo/nombre"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MBSAtributo/nombre"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -35,15 +35,15 @@
         <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="100" height="15"/>
       </viewmap>
       <modelFacet>
-        <metaClass href="concreta.genmodel#//diagConcreta/MBSMetodo"/>
-        <containmentMetaFeature href="concreta.genmodel#//diagConcreta/MBSClase/metodos"/>
-        <childMetaFeature href="concreta.genmodel#//diagConcreta/MBSClase/metodos"/>
+        <metaClass href="concreta.genmodel#//concreta/MBSMetodo"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSClase/metodos"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSClase/metodos"/>
       </modelFacet>
       <labels visualID="5002" editPartClassName="MBSMetodoNombreEditPart" itemSemanticEditPolicyClassName="MBSMetodoNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMBSMetodoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//diagConcreta/MBSMetodo/nombre"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MBSMetodo/nombre"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -56,15 +56,15 @@
       </viewmap>
       <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet>
-        <metaClass href="concreta.genmodel#//diagConcreta/MBSClase"/>
-        <containmentMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaClases"/>
-        <childMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaClases"/>
+        <metaClass href="concreta.genmodel#//concreta/MBSClase"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaClases"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaClases"/>
       </modelFacet>
       <labels visualID="5003" editPartClassName="MBSClaseNombreEditPart" itemSemanticEditPolicyClassName="MBSClaseNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMBSClaseLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//diagConcreta/MBSClase/nombre"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MBSClase/nombre"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -73,15 +73,15 @@
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSPaqueteEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MBSPaqueteFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MBSPaqueteFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMBSPaqueteLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MBSPaqueteFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureMBSPaqueteLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureMBSPaqueteLabelFigure.setText(&quot;MBSPaquete&quot;);&#xA;&#xA;this.add(fFigureMBSPaqueteLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMBSPaqueteLabelFigure() {&#xA;&#x9;&#x9;return fFigureMBSPaqueteLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
-        <metaClass href="concreta.genmodel#//diagConcreta/MBSPaquete"/>
-        <containmentMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaPaquetes"/>
-        <childMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaPaquetes"/>
+        <metaClass href="concreta.genmodel#//concreta/MBSPaquete"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaPaquetes"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaPaquetes"/>
       </modelFacet>
       <labels visualID="5004" editPartClassName="MBSPaqueteNombreEditPart" itemSemanticEditPolicyClassName="MBSPaqueteNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMBSPaqueteLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//diagConcreta/MBSPaquete/nombre"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MBSPaquete/nombre"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -90,11 +90,11 @@
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSRelacionEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MBSRelacionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MBSRelacionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MBSRelacionFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
-        <metaClass href="concreta.genmodel#//diagConcreta/MBSRelacion"/>
-        <containmentMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaRelaciones"/>
-        <childMetaFeature href="concreta.genmodel#//diagConcreta/MBSDiagramaClases/listaRelaciones"/>
-        <sourceMetaFeature href="concreta.genmodel#//diagConcreta/MBSRelacion/source"/>
-        <targetMetaFeature href="concreta.genmodel#//diagConcreta/MBSRelacion/target"/>
+        <metaClass href="concreta.genmodel#//concreta/MBSRelacion"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelaciones"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelaciones"/>
+        <sourceMetaFeature href="concreta.genmodel#//concreta/MBSRelacion/source"/>
+        <targetMetaFeature href="concreta.genmodel#//concreta/MBSRelacion/target"/>
       </modelFacet>
       <labels visualID="6001" editPartClassName="MBSRelacionLabelNameEditPart" itemSemanticEditPolicyClassName="MBSRelacionLabelNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -102,15 +102,39 @@
           <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
         </viewmap>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//diagConcreta/MBSRelacion/labelName"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MBSRelacion/labelName"/>
         </modelFacet>
       </labels>
     </links>
-    <compartments visualID="7001" editPartClassName="MBSClaseMBSClaseAtributosCompartmentEditPart" itemSemanticEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="MBSClaseAtributosCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
+    <links visualID="4002" editPartClassName="MBSHerenciaEditPart" itemSemanticEditPolicyClassName="MBSHerenciaItemSemanticEditPolicy" createCommandClassName="MBSHerenciaCreateCommand" reorientCommandClassName="MBSHerenciaReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSHerenciaEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MBSHerenciaFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MBSHerenciaFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MBSHerenciaFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(2)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(-2)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;df.setTemplate(pl);&#xA;df.setScale(getMapMode().DPtoLP(7)&#xA;, getMapMode().DPtoLP(3)&#xA;);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="concreta.genmodel#//concreta/MBSHerencia"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelacionesHerencia"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelacionesHerencia"/>
+        <sourceMetaFeature href="concreta.genmodel#//concreta/MBSHerencia/source"/>
+        <targetMetaFeature href="concreta.genmodel#//concreta/MBSHerencia/target"/>
+      </modelFacet>
+    </links>
+    <links visualID="4003" editPartClassName="MBSContainmentEditPart" itemSemanticEditPolicyClassName="MBSContainmentItemSemanticEditPolicy" createCommandClassName="MBSContainmentCreateCommand" reorientCommandClassName="MBSContainmentReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MBSContainmentEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MBSContainmentFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MBSContainmentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MBSContainmentFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(1)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(-1)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(1)&#xA;);&#xA;df.setTemplate(pl);&#xA;df.setScale(getMapMode().DPtoLP(7)&#xA;, getMapMode().DPtoLP(3)&#xA;);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="concreta.genmodel#//concreta/MBSContainment"/>
+        <containmentMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelacionesContainment"/>
+        <childMetaFeature href="concreta.genmodel#//concreta/MBSDiagramaClases/listaRelacionesContainment"/>
+        <sourceMetaFeature href="concreta.genmodel#//concreta/MBSContainment/source"/>
+        <targetMetaFeature href="concreta.genmodel#//concreta/MBSContainment/target"/>
+      </modelFacet>
+    </links>
+    <compartments visualID="7001" editPartClassName="MBSClaseMBSClaseAtributosCompartmentEditPart" itemSemanticEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="MBSClaseAtributosCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getMBSClaseAtributosCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
-    <compartments visualID="7002" editPartClassName="MBSClaseMBSClaseMetodosCompartmentEditPart" itemSemanticEditPolicyClassName="MBSClaseMBSClaseMetodosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSClaseMBSClaseMetodosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.1" title="MBSClaseMetodosCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
+    <compartments visualID="7002" editPartClassName="MBSClaseMBSClaseMetodosCompartmentEditPart" itemSemanticEditPolicyClassName="MBSClaseMBSClaseMetodosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSClaseMBSClaseMetodosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.1" title="MBSClaseMetodosCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getMBSClaseMetodosCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
@@ -120,13 +144,14 @@
         <entries xsi:type="gmfgen:ToolEntry" title="MBSClase" description="Create new MBSClase" genNodes="//@diagram/@topLevelNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="MBSMetodo" description="Create new MBSMetodo" genNodes="//@diagram/@childNodes.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="MBSPaquete" description="Create new MBSPaquete" genNodes="//@diagram/@topLevelNodes.1"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="MBSParametro" description="Create new MBSParametro"/>
       </groups>
       <groups title="Connections" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="MBSContainment" description="Create new MBSContainment" genLinks="//@diagram/@links.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="MBSHerencia" description="Create new MBSHerencia" genLinks="//@diagram/@links.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="MBSRelacion" description="Create new MBSRelacion" genLinks="//@diagram/@links.0"/>
       </groups>
     </palette>
-    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="diagramaConcreta.diagram.general" name="DiagConcreta Diagram">
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="diagramaConcreta.diagram.general" name="Concreta Diagram">
       <children xsi:type="gmfgen:GenStandardPreferencePage" iD="diagramaConcreta.diagram.appearance" name="Appearance" kind="Appearance"/>
       <children xsi:type="gmfgen:GenStandardPreferencePage" iD="diagramaConcreta.diagram.connections" name="Connections" kind="Connections"/>
       <children xsi:type="gmfgen:GenStandardPreferencePage" iD="diagramaConcreta.diagram.printing" name="Printing" kind="Printing"/>
@@ -150,6 +175,16 @@
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.2" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
   </navigator>
   <diagramUpdater/>
   <propertySheet>

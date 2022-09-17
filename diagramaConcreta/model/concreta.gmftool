@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <palette
-      title="diagConcretaPalette">
+      title="concretaPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
         title="Objects"
@@ -46,20 +46,29 @@
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="MBSParametro"
-          description="Create new MBSParametro">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
     </tools>
     <tools
         xsi:type="gmftool:ToolGroup"
         title="Connections"
         collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MBSContainment"
+          description="Create new MBSContainment">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MBSHerencia"
+          description="Create new MBSHerencia">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="MBSRelacion"

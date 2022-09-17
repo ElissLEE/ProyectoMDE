@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: diagramaConcreta.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: diagConcreta.presentation.DiagConcretaEditorPlugin$Implementation
+Bundle-Activator: concreta.presentation.ConcretaEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: diagConcreta.presentation
+Export-Package: concreta.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  diagramaConcreta.edit;visibility:=reexport,

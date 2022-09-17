@@ -1,19 +1,12 @@
 package diagrama.model;
 
-import java.util.ArrayList;
-
-import diagConcreta.DiagConcretaFactory;
-import diagConcreta.DiagConcretaPackage;
-import diagramaAbstracta.DiagramaAbstractaFactory;
-import diagramaAbstracta.DiagramaAbstractaPackage;
-import diagConcreta.MBSClase;
-import diagConcreta.MBSDiagramaClases;
-import diagConcreta.MBSPaquete;
-import diagConcreta.MBSRelacion;
-import diagConcreta.ModelFactory;
+import abstracta.AbstractaPackage;
+import concreta.ConcretaFactory;
+import concreta.ConcretaPackage;
+import concreta.ModelFactory;
 
 public class ModelFactoryModel {
-
+	
 	//------------------------------  Singleton ------------------------------------------------
 	// Clase estatica oculta. Tan solo se instanciara el singleton una vez
 	private static class SingletonHolder { 
@@ -26,42 +19,20 @@ public class ModelFactoryModel {
 		return SingletonHolder.eINSTANCE;
 	}
 	//------------------------------  Singleton ------------------------------------------------
-	ModelFactory modelFactory = DiagConcretaFactory.eINSTANCE.createModelFactory();
-	ModelFactory modelFactoryConcreta;
-	diagramaAbstracta.ModelFactory modelFactoryAbstracta;
+	ModelFactory modelFactory = ConcretaFactory.eINSTANCE.createModelFactory();
+	private ModelFactory modelFactoryConcreta;
+	private abstracta.ModelFactory modelFactoryAbstracta;
 
 	public ModelFactoryModel() {
-		// TODO Auto-generated constructor stub
-
-		ModelFactory tempModelFactory = modelFactory;
-
-//		modelFactory = cargar();
-
-		if ( modelFactory == null ){
-			modelFactory = tempModelFactory;
-
-		}
 	}
 
 	public ModelFactory cargarConcreta() {
 		ModelFactory modelFactory = null;
 
-		DiagConcretaPackage whoownmePackage =  DiagConcretaPackage.eINSTANCE;
+		ConcretaPackage whoownmePackage =  ConcretaPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
-		//EXISTEN 3 FORMAS DE CARGAR EL RECURSO
-
-		//1. CON LA SIGUIENTE RUTA (platform:/resource) SE CARGAR EL RECURSO CUANDO SE HACE UNA NUEVA INSTANCIA DE ECLIPSE, EN DONDE SE CREA UN PROYECTO(test)
-		//QUE CONTIENE LAS PRODUCCIONES, DONDE SE ESPECIFICA QUE RECURSO CARGAR
-
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/concreta.diagconcreta");
-
-		//2.CON LA SIGUIENTE RUTA (platform:/plugin/) SE CARGAR EL RECURSO DE ALGUNOS DE LOS PLUGINS(whoownme.model) EN LOS QUE SE ESTA TRABJANDO EN EL WORKSPACE
-		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/plugin/whoownme.model/resource/model.whoownme");
-
-		//3. CON LA SIGUIENTE RUTA (file:\\E:\\) SE CARGA EL RECURSO INDICANDO UNA RUTA DESDE EL DIRECTORIO DE ARCHIVOS DE WIMDOWS
-		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("file:\\E:\\varios\\td\\whoownme\\whoownme\\whoownme.model\\resource\\model.whoownme");
-
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/"+"model.concreta");
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {
@@ -75,32 +46,19 @@ public class ModelFactoryModel {
 		}
 		return modelFactory;
 	}
-	
-	public diagramaAbstracta.ModelFactory cargarAbstracta() {
-		
-		diagramaAbstracta.ModelFactory modelFactory = null;
 
-		DiagramaAbstractaPackage whoownmePackage =  DiagramaAbstractaPackage.eINSTANCE;
+	public abstracta.ModelFactory cargarAbstracta() {
+		abstracta.ModelFactory modelFactory = null;
+
+		AbstractaPackage whoownmePackage =  AbstractaPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
-		//EXISTEN 3 FORMAS DE CARGAR EL RECURSO
-
-		//1. CON LA SIGUIENTE RUTA (platform:/resource) SE CARGAR EL RECURSO CUANDO SE HACE UNA NUEVA INSTANCIA DE ECLIPSE, EN DONDE SE CREA UN PROYECTO(test)
-		//QUE CONTIENE LAS PRODUCCIONES, DONDE SE ESPECIFICA QUE RECURSO CARGAR
-
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/abstracta.diagramaabstracta");
-
-		//2.CON LA SIGUIENTE RUTA (platform:/plugin/) SE CARGAR EL RECURSO DE ALGUNOS DE LOS PLUGINS(whoownme.model) EN LOS QUE SE ESTA TRABJANDO EN EL WORKSPACE
-		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/plugin/whoownme.model/resource/model.whoownme");
-
-		//3. CON LA SIGUIENTE RUTA (file:\\E:\\) SE CARGA EL RECURSO INDICANDO UNA RUTA DESDE EL DIRECTORIO DE ARCHIVOS DE WIMDOWS
-		//org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("file:\\E:\\varios\\td\\whoownme\\whoownme\\whoownme.model\\resource\\model.whoownme");
-
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.abstracta");
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {
 			resource.load(null);
-			modelFactory = (diagramaAbstracta.ModelFactory)resource.getContents().get(0);
+			modelFactory = (abstracta.ModelFactory)resource.getContents().get(0);
 			System.out.println("loaded: " + modelFactory);
 		}
 		catch (java.io.IOException e) {
@@ -110,114 +68,61 @@ public class ModelFactoryModel {
 		return modelFactory;
 	}
 	
+	public void salvarAbstracta() {
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.abstracta");
+		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+		resource.getContents().add(modelFactoryAbstracta);
+		try {
+			resource.save(java.util.Collections.EMPTY_MAP);
+		} catch (java.io.IOException e) {
+			// TO-DO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return;
+
+}
+
+	
+
 	public void generarModelToModel() {
 		
 		modelFactoryConcreta = cargarConcreta();
 		modelFactoryAbstracta = cargarAbstracta();
-		
-		//Crear paquetes (Determinar si hay que crear paquetes)
-		for (MBSDiagramaClases diagrama : modelFactoryConcreta.getListaDiagramas()) {
-			
-			for (MBSPaquete paquete : diagrama.getListaPaquetes()) {
-				
-//				crearPaquete(paquete);
-			}
-		}
+		TransformacionM2M transformacionM2M = new TransformacionM2M(modelFactoryConcreta, modelFactoryAbstracta);
+		transformacionM2M.transformarM2M();
+		salvarAbstracta();
 	}
 
-//	private void crearPaquete(MBSPaquete paquete) {
-//		
-//		String ruta = paquete.getRuta();
-//		
-//		String[] split=ruta.split("/");
-//		
-//		for(int i=0;i<split.length;i++) {
-//			String nombrePaquete = split[i];
-//			MBSPaquete paqueteAux = obtenerPaquete(nombrePaquete);
-//			if(paqueteAux != null) {
-//				//Crear paquete
-//			}
-//		}
-//		
-//	}
 
-//	private MBSPaquete obtenerPaquete(String nombrePaquete) {
-//		
-//		for (iterable_type iterable_element : modelFactoryAbstracta.getListaDiagramas()) {
-//			
-//		}
-//	}
-	
-//	private ModelFactory cargarAbstracta() {
-//		
-//		ModelFactory modelFactory = cargar("model.diagramaabstracta");
-//		return modelFactory;
-//	}
-
-//	public void generarModelToModel() {
-//		ModelFactory modelFactory = cargar();
-//		
-//		//Imprimir las clases creadas por un usuario de todos los diagramas
-//		
-////		for (MBSDiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-////			 System.out.println("Diagrama de clases: " + diagrama.getNombre()+ "\n");
-////			 
-////			 for (MBSClase clase : diagrama.getListaClases()) {
-////				 
-////				System.out.println("clase: " + clase.getNombre() + "\n");
-////			}
-////			 
-////		}
-//		
-//		//Buscar una clase por el id
-//		
-//		//Imprimir las relaciones salientes de una clase
-//		
-//		ArrayList<MBSRelacion>listaRelaciones = obtenerRelacionesSalientes("empresa");
-//		
-//		for(int i=0;i<listaRelaciones.size();i++) {
-//			System.out.println("Relacion saliente con la clase empresa: "+listaRelaciones.get(i).getTarget().getNombre());
-//		}
-//		
-//		//Imprimir las relaciones entrantes de una clase
-//		
-//		//Verificar si existe una relacion entre dos clases dados por sus id
-//	
-//		
-//	}
-//	
-//	private MBSClase obtenerClase(String nombre){
-//		
-//		for (MBSDiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-//			 for (MBSClase clase : diagrama.getListaClases()) {
-//				 
-//				if(clase.getNombre().equals(nombre)) {
-//					return clase;
+//	private ArrayList<Object> obtenerRelacionesSalientes(String nombreClase) {
+//		ArrayList<Object> listaRelaciones = new ArrayList<>();
+//		for(MBSdiagramaClases diagrama : modelFactory.getListaDiagramas()) {
+//			for (MBSRelacion mbsRelacion : diagrama.getListaRelaciones()) {
+//				if(mbsRelacion.getSource().getNombre().equals(nombreClase)) {
+//					listaRelaciones.add(mbsRelacion);
 //				}
 //			}
-//			 
 //		}
-//		
-//		return null;
+//		return listaRelaciones;
 //	}
-	
-	private ArrayList<MBSRelacion>obtenerRelacionesSalientes(String nombreClase){
-		
-		ArrayList<MBSRelacion>listaRelaciones = new ArrayList<>();
-		
-		
-		for (MBSDiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-			 for (MBSRelacion relacion : diagrama.getListaRelaciones()) {
-				 
-				if(relacion.getSource().getNombre().equals(nombreClase)) {
-					listaRelaciones.add(relacion);
-				}
-			}
-			 
-		}
-		
-		return listaRelaciones;
-	}
 
+	/**
+	 * Busca una clase
+	 * @param nombre
+	 * @return
+	 */
+//	private MBSClase obtenerClase(String nombre) {
+//		MBSClase clase = null;
+//		for (MBSdiagramaClases diagrama : modelFactory.getListaDiagramas()) {
+//			for (MBSClase mbsClase : diagrama.getListaClases()) {
+//				if(mbsClase.getNombre().equals(nombre)) {
+//					return mbsClase;
+//				}
+//			}
+//		}
+//		return clase;
+//	}
 
 }

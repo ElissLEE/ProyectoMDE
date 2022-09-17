@@ -1,0 +1,101 @@
+@namespace(uri="abstracta", prefix="abstracta")
+@gmf
+package abstracta;
+
+class ModelFactory  {
+	
+	attr String nombre;
+	attr String ruta;
+	val MBSPaquete[*] listaPaquetes;
+}
+
+class MBSPaquete  {
+	
+	attr String nombre;
+	attr String ruta;
+	val MBSClase[*] listaClases;
+	val MBSPaquete[*] listaPaquetes;
+}
+
+class MBSClase  {
+	
+	attr String idClase;
+	attr String nombre;
+	attr String estereotipo;
+	attr String modificadorAcceso;
+	attr boolean abstracta;
+	attr String descripcion;
+	attr String ruta;
+	
+	val MBSAtributo[*] atributos;
+	val MBSMetodo[*] metodos;
+	val MBSRelacion [*]listaRelaciones;
+	val MBSHerencia[*] listaRelacionesHerencia;
+    val MBSContainment[*] listaRelacionesContainment;
+	
+}
+
+class MBSMetodo {
+	
+	attr String nombre;	
+	attr String modificadorAcceso;
+	attr String tipoRetorno;
+	attr String ruta;
+	
+	val MBSParametro[*] listaParametros;
+}
+
+class MBSAtributo {
+	
+	attr String nombre;
+	attr String tipo;
+	attr String modificadorAcesso;
+	attr String ValorDefecto;
+	attr boolean constante;
+	attr String ruta;
+	
+}
+
+class MBSParametro {
+	
+	attr String nombre;
+	attr String tipo;
+
+}
+
+class MBSRelacion {
+  
+    ref MBSClase source;
+    ref MBSClase target;
+    attr String nombre;
+    attr String tipo;
+    attr String multiplicidaA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr String navegabilidadA;
+    attr String navegabilidadB;
+       
+}
+
+class MBSHerencia {
+   
+    ref MBSClase source;
+    ref MBSClase target;
+
+}
+
+class MBSContainment {
+   
+    ref MBSClase source;
+    ref MBSClase target;
+   	attr String nombre;
+    attr String tipo;
+    attr String multiplicidadA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr String navegabilidadA;
+    attr String navegabilidadB;
+
+}

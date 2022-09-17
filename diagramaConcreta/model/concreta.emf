@@ -1,6 +1,6 @@
-@namespace(uri="diagConcreta", prefix="diagConcreta")
+@namespace(uri="concreta", prefix="concreta")
 @gmf
-package diagConcreta;
+package concreta;
 
  class ModelFactory{
  	
@@ -13,11 +13,13 @@ package diagConcreta;
 @gmf.diagram
 class MBSDiagramaClases {
 
-	attr String idClase;
 	attr String nombre;
+	attr String idClase;
 	attr String descripcion;
     val MBSClase[*] listaClases;
     val MBSRelacion[*] listaRelaciones;
+    val MBSHerencia[*] listaRelacionesHerencia;
+    val MBSContainment[*] listaRelacionesContainment;
     val MBSPaquete[*] listaPaquetes;
 }
 
@@ -26,11 +28,9 @@ class MBSPaquete  {
 
 	attr String nombre;
 	attr String ruta;
-	val MBSClase[*] listaClases;
-	val MBSPaquete[*] listaPaquetes;
 }
 
-@gmf.node(label = "nombre", size ="150,150", color ="240,255,255")
+@gmf.node(label = "nombre", label.layout= "center", size ="150,150", color ="240,255,255")
 class MBSClase  {
 
 	attr String nombre;
@@ -38,10 +38,11 @@ class MBSClase  {
 	attr String modificadorAcceso;
 	attr boolean abstracta;
 	attr String descripcion;
+	attr String ruta;
 	
-	@gmf.compartment 
+	@gmf.compartment(layout="list", collapsible="false")
 	val MBSAtributo[*] atributos;
-	@gmf.compartment
+	@gmf.compartment(layout="list", collapsible="false")
 	val MBSMetodo[*] metodos;
 
 }
@@ -50,10 +51,9 @@ class MBSClase  {
 class MBSMetodo {
 	
 	attr String nombre;	
-	attr boolean static;
 	attr String modificadorAcceso;
 	attr String tipoRetorno;
-	attr String semantica;
+	attr String ruta;
 
 	val MBSParametro[*] listaParametros;
 }
@@ -64,18 +64,17 @@ class MBSAtributo {
 	attr String nombre;
 	attr String tipo;
 	attr String modificadorAcesso;
-	attr String ValorDefecto;
+	attr String valorDefecto;
 	attr boolean constante;
-	attr boolean static;	
+	attr String ruta;
 	
 }
 
-@gmf.node(label = "nombre")
 class MBSParametro {
 	
 	attr String nombre;
 	attr String tipo;
-
+	
 }
 
 @gmf.link(source="source", target="target", style="solid", width="2", label="labelName")
@@ -92,5 +91,29 @@ class MBSRelacion {
     attr String navegabilidadA;
     attr String navegabilidadB;
     attr String labelName;
+
+}
+
+@gmf.link(source="source", target="target", style="dot", width="1", target.decoration="closedarrow")
+class MBSHerencia {
+   
+    ref MBSClase source;
+    ref MBSClase target;
+
+}
+
+@gmf.link(source="source", source.decoration="filledrhomb", target="target", style="solid", width="2")
+class MBSContainment {
+   
+    ref MBSClase source;
+    ref MBSClase target;
+   	attr String nombre;
+    attr String tipo;
+    attr String multiplicidadA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr String navegabilidadA;
+    attr String navegabilidadB;
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="diagConcreta" nsURI="diagConcreta" nsPrefix="diagConcreta">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="concreta" nsURI="concreta" nsPrefix="concreta">
   <eAnnotations source="gmf"/>
   <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -10,13 +10,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSDiagramaClases">
     <eAnnotations source="gmf.diagram"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idClase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idClase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaClases" upperBound="-1"
         eType="#//MBSClase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelaciones" upperBound="-1"
         eType="#//MBSRelacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelacionesHerencia"
+        upperBound="-1" eType="#//MBSHerencia" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelacionesContainment"
+        upperBound="-1" eType="#//MBSContainment" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaPaquetes" upperBound="-1"
         eType="#//MBSPaquete" containment="true"/>
   </eClassifiers>
@@ -26,14 +30,11 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listaClases" upperBound="-1"
-        eType="#//MBSClase" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listaPaquetes" upperBound="-1"
-        eType="#//MBSPaquete" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSClase">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
+      <details key="label.layout" value="center"/>
       <details key="size" value="150,150"/>
       <details key="color" value="240,255,255"/>
     </eAnnotations>
@@ -42,13 +43,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcceso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstracta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//MBSAtributo" containment="true">
-      <eAnnotations source="gmf.compartment"/>
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metodos" upperBound="-1"
         eType="#//MBSMetodo" containment="true">
-      <eAnnotations source="gmf.compartment"/>
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSMetodo">
@@ -60,10 +68,9 @@
       <details key="border.color" value="255,255,255"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcceso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoRetorno" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semantica" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaParametros" upperBound="-1"
         eType="#//MBSParametro" containment="true"/>
   </eClassifiers>
@@ -78,14 +85,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcesso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constante" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSParametro">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="nombre"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -108,5 +112,35 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MBSHerencia">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="1"/>
+      <details key="target.decoration" value="closedarrow"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MBSContainment">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="source.decoration" value="filledrhomb"/>
+      <details key="target" value="target"/>
+      <details key="style" value="solid"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

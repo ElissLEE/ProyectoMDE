@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: diagramaAbstracta.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: diagramaAbstracta.presentation.DiagramaAbstractaEditorPlugin$Implementation
+Bundle-Activator: abstracta.presentation.AbstractaEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: diagramaAbstracta.presentation
+Export-Package: abstracta.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  diagramaAbstracta.edit;visibility:=reexport,

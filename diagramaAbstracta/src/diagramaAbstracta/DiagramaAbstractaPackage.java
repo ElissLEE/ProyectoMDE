@@ -37,7 +37,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "diagramaAbstracta";
+	String eNS_URI = "abstracta";
 
 	/**
 	 * The package namespace name.
@@ -45,7 +45,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "diagramaAbstracta";
+	String eNS_PREFIX = "abstracta";
 
 	/**
 	 * The singleton instance of the package.
@@ -276,22 +276,13 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	int MBS_METODO__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_METODO__STATIC = 1;
-
-	/**
 	 * The feature id for the '<em><b>Modificador Acceso</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__MODIFICADOR_ACCESO = 2;
+	int MBS_METODO__MODIFICADOR_ACCESO = 1;
 
 	/**
 	 * The feature id for the '<em><b>Tipo Retorno</b></em>' attribute.
@@ -300,7 +291,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__TIPO_RETORNO = 3;
+	int MBS_METODO__TIPO_RETORNO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Semantica</b></em>' attribute.
@@ -309,7 +300,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__SEMANTICA = 4;
+	int MBS_METODO__SEMANTICA = 3;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
@@ -318,7 +309,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__LISTA_PARAMETROS = 5;
+	int MBS_METODO__LISTA_PARAMETROS = 4;
 
 	/**
 	 * The number of structural features of the '<em>MBS Metodo</em>' class.
@@ -327,7 +318,7 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO_FEATURE_COUNT = 6;
+	int MBS_METODO_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link diagramaAbstracta.impl.MBSAtributoImpl <em>MBS Atributo</em>}' class.
@@ -385,22 +376,13 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	int MBS_ATRIBUTO__CONSTANTE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_ATRIBUTO__STATIC = 5;
-
-	/**
 	 * The number of structural features of the '<em>MBS Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_ATRIBUTO_FEATURE_COUNT = 6;
+	int MBS_ATRIBUTO_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link diagramaAbstracta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.
@@ -777,17 +759,6 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	EAttribute getMBSMetodo_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link diagramaAbstracta.MBSMetodo#isStatic <em>Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Static</em>'.
-	 * @see diagramaAbstracta.MBSMetodo#isStatic()
-	 * @see #getMBSMetodo()
-	 * @generated
-	 */
-	EAttribute getMBSMetodo_Static();
-
-	/**
 	 * Returns the meta object for the attribute '{@link diagramaAbstracta.MBSMetodo#getModificadorAcceso <em>Modificador Acceso</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -895,17 +866,6 @@ public interface DiagramaAbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMBSAtributo_Constante();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagramaAbstracta.MBSAtributo#isStatic <em>Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Static</em>'.
-	 * @see diagramaAbstracta.MBSAtributo#isStatic()
-	 * @see #getMBSAtributo()
-	 * @generated
-	 */
-	EAttribute getMBSAtributo_Static();
 
 	/**
 	 * Returns the meta object for class '{@link diagramaAbstracta.MBSParametro <em>MBS Parametro</em>}'.
@@ -1258,14 +1218,6 @@ public interface DiagramaAbstractaPackage extends EPackage {
 		EAttribute MBS_METODO__NOMBRE = eINSTANCE.getMBSMetodo_Nombre();
 
 		/**
-		 * The meta object literal for the '<em><b>Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_METODO__STATIC = eINSTANCE.getMBSMetodo_Static();
-
-		/**
 		 * The meta object literal for the '<em><b>Modificador Acceso</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1346,14 +1298,6 @@ public interface DiagramaAbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_ATRIBUTO__CONSTANTE = eINSTANCE.getMBSAtributo_Constante();
-
-		/**
-		 * The meta object literal for the '<em><b>Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_ATRIBUTO__STATIC = eINSTANCE.getMBSAtributo_Static();
 
 		/**
 		 * The meta object literal for the '{@link diagramaAbstracta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.

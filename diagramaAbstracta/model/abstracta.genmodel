@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/diagramaAbstracta/src" modelPluginID="diagramaAbstracta"
+    modelName="Abstracta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>abstracta.emf</foreignModel>
+  <genPackages prefix="Abstracta" disposableProviderFactory="true" ecorePackage="abstracta.ecore#/">
+    <genClasses ecoreClass="abstracta.ecore#//ModelFactory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//ModelFactory/listaPaquetes"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSPaquete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSPaquete/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSPaquete/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSPaquete/listaClases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSPaquete/listaPaquetes"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSClase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/idClase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/estereotipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/modificadorAcceso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/abstracta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/descripcion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSClase/atributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSClase/metodos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSClase/listaRelaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSClase/listaRelacionesHerencia"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSClase/listaRelacionesContainment"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSMetodo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSMetodo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSMetodo/modificadorAcceso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSMetodo/tipoRetorno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSMetodo/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSMetodo/listaParametros"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSAtributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/modificadorAcesso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/ValorDefecto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/constante"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSAtributo/ruta"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSParametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSParametro/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSParametro/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSRelacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSRelacion/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSRelacion/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/multiplicidaA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/multiplicidadB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/rolA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/rolB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/navegabilidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSRelacion/navegabilidadB"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSHerencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSHerencia/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSHerencia/target"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MBSContainment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSContainment/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MBSContainment/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/multiplicidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/multiplicidadB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/rolA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/rolB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/navegabilidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSContainment/navegabilidadB"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

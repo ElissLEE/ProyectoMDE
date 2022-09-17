@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/diagramaConcreta/src" modelPluginID="diagramaConcreta"
-    modelName="DiagConcreta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    modelName="Concreta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false">
   <foreignModel>concreta.emf</foreignModel>
-  <genPackages prefix="DiagConcreta" disposableProviderFactory="true" ecorePackage="concreta.ecore#/">
+  <genPackages prefix="Concreta" disposableProviderFactory="true" ecorePackage="concreta.ecore#/">
     <genClasses ecoreClass="concreta.ecore#//ModelFactory">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//ModelFactory/listaDiagramas"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSDiagramaClases">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSDiagramaClases/idClase"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSDiagramaClases/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSDiagramaClases/idClase"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSDiagramaClases/descripcion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSDiagramaClases/listaClases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSDiagramaClases/listaRelaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSDiagramaClases/listaRelacionesHerencia"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSDiagramaClases/listaRelacionesContainment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSDiagramaClases/listaPaquetes"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSPaquete">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSPaquete/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSPaquete/ruta"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSPaquete/listaClases"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSPaquete/listaPaquetes"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSClase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSClase/nombre"/>
@@ -30,24 +30,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSClase/modificadorAcceso"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSClase/abstracta"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSClase/descripcion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSClase/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSClase/atributos"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSClase/metodos"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/static"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/modificadorAcceso"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/tipoRetorno"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/semantica"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSMetodo/listaParametros"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSAtributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/modificadorAcesso"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/ValorDefecto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/valorDefecto"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/constante"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/ruta"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSParametro">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSParametro/nombre"/>
@@ -65,6 +65,22 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/navegabilidadA"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/navegabilidadB"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSRelacion/labelName"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MBSHerencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSHerencia/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSHerencia/target"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MBSContainment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSContainment/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSContainment/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/multiplicidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/multiplicidadB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/rolA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/rolB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/navegabilidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSContainment/navegabilidadB"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

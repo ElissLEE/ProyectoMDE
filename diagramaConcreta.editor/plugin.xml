@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="diagConcreta.presentation.DiagConcretaModelWizardID"
-            name="%_UI_DiagConcretaModelWizard_label"
-            class="diagConcreta.presentation.DiagConcretaModelWizard"
+            id="concreta.presentation.ConcretaModelWizardID"
+            name="%_UI_ConcretaModelWizard_label"
+            class="concreta.presentation.ConcretaModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/DiagConcretaModelFile.gif">
-         <description>%_UI_DiagConcretaModelWizard_description</description>
+            icon="icons/full/obj16/ConcretaModelFile.gif">
+         <description>%_UI_ConcretaModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated concreta -->
       <editor
-            id="diagConcreta.presentation.DiagConcretaEditorID"
-            name="%_UI_DiagConcretaEditor_label"
-            icon="icons/full/obj16/DiagConcretaModelFile.gif"
-            extensions="diagconcreta"
-            class="diagConcreta.presentation.DiagConcretaEditor"
-            contributorClass="diagConcreta.presentation.DiagConcretaActionBarContributor">
+            id="concreta.presentation.ConcretaEditorID"
+            name="%_UI_ConcretaEditor_label"
+            icon="icons/full/obj16/ConcretaModelFile.gif"
+            extensions="concreta"
+            class="concreta.presentation.ConcretaEditor"
+            contributorClass="concreta.presentation.ConcretaActionBarContributor">
       </editor>
    </extension>
 

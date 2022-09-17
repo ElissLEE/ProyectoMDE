@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated concreta -->
       <factory
-            uri="diagConcreta"
-            class="diagConcreta.provider.DiagConcretaItemProviderAdapterFactory"
+            uri="concreta"
+            class="concreta.provider.ConcretaItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

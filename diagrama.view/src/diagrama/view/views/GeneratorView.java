@@ -20,24 +20,6 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 
 
-/**
- * This sample class demonstrates how to plug-in a new
- * workbench view. The view shows data obtained from the
- * model. The sample creates a dummy model on the fly,
- * but a real implementation would connect to the model
- * available either in this or another plug-in (e.g. the workspace).
- * The view is connected to the model using a content provider.
- * <p>
- * The view uses a label provider to define how model
- * objects should be presented in the view. Each
- * view can present the same model objects using
- * different labels and icons, if needed. Alternatively,
- * a single label provider can be shared between views
- * in order to ensure that objects of the same type are
- * presented in the same way everywhere.
- * <p>
- */
-
 public class GeneratorView extends ViewPart {
 	public GeneratorView() {
 	}
@@ -46,9 +28,7 @@ public class GeneratorView extends ViewPart {
 	 * The ID of the view as specified by the extension.
 	 */
 	public static final String ID = "diagrama.view.views.GeneratorView";
-
-
-
+	
 
 	@Override
 	public void createPartControl(Composite parent) {
@@ -56,7 +36,7 @@ public class GeneratorView extends ViewPart {
 		
 		Group grpGeneracionDeModelo = new Group(parent, SWT.NONE);
 		grpGeneracionDeModelo.setText("Generacion de modelo a modelo");
-		grpGeneracionDeModelo.setBounds(38, 31, 500, 119);
+		grpGeneracionDeModelo.setBounds(10, 10, 574, 132);
 		
 		Button btnGenerateMm = new Button(grpGeneracionDeModelo, SWT.NONE);
 		btnGenerateMm.addSelectionListener(new SelectionAdapter() {
@@ -66,20 +46,18 @@ public class GeneratorView extends ViewPart {
 				mfm.generarModelToModel();
 			}
 		});
-		btnGenerateMm.setBounds(205, 47, 104, 25);
+		btnGenerateMm.setBounds(219, 55, 138, 25);
 		btnGenerateMm.setText("Generate M2M");
 		
 		Group grpGeneracionDeModelo_2 = new Group(parent, SWT.NONE);
 		grpGeneracionDeModelo_2.setText("Generacion de modelo a texto");
-		grpGeneracionDeModelo_2.setBounds(38, 182, 500, 119);
+		grpGeneracionDeModelo_2.setBounds(10, 154, 574, 132);
 		
 		Button btnGenerateMt = new Button(grpGeneracionDeModelo_2, SWT.NONE);
 		btnGenerateMt.setText("Generate M2T");
-		btnGenerateMt.setBounds(205, 47, 104, 25);
+		btnGenerateMt.setBounds(219, 55, 138, 25);
 
 	}
-
-
 
 	@Override
 	public void setFocus() {

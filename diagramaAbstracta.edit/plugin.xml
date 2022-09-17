@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated diagramaAbstracta -->
+      <!-- @generated abstracta -->
       <factory
-            uri="diagramaAbstracta"
-            class="diagramaAbstracta.provider.DiagramaAbstractaItemProviderAdapterFactory"
+            uri="abstracta"
+            class="abstracta.provider.AbstractaItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
