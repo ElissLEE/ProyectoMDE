@@ -39,7 +39,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/modificadorAcceso"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/tipoRetorno"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/ruta"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSMetodo/listaParametros"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSMetodo/parametros"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSAtributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/nombre"/>
@@ -48,10 +48,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/valorDefecto"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/constante"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/ruta"/>
-    </genClasses>
-    <genClasses ecoreClass="concreta.ecore#//MBSParametro">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSParametro/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSParametro/tipo"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MBSRelacion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MBSRelacion/source"/>

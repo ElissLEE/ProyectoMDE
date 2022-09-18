@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MBSRelacion#getTarget <em>Target</em>}</li>
  *   <li>{@link abstracta.MBSRelacion#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.MBSRelacion#getTipo <em>Tipo</em>}</li>
- *   <li>{@link abstracta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}</li>
+ *   <li>{@link abstracta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link abstracta.MBSRelacion#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  *   <li>{@link abstracta.MBSRelacion#getRolA <em>Rol A</em>}</li>
  *   <li>{@link abstracta.MBSRelacion#getRolB <em>Rol B</em>}</li>
@@ -135,30 +135,30 @@ public interface MBSRelacion extends EObject {
 	void setTipo(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Multiplicida A</b></em>' attribute.
+	 * Returns the value of the '<em><b>Multiplicidad A</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Multiplicida A</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Multiplicidad A</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Multiplicida A</em>' attribute.
-	 * @see #setMultiplicidaA(String)
-	 * @see abstracta.AbstractaPackage#getMBSRelacion_MultiplicidaA()
+	 * @return the value of the '<em>Multiplicidad A</em>' attribute.
+	 * @see #setMultiplicidadA(String)
+	 * @see abstracta.AbstractaPackage#getMBSRelacion_MultiplicidadA()
 	 * @model
 	 * @generated
 	 */
-	String getMultiplicidaA();
+	String getMultiplicidadA();
 
 	/**
-	 * Sets the value of the '{@link abstracta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Multiplicida A</em>' attribute.
-	 * @see #getMultiplicidaA()
+	 * @param value the new value of the '<em>Multiplicidad A</em>' attribute.
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 */
-	void setMultiplicidaA(String value);
+	void setMultiplicidadA(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicidad B</b></em>' attribute.

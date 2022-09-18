@@ -62,7 +62,6 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 			case ConcretaPackage.MBS_CLASE: return createMBSClase();
 			case ConcretaPackage.MBS_METODO: return createMBSMetodo();
 			case ConcretaPackage.MBS_ATRIBUTO: return createMBSAtributo();
-			case ConcretaPackage.MBS_PARAMETRO: return createMBSParametro();
 			case ConcretaPackage.MBS_RELACION: return createMBSRelacion();
 			case ConcretaPackage.MBS_HERENCIA: return createMBSHerencia();
 			case ConcretaPackage.MBS_CONTAINMENT: return createMBSContainment();
@@ -129,16 +128,6 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	public MBSAtributo createMBSAtributo() {
 		MBSAtributoImpl mbsAtributo = new MBSAtributoImpl();
 		return mbsAtributo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSParametro createMBSParametro() {
-		MBSParametroImpl mbsParametro = new MBSParametroImpl();
-		return mbsParametro;
 	}
 
 	/**

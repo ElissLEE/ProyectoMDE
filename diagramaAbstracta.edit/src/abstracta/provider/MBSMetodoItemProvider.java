@@ -3,7 +3,6 @@
 package abstracta.provider;
 
 
-import abstracta.AbstractaFactory;
 import abstracta.AbstractaPackage;
 import abstracta.MBSMetodo;
 
@@ -14,8 +13,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -67,6 +64,7 @@ public class MBSMetodoItemProvider
 			addModificadorAccesoPropertyDescriptor(object);
 			addTipoRetornoPropertyDescriptor(object);
 			addRutaPropertyDescriptor(object);
+			addParametrosPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -160,33 +158,25 @@ public class MBSMetodoItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Parametros feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(AbstractaPackage.Literals.MBS_METODO__LISTA_PARAMETROS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addParametrosPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSMetodo_parametros_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSMetodo_parametros_feature", "_UI_MBSMetodo_type"),
+				 AbstractaPackage.Literals.MBS_METODO__PARAMETROS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -231,10 +221,8 @@ public class MBSMetodoItemProvider
 			case AbstractaPackage.MBS_METODO__MODIFICADOR_ACCESO:
 			case AbstractaPackage.MBS_METODO__TIPO_RETORNO:
 			case AbstractaPackage.MBS_METODO__RUTA:
+			case AbstractaPackage.MBS_METODO__PARAMETROS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case AbstractaPackage.MBS_METODO__LISTA_PARAMETROS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -250,11 +238,6 @@ public class MBSMetodoItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AbstractaPackage.Literals.MBS_METODO__LISTA_PARAMETROS,
-				 AbstractaFactory.eINSTANCE.createMBSParametro()));
 	}
 
 	/**

@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link concreta.impl.MBSMetodoImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link concreta.impl.MBSMetodoImpl#getTipoRetorno <em>Tipo Retorno</em>}</li>
  *   <li>{@link concreta.impl.MBSMetodoImpl#getRuta <em>Ruta</em>}</li>
- *   <li>{@link concreta.impl.MBSMetodoImpl#getListaParametros <em>Lista Parametros</em>}</li>
+ *   <li>{@link concreta.impl.MBSMetodoImpl#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,14 +121,24 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 	protected String ruta = RUTA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getListaParametros() <em>Lista Parametros</em>}' containment reference list.
+	 * The default value of the '{@link #getParametros() <em>Parametros</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getListaParametros()
+	 * @see #getParametros()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MBSParametro> listaParametros;
+	protected static final String PARAMETROS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getParametros() <em>Parametros</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParametros()
+	 * @generated
+	 * @ordered
+	 */
+	protected String parametros = PARAMETROS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,11 +248,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MBSParametro> getListaParametros() {
-		if (listaParametros == null) {
-			listaParametros = new EObjectContainmentEList<MBSParametro>(MBSParametro.class, this, ConcretaPackage.MBS_METODO__LISTA_PARAMETROS);
-		}
-		return listaParametros;
+	public String getParametros() {
+		return parametros;
 	}
 
 	/**
@@ -250,13 +257,11 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ConcretaPackage.MBS_METODO__LISTA_PARAMETROS:
-				return ((InternalEList<?>)getListaParametros()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setParametros(String newParametros) {
+		String oldParametros = parametros;
+		parametros = newParametros;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_METODO__PARAMETROS, oldParametros, parametros));
 	}
 
 	/**
@@ -275,8 +280,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 				return getTipoRetorno();
 			case ConcretaPackage.MBS_METODO__RUTA:
 				return getRuta();
-			case ConcretaPackage.MBS_METODO__LISTA_PARAMETROS:
-				return getListaParametros();
+			case ConcretaPackage.MBS_METODO__PARAMETROS:
+				return getParametros();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,9 +307,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 			case ConcretaPackage.MBS_METODO__RUTA:
 				setRuta((String)newValue);
 				return;
-			case ConcretaPackage.MBS_METODO__LISTA_PARAMETROS:
-				getListaParametros().clear();
-				getListaParametros().addAll((Collection<? extends MBSParametro>)newValue);
+			case ConcretaPackage.MBS_METODO__PARAMETROS:
+				setParametros((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -330,8 +334,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 			case ConcretaPackage.MBS_METODO__RUTA:
 				setRuta(RUTA_EDEFAULT);
 				return;
-			case ConcretaPackage.MBS_METODO__LISTA_PARAMETROS:
-				getListaParametros().clear();
+			case ConcretaPackage.MBS_METODO__PARAMETROS:
+				setParametros(PARAMETROS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -353,8 +357,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 				return TIPO_RETORNO_EDEFAULT == null ? tipoRetorno != null : !TIPO_RETORNO_EDEFAULT.equals(tipoRetorno);
 			case ConcretaPackage.MBS_METODO__RUTA:
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
-			case ConcretaPackage.MBS_METODO__LISTA_PARAMETROS:
-				return listaParametros != null && !listaParametros.isEmpty();
+			case ConcretaPackage.MBS_METODO__PARAMETROS:
+				return PARAMETROS_EDEFAULT == null ? parametros != null : !PARAMETROS_EDEFAULT.equals(parametros);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -377,6 +381,8 @@ public class MBSMetodoImpl extends EObjectImpl implements MBSMetodo {
 		result.append(tipoRetorno);
 		result.append(", ruta: ");
 		result.append(ruta);
+		result.append(", parametros: ");
+		result.append(parametros);
 		result.append(')');
 		return result.toString();
 	}

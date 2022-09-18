@@ -367,13 +367,13 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_METODO__RUTA = 3;
 
 	/**
-	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Parametros</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__LISTA_PARAMETROS = 4;
+	int MBS_METODO__PARAMETROS = 4;
 
 	/**
 	 * The number of structural features of the '<em>MBS Metodo</em>' class.
@@ -458,43 +458,6 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_ATRIBUTO_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link concreta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see concreta.impl.MBSParametroImpl
-	 * @see concreta.impl.ConcretaPackageImpl#getMBSParametro()
-	 * @generated
-	 */
-	int MBS_PARAMETRO = 6;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO__NOMBRE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO__TIPO = 1;
-
-	/**
-	 * The number of structural features of the '<em>MBS Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link concreta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -502,7 +465,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMBSRelacion()
 	 * @generated
 	 */
-	int MBS_RELACION = 7;
+	int MBS_RELACION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -621,7 +584,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMBSHerencia()
 	 * @generated
 	 */
-	int MBS_HERENCIA = 8;
+	int MBS_HERENCIA = 7;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -658,7 +621,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMBSContainment()
 	 * @generated
 	 */
-	int MBS_CONTAINMENT = 9;
+	int MBS_CONTAINMENT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1086,15 +1049,15 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMBSMetodo_Ruta();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MBSMetodo#getListaParametros <em>Lista Parametros</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MBSMetodo#getParametros <em>Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Parametros</em>'.
-	 * @see concreta.MBSMetodo#getListaParametros()
+	 * @return the meta object for the attribute '<em>Parametros</em>'.
+	 * @see concreta.MBSMetodo#getParametros()
 	 * @see #getMBSMetodo()
 	 * @generated
 	 */
-	EReference getMBSMetodo_ListaParametros();
+	EAttribute getMBSMetodo_Parametros();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MBSAtributo <em>MBS Atributo</em>}'.
@@ -1171,38 +1134,6 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMBSAtributo_Ruta();
-
-	/**
-	 * Returns the meta object for class '{@link concreta.MBSParametro <em>MBS Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MBS Parametro</em>'.
-	 * @see concreta.MBSParametro
-	 * @generated
-	 */
-	EClass getMBSParametro();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSParametro#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see concreta.MBSParametro#getNombre()
-	 * @see #getMBSParametro()
-	 * @generated
-	 */
-	EAttribute getMBSParametro_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSParametro#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see concreta.MBSParametro#getTipo()
-	 * @see #getMBSParametro()
-	 * @generated
-	 */
-	EAttribute getMBSParametro_Tipo();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MBSRelacion <em>MBS Relacion</em>}'.
@@ -1760,12 +1691,12 @@ public interface ConcretaPackage extends EPackage {
 		EAttribute MBS_METODO__RUTA = eINSTANCE.getMBSMetodo_Ruta();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Parametros</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MBS_METODO__LISTA_PARAMETROS = eINSTANCE.getMBSMetodo_ListaParametros();
+		EAttribute MBS_METODO__PARAMETROS = eINSTANCE.getMBSMetodo_Parametros();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MBSAtributoImpl <em>MBS Atributo</em>}' class.
@@ -1824,32 +1755,6 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_ATRIBUTO__RUTA = eINSTANCE.getMBSAtributo_Ruta();
-
-		/**
-		 * The meta object literal for the '{@link concreta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see concreta.impl.MBSParametroImpl
-		 * @see concreta.impl.ConcretaPackageImpl#getMBSParametro()
-		 * @generated
-		 */
-		EClass MBS_PARAMETRO = eINSTANCE.getMBSParametro();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_PARAMETRO__NOMBRE = eINSTANCE.getMBSParametro_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_PARAMETRO__TIPO = eINSTANCE.getMBSParametro_Tipo();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.

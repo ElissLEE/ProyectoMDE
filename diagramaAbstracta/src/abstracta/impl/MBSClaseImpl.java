@@ -34,8 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.MBSClaseImpl#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.impl.MBSClaseImpl#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#isAbstracta <em>Abstracta</em>}</li>
@@ -51,26 +51,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class MBSClaseImpl extends EObjectImpl implements MBSClase {
-	/**
-	 * The default value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdClase()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_CLASE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdClase()
-	 * @generated
-	 * @ordered
-	 */
-	protected String idClase = ID_CLASE_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,6 +70,26 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	 * @ordered
 	 */
 	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdClase()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_CLASE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdClase()
+	 * @generated
+	 * @ordered
+	 */
+	protected String idClase = ID_CLASE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEstereotipo() <em>Estereotipo</em>}' attribute.
@@ -497,10 +497,10 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
-				return getIdClase();
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
 				return getNombre();
+			case AbstractaPackage.MBS_CLASE__ID_CLASE:
+				return getIdClase();
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 				return getEstereotipo();
 			case AbstractaPackage.MBS_CLASE__MODIFICADOR_ACCESO:
@@ -534,11 +534,11 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
-				setIdClase((String)newValue);
-				return;
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
 				setNombre((String)newValue);
+				return;
+			case AbstractaPackage.MBS_CLASE__ID_CLASE:
+				setIdClase((String)newValue);
 				return;
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 				setEstereotipo((String)newValue);
@@ -587,11 +587,11 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
-				setIdClase(ID_CLASE_EDEFAULT);
-				return;
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case AbstractaPackage.MBS_CLASE__ID_CLASE:
+				setIdClase(ID_CLASE_EDEFAULT);
 				return;
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 				setEstereotipo(ESTEREOTIPO_EDEFAULT);
@@ -635,10 +635,10 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
-				return ID_CLASE_EDEFAULT == null ? idClase != null : !ID_CLASE_EDEFAULT.equals(idClase);
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case AbstractaPackage.MBS_CLASE__ID_CLASE:
+				return ID_CLASE_EDEFAULT == null ? idClase != null : !ID_CLASE_EDEFAULT.equals(idClase);
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 				return ESTEREOTIPO_EDEFAULT == null ? estereotipo != null : !ESTEREOTIPO_EDEFAULT.equals(estereotipo);
 			case AbstractaPackage.MBS_CLASE__MODIFICADOR_ACCESO:
@@ -673,10 +673,10 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (idClase: ");
-		result.append(idClase);
-		result.append(", nombre: ");
+		result.append(" (nombre: ");
 		result.append(nombre);
+		result.append(", idClase: ");
+		result.append(idClase);
 		result.append(", estereotipo: ");
 		result.append(estereotipo);
 		result.append(", modificadorAcceso: ");

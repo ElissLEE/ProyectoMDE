@@ -76,15 +76,6 @@ public interface ConcretaFactory extends EFactory {
 	MBSAtributo createMBSAtributo();
 
 	/**
-	 * Returns a new object of class '<em>MBS Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MBS Parametro</em>'.
-	 * @generated
-	 */
-	MBSParametro createMBSParametro();
-
-	/**
 	 * Returns a new object of class '<em>MBS Relacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

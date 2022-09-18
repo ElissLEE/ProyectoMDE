@@ -187,29 +187,6 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link abstracta.MBSParametro} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MBSParametroItemProvider mbsParametroItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link abstracta.MBSParametro}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMBSParametroAdapter() {
-		if (mbsParametroItemProvider == null) {
-			mbsParametroItemProvider = new MBSParametroItemProvider(this);
-		}
-
-		return mbsParametroItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link abstracta.MBSRelacion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -382,7 +359,6 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 		if (mbsClaseItemProvider != null) mbsClaseItemProvider.dispose();
 		if (mbsMetodoItemProvider != null) mbsMetodoItemProvider.dispose();
 		if (mbsAtributoItemProvider != null) mbsAtributoItemProvider.dispose();
-		if (mbsParametroItemProvider != null) mbsParametroItemProvider.dispose();
 		if (mbsRelacionItemProvider != null) mbsRelacionItemProvider.dispose();
 		if (mbsHerenciaItemProvider != null) mbsHerenciaItemProvider.dispose();
 		if (mbsContainmentItemProvider != null) mbsContainmentItemProvider.dispose();

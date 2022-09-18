@@ -68,13 +68,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mbsParametroEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass mbsRelacionEClass = null;
 
 	/**
@@ -248,7 +241,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_IdClase() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -257,7 +250,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_Nombre() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -400,8 +393,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMBSMetodo_ListaParametros() {
-		return (EReference)mbsMetodoEClass.getEStructuralFeatures().get(4);
+	public EAttribute getMBSMetodo_Parametros() {
+		return (EAttribute)mbsMetodoEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -472,33 +465,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMBSParametro() {
-		return mbsParametroEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSParametro_Nombre() {
-		return (EAttribute)mbsParametroEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSParametro_Tipo() {
-		return (EAttribute)mbsParametroEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMBSRelacion() {
 		return mbsRelacionEClass;
 	}
@@ -544,7 +510,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSRelacion_MultiplicidaA() {
+	public EAttribute getMBSRelacion_MultiplicidadA() {
 		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -759,8 +725,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(mbsPaqueteEClass, MBS_PAQUETE__LISTA_PAQUETES);
 
 		mbsClaseEClass = createEClass(MBS_CLASE);
-		createEAttribute(mbsClaseEClass, MBS_CLASE__ID_CLASE);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__NOMBRE);
+		createEAttribute(mbsClaseEClass, MBS_CLASE__ID_CLASE);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__ESTEREOTIPO);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__MODIFICADOR_ACCESO);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__ABSTRACTA);
@@ -777,7 +743,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(mbsMetodoEClass, MBS_METODO__MODIFICADOR_ACCESO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__TIPO_RETORNO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__RUTA);
-		createEReference(mbsMetodoEClass, MBS_METODO__LISTA_PARAMETROS);
+		createEAttribute(mbsMetodoEClass, MBS_METODO__PARAMETROS);
 
 		mbsAtributoEClass = createEClass(MBS_ATRIBUTO);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__NOMBRE);
@@ -787,16 +753,12 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__CONSTANTE);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__RUTA);
 
-		mbsParametroEClass = createEClass(MBS_PARAMETRO);
-		createEAttribute(mbsParametroEClass, MBS_PARAMETRO__NOMBRE);
-		createEAttribute(mbsParametroEClass, MBS_PARAMETRO__TIPO);
-
 		mbsRelacionEClass = createEClass(MBS_RELACION);
 		createEReference(mbsRelacionEClass, MBS_RELACION__SOURCE);
 		createEReference(mbsRelacionEClass, MBS_RELACION__TARGET);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NOMBRE);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__TIPO);
-		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDA_A);
+		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDAD_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_B);
@@ -862,8 +824,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getMBSPaquete_ListaPaquetes(), this.getMBSPaquete(), null, "listaPaquetes", null, 0, -1, MBSPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsClaseEClass, MBSClase.class, "MBSClase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMBSClase_IdClase(), ecorePackage.getEString(), "idClase", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSClase_IdClase(), ecorePackage.getEString(), "idClase", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_Estereotipo(), ecorePackage.getEString(), "estereotipo", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_ModificadorAcceso(), ecorePackage.getEString(), "modificadorAcceso", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_Abstracta(), ecorePackage.getEBoolean(), "abstracta", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -880,7 +842,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMBSMetodo_ModificadorAcceso(), ecorePackage.getEString(), "modificadorAcceso", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSMetodo_TipoRetorno(), ecorePackage.getEString(), "tipoRetorno", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSMetodo_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSMetodo_ListaParametros(), this.getMBSParametro(), null, "listaParametros", null, 0, -1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSMetodo_Parametros(), ecorePackage.getEString(), "parametros", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsAtributoEClass, MBSAtributo.class, "MBSAtributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -890,16 +852,12 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMBSAtributo_Constante(), ecorePackage.getEBoolean(), "constante", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mbsParametroEClass, MBSParametro.class, "MBSParametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMBSParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSParametro_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, MBSParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(mbsRelacionEClass, MBSRelacion.class, "MBSRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMBSRelacion_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSRelacion_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_MultiplicidaA(), ecorePackage.getEString(), "multiplicidaA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_MultiplicidadA(), ecorePackage.getEString(), "multiplicidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolA(), ecorePackage.getEString(), "rolA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

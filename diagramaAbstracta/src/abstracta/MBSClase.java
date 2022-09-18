@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link abstracta.MBSClase#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link abstracta.MBSClase#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.MBSClase#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link abstracta.MBSClase#getEstereotipo <em>Estereotipo</em>}</li>
  *   <li>{@link abstracta.MBSClase#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.MBSClase#isAbstracta <em>Abstracta</em>}</li>

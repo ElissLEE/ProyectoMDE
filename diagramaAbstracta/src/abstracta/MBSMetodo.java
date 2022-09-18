@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MBSMetodo#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.MBSMetodo#getTipoRetorno <em>Tipo Retorno</em>}</li>
  *   <li>{@link abstracta.MBSMetodo#getRuta <em>Ruta</em>}</li>
- *   <li>{@link abstracta.MBSMetodo#getListaParametros <em>Lista Parametros</em>}</li>
+ *   <li>{@link abstracta.MBSMetodo#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getMBSMetodo()
@@ -132,19 +132,29 @@ public interface MBSMetodo extends EObject {
 	void setRuta(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Lista Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link abstracta.MBSParametro}.
+	 * Returns the value of the '<em><b>Parametros</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Lista Parametros</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Parametros</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Parametros</em>' containment reference list.
-	 * @see abstracta.AbstractaPackage#getMBSMetodo_ListaParametros()
-	 * @model containment="true"
+	 * @return the value of the '<em>Parametros</em>' attribute.
+	 * @see #setParametros(String)
+	 * @see abstracta.AbstractaPackage#getMBSMetodo_Parametros()
+	 * @model
 	 * @generated
 	 */
-	EList<MBSParametro> getListaParametros();
+	String getParametros();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MBSMetodo#getParametros <em>Parametros</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parametros</em>' attribute.
+	 * @see #getParametros()
+	 * @generated
+	 */
+	void setParametros(String value);
 
 } // MBSMetodo

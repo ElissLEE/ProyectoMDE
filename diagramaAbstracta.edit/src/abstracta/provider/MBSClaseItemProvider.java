@@ -63,8 +63,8 @@ public class MBSClaseItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdClasePropertyDescriptor(object);
 			addNombrePropertyDescriptor(object);
+			addIdClasePropertyDescriptor(object);
 			addEstereotipoPropertyDescriptor(object);
 			addModificadorAccesoPropertyDescriptor(object);
 			addAbstractaPropertyDescriptor(object);
@@ -281,7 +281,7 @@ public class MBSClaseItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MBSClase)object).getIdClase();
+		String label = ((MBSClase)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MBSClase_type") :
 			getString("_UI_MBSClase_type") + " " + label;
@@ -300,8 +300,8 @@ public class MBSClaseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MBSClase.class)) {
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
+			case AbstractaPackage.MBS_CLASE__ID_CLASE:
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 			case AbstractaPackage.MBS_CLASE__MODIFICADOR_ACCESO:
 			case AbstractaPackage.MBS_CLASE__ABSTRACTA:

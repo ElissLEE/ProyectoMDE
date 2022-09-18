@@ -167,22 +167,22 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_CLASE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Id Clase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CLASE__ID_CLASE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__NOMBRE = 1;
+	int MBS_CLASE__NOMBRE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id Clase</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_CLASE__ID_CLASE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Estereotipo</b></em>' attribute.
@@ -330,13 +330,13 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_METODO__RUTA = 3;
 
 	/**
-	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Parametros</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_METODO__LISTA_PARAMETROS = 4;
+	int MBS_METODO__PARAMETROS = 4;
 
 	/**
 	 * The number of structural features of the '<em>MBS Metodo</em>' class.
@@ -421,43 +421,6 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_ATRIBUTO_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.MBSParametroImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getMBSParametro()
-	 * @generated
-	 */
-	int MBS_PARAMETRO = 5;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO__NOMBRE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO__TIPO = 1;
-
-	/**
-	 * The number of structural features of the '<em>MBS Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link abstracta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -465,7 +428,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMBSRelacion()
 	 * @generated
 	 */
-	int MBS_RELACION = 6;
+	int MBS_RELACION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -504,13 +467,13 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_RELACION__TIPO = 3;
 
 	/**
-	 * The feature id for the '<em><b>Multiplicida A</b></em>' attribute.
+	 * The feature id for the '<em><b>Multiplicidad A</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__MULTIPLICIDA_A = 4;
+	int MBS_RELACION__MULTIPLICIDAD_A = 4;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad B</b></em>' attribute.
@@ -575,7 +538,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMBSHerencia()
 	 * @generated
 	 */
-	int MBS_HERENCIA = 7;
+	int MBS_HERENCIA = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -612,7 +575,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMBSContainment()
 	 * @generated
 	 */
-	int MBS_CONTAINMENT = 8;
+	int MBS_CONTAINMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1008,15 +971,15 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMBSMetodo_Ruta();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.MBSMetodo#getListaParametros <em>Lista Parametros</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MBSMetodo#getParametros <em>Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Parametros</em>'.
-	 * @see abstracta.MBSMetodo#getListaParametros()
+	 * @return the meta object for the attribute '<em>Parametros</em>'.
+	 * @see abstracta.MBSMetodo#getParametros()
 	 * @see #getMBSMetodo()
 	 * @generated
 	 */
-	EReference getMBSMetodo_ListaParametros();
+	EAttribute getMBSMetodo_Parametros();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.MBSAtributo <em>MBS Atributo</em>}'.
@@ -1095,38 +1058,6 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMBSAtributo_Ruta();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.MBSParametro <em>MBS Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MBS Parametro</em>'.
-	 * @see abstracta.MBSParametro
-	 * @generated
-	 */
-	EClass getMBSParametro();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MBSParametro#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.MBSParametro#getNombre()
-	 * @see #getMBSParametro()
-	 * @generated
-	 */
-	EAttribute getMBSParametro_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MBSParametro#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see abstracta.MBSParametro#getTipo()
-	 * @see #getMBSParametro()
-	 * @generated
-	 */
-	EAttribute getMBSParametro_Tipo();
-
-	/**
 	 * Returns the meta object for class '{@link abstracta.MBSRelacion <em>MBS Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1181,15 +1112,15 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMBSRelacion_Tipo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MBSRelacion#getMultiplicidaA <em>Multiplicida A</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicida A</em>'.
-	 * @see abstracta.MBSRelacion#getMultiplicidaA()
+	 * @return the meta object for the attribute '<em>Multiplicidad A</em>'.
+	 * @see abstracta.MBSRelacion#getMultiplicidadA()
 	 * @see #getMBSRelacion()
 	 * @generated
 	 */
-	EAttribute getMBSRelacion_MultiplicidaA();
+	EAttribute getMBSRelacion_MultiplicidadA();
 
 	/**
 	 * Returns the meta object for the attribute '{@link abstracta.MBSRelacion#getMultiplicidadB <em>Multiplicidad B</em>}'.
@@ -1645,12 +1576,12 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MBS_METODO__RUTA = eINSTANCE.getMBSMetodo_Ruta();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Parametros</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MBS_METODO__LISTA_PARAMETROS = eINSTANCE.getMBSMetodo_ListaParametros();
+		EAttribute MBS_METODO__PARAMETROS = eINSTANCE.getMBSMetodo_Parametros();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MBSAtributoImpl <em>MBS Atributo</em>}' class.
@@ -1711,32 +1642,6 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MBS_ATRIBUTO__RUTA = eINSTANCE.getMBSAtributo_Ruta();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.MBSParametroImpl <em>MBS Parametro</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.MBSParametroImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getMBSParametro()
-		 * @generated
-		 */
-		EClass MBS_PARAMETRO = eINSTANCE.getMBSParametro();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_PARAMETRO__NOMBRE = eINSTANCE.getMBSParametro_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_PARAMETRO__TIPO = eINSTANCE.getMBSParametro_Tipo();
-
-		/**
 		 * The meta object literal for the '{@link abstracta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1779,12 +1684,12 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MBS_RELACION__TIPO = eINSTANCE.getMBSRelacion_Tipo();
 
 		/**
-		 * The meta object literal for the '<em><b>Multiplicida A</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Multiplicidad A</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MBS_RELACION__MULTIPLICIDA_A = eINSTANCE.getMBSRelacion_MultiplicidaA();
+		EAttribute MBS_RELACION__MULTIPLICIDAD_A = eINSTANCE.getMBSRelacion_MultiplicidadA();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad B</b></em>' attribute feature.

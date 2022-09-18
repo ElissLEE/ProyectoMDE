@@ -61,7 +61,6 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 			case AbstractaPackage.MBS_CLASE: return createMBSClase();
 			case AbstractaPackage.MBS_METODO: return createMBSMetodo();
 			case AbstractaPackage.MBS_ATRIBUTO: return createMBSAtributo();
-			case AbstractaPackage.MBS_PARAMETRO: return createMBSParametro();
 			case AbstractaPackage.MBS_RELACION: return createMBSRelacion();
 			case AbstractaPackage.MBS_HERENCIA: return createMBSHerencia();
 			case AbstractaPackage.MBS_CONTAINMENT: return createMBSContainment();
@@ -118,16 +117,6 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	public MBSAtributo createMBSAtributo() {
 		MBSAtributoImpl mbsAtributo = new MBSAtributoImpl();
 		return mbsAtributo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSParametro createMBSParametro() {
-		MBSParametroImpl mbsParametro = new MBSParametroImpl();
-		return mbsParametro;
 	}
 
 	/**

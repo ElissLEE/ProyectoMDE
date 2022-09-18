@@ -19,8 +19,8 @@ class MBSPaquete  {
 
 class MBSClase  {
 	
-	attr String idClase;
 	attr String nombre;
+	attr String idClase;
 	attr String estereotipo;
 	attr String modificadorAcceso;
 	attr boolean abstracta;
@@ -41,8 +41,7 @@ class MBSMetodo {
 	attr String modificadorAcceso;
 	attr String tipoRetorno;
 	attr String ruta;
-	
-	val MBSParametro[*] listaParametros;
+	attr String parametros;
 }
 
 class MBSAtributo {
@@ -56,20 +55,13 @@ class MBSAtributo {
 	
 }
 
-class MBSParametro {
-	
-	attr String nombre;
-	attr String tipo;
-
-}
-
 class MBSRelacion {
   
     ref MBSClase source;
     ref MBSClase target;
     attr String nombre;
     attr String tipo;
-    attr String multiplicidaA;
+    attr String multiplicidadA;
     attr String multiplicidadB;
     attr String rolA;
     attr String rolB;

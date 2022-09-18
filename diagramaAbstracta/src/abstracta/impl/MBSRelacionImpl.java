@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getTipo <em>Tipo</em>}</li>
- *   <li>{@link abstracta.impl.MBSRelacionImpl#getMultiplicidaA <em>Multiplicida A</em>}</li>
+ *   <li>{@link abstracta.impl.MBSRelacionImpl#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getRolA <em>Rol A</em>}</li>
  *   <li>{@link abstracta.impl.MBSRelacionImpl#getRolB <em>Rol B</em>}</li>
@@ -98,24 +98,24 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	protected String tipo = TIPO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMultiplicidaA() <em>Multiplicida A</em>}' attribute.
+	 * The default value of the '{@link #getMultiplicidadA() <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMultiplicidaA()
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MULTIPLICIDA_A_EDEFAULT = null;
+	protected static final String MULTIPLICIDAD_A_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMultiplicidaA() <em>Multiplicida A</em>}' attribute.
+	 * The cached value of the '{@link #getMultiplicidadA() <em>Multiplicidad A</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMultiplicidaA()
+	 * @see #getMultiplicidadA()
 	 * @generated
 	 * @ordered
 	 */
-	protected String multiplicidaA = MULTIPLICIDA_A_EDEFAULT;
+	protected String multiplicidadA = MULTIPLICIDAD_A_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMultiplicidadB() <em>Multiplicidad B</em>}' attribute.
@@ -359,8 +359,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMultiplicidaA() {
-		return multiplicidaA;
+	public String getMultiplicidadA() {
+		return multiplicidadA;
 	}
 
 	/**
@@ -368,11 +368,11 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMultiplicidaA(String newMultiplicidaA) {
-		String oldMultiplicidaA = multiplicidaA;
-		multiplicidaA = newMultiplicidaA;
+	public void setMultiplicidadA(String newMultiplicidadA) {
+		String oldMultiplicidadA = multiplicidadA;
+		multiplicidadA = newMultiplicidadA;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MBS_RELACION__MULTIPLICIDA_A, oldMultiplicidaA, multiplicidaA));
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_A, oldMultiplicidadA, multiplicidadA));
 	}
 
 	/**
@@ -498,8 +498,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return getNombre();
 			case AbstractaPackage.MBS_RELACION__TIPO:
 				return getTipo();
-			case AbstractaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				return getMultiplicidaA();
+			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				return getMultiplicidadA();
 			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				return getMultiplicidadB();
 			case AbstractaPackage.MBS_RELACION__ROL_A:
@@ -534,8 +534,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case AbstractaPackage.MBS_RELACION__TIPO:
 				setTipo((String)newValue);
 				return;
-			case AbstractaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				setMultiplicidaA((String)newValue);
+			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				setMultiplicidadA((String)newValue);
 				return;
 			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				setMultiplicidadB((String)newValue);
@@ -576,8 +576,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case AbstractaPackage.MBS_RELACION__TIPO:
 				setTipo(TIPO_EDEFAULT);
 				return;
-			case AbstractaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				setMultiplicidaA(MULTIPLICIDA_A_EDEFAULT);
+			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				setMultiplicidadA(MULTIPLICIDAD_A_EDEFAULT);
 				return;
 			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				setMultiplicidadB(MULTIPLICIDAD_B_EDEFAULT);
@@ -614,8 +614,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AbstractaPackage.MBS_RELACION__TIPO:
 				return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
-			case AbstractaPackage.MBS_RELACION__MULTIPLICIDA_A:
-				return MULTIPLICIDA_A_EDEFAULT == null ? multiplicidaA != null : !MULTIPLICIDA_A_EDEFAULT.equals(multiplicidaA);
+			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_A:
+				return MULTIPLICIDAD_A_EDEFAULT == null ? multiplicidadA != null : !MULTIPLICIDAD_A_EDEFAULT.equals(multiplicidadA);
 			case AbstractaPackage.MBS_RELACION__MULTIPLICIDAD_B:
 				return MULTIPLICIDAD_B_EDEFAULT == null ? multiplicidadB != null : !MULTIPLICIDAD_B_EDEFAULT.equals(multiplicidadB);
 			case AbstractaPackage.MBS_RELACION__ROL_A:
@@ -644,8 +644,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 		result.append(nombre);
 		result.append(", tipo: ");
 		result.append(tipo);
-		result.append(", multiplicidaA: ");
-		result.append(multiplicidaA);
+		result.append(", multiplicidadA: ");
+		result.append(multiplicidadA);
 		result.append(", multiplicidadB: ");
 		result.append(multiplicidadB);
 		result.append(", rolA: ");
