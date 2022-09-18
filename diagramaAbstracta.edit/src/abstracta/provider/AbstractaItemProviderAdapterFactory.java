@@ -210,52 +210,6 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link abstracta.MBSHerencia} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MBSHerenciaItemProvider mbsHerenciaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link abstracta.MBSHerencia}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMBSHerenciaAdapter() {
-		if (mbsHerenciaItemProvider == null) {
-			mbsHerenciaItemProvider = new MBSHerenciaItemProvider(this);
-		}
-
-		return mbsHerenciaItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link abstracta.MBSContainment} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MBSContainmentItemProvider mbsContainmentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link abstracta.MBSContainment}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMBSContainmentAdapter() {
-		if (mbsContainmentItemProvider == null) {
-			mbsContainmentItemProvider = new MBSContainmentItemProvider(this);
-		}
-
-		return mbsContainmentItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,8 +314,6 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 		if (mbsMetodoItemProvider != null) mbsMetodoItemProvider.dispose();
 		if (mbsAtributoItemProvider != null) mbsAtributoItemProvider.dispose();
 		if (mbsRelacionItemProvider != null) mbsRelacionItemProvider.dispose();
-		if (mbsHerenciaItemProvider != null) mbsHerenciaItemProvider.dispose();
-		if (mbsContainmentItemProvider != null) mbsContainmentItemProvider.dispose();
 	}
 
 }

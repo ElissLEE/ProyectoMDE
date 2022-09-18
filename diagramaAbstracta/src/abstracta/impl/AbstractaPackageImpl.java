@@ -71,20 +71,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	private EClass mbsRelacionEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mbsHerenciaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mbsContainmentEClass = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -330,24 +316,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMBSClase_ListaRelacionesHerencia() {
-		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMBSClase_ListaRelacionesContainment() {
-		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMBSMetodo() {
 		return mbsMetodoEClass;
 	}
@@ -564,132 +532,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMBSHerencia() {
-		return mbsHerenciaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMBSHerencia_Source() {
-		return (EReference)mbsHerenciaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMBSHerencia_Target() {
-		return (EReference)mbsHerenciaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMBSContainment() {
-		return mbsContainmentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMBSContainment_Source() {
-		return (EReference)mbsContainmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMBSContainment_Target() {
-		return (EReference)mbsContainmentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_Nombre() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_Tipo() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_MultiplicidadA() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_MultiplicidadB() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_RolA() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_RolB() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_NavegabilidadA() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMBSContainment_NavegabilidadB() {
-		return (EAttribute)mbsContainmentEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AbstractaFactory getAbstractaFactory() {
 		return (AbstractaFactory)getEFactoryInstance();
 	}
@@ -735,8 +577,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(mbsClaseEClass, MBS_CLASE__ATRIBUTOS);
 		createEReference(mbsClaseEClass, MBS_CLASE__METODOS);
 		createEReference(mbsClaseEClass, MBS_CLASE__LISTA_RELACIONES);
-		createEReference(mbsClaseEClass, MBS_CLASE__LISTA_RELACIONES_HERENCIA);
-		createEReference(mbsClaseEClass, MBS_CLASE__LISTA_RELACIONES_CONTAINMENT);
 
 		mbsMetodoEClass = createEClass(MBS_METODO);
 		createEAttribute(mbsMetodoEClass, MBS_METODO__NOMBRE);
@@ -764,22 +604,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_B);
-
-		mbsHerenciaEClass = createEClass(MBS_HERENCIA);
-		createEReference(mbsHerenciaEClass, MBS_HERENCIA__SOURCE);
-		createEReference(mbsHerenciaEClass, MBS_HERENCIA__TARGET);
-
-		mbsContainmentEClass = createEClass(MBS_CONTAINMENT);
-		createEReference(mbsContainmentEClass, MBS_CONTAINMENT__SOURCE);
-		createEReference(mbsContainmentEClass, MBS_CONTAINMENT__TARGET);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__NOMBRE);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__TIPO);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__MULTIPLICIDAD_A);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__MULTIPLICIDAD_B);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__ROL_A);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__ROL_B);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__NAVEGABILIDAD_A);
-		createEAttribute(mbsContainmentEClass, MBS_CONTAINMENT__NAVEGABILIDAD_B);
 	}
 
 	/**
@@ -834,8 +658,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getMBSClase_Atributos(), this.getMBSAtributo(), null, "atributos", null, 0, -1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSClase_Metodos(), this.getMBSMetodo(), null, "metodos", null, 0, -1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSClase_ListaRelaciones(), this.getMBSRelacion(), null, "listaRelaciones", null, 0, -1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSClase_ListaRelacionesHerencia(), this.getMBSHerencia(), null, "listaRelacionesHerencia", null, 0, -1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSClase_ListaRelacionesContainment(), this.getMBSContainment(), null, "listaRelacionesContainment", null, 0, -1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsMetodoEClass, MBSMetodo.class, "MBSMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSMetodo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -863,22 +685,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMBSRelacion_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(mbsHerenciaEClass, MBSHerencia.class, "MBSHerencia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMBSHerencia_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSHerencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSHerencia_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSHerencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(mbsContainmentEClass, MBSContainment.class, "MBSContainment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMBSContainment_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSContainment_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_MultiplicidadA(), ecorePackage.getEString(), "multiplicidadA", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_RolA(), ecorePackage.getEString(), "rolA", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSContainment_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

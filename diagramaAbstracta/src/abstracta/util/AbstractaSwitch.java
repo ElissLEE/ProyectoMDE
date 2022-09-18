@@ -102,18 +102,6 @@ public class AbstractaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AbstractaPackage.MBS_HERENCIA: {
-				MBSHerencia mbsHerencia = (MBSHerencia)theEObject;
-				T result = caseMBSHerencia(mbsHerencia);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AbstractaPackage.MBS_CONTAINMENT: {
-				MBSContainment mbsContainment = (MBSContainment)theEObject;
-				T result = caseMBSContainment(mbsContainment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -205,36 +193,6 @@ public class AbstractaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMBSRelacion(MBSRelacion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MBS Herencia</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MBS Herencia</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMBSHerencia(MBSHerencia object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MBS Containment</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MBS Containment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMBSContainment(MBSContainment object) {
 		return null;
 	}
 

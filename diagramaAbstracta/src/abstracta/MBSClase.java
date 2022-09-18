@@ -25,8 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MBSClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.MBSClase#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.MBSClase#getListaRelaciones <em>Lista Relaciones</em>}</li>
- *   <li>{@link abstracta.MBSClase#getListaRelacionesHerencia <em>Lista Relaciones Herencia</em>}</li>
- *   <li>{@link abstracta.MBSClase#getListaRelacionesContainment <em>Lista Relaciones Containment</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getMBSClase()
@@ -263,37 +261,5 @@ public interface MBSClase extends EObject {
 	 * @generated
 	 */
 	EList<MBSRelacion> getListaRelaciones();
-
-	/**
-	 * Returns the value of the '<em><b>Lista Relaciones Herencia</b></em>' containment reference list.
-	 * The list contents are of type {@link abstracta.MBSHerencia}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lista Relaciones Herencia</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Relaciones Herencia</em>' containment reference list.
-	 * @see abstracta.AbstractaPackage#getMBSClase_ListaRelacionesHerencia()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<MBSHerencia> getListaRelacionesHerencia();
-
-	/**
-	 * Returns the value of the '<em><b>Lista Relaciones Containment</b></em>' containment reference list.
-	 * The list contents are of type {@link abstracta.MBSContainment}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lista Relaciones Containment</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Relaciones Containment</em>' containment reference list.
-	 * @see abstracta.AbstractaPackage#getMBSClase_ListaRelacionesContainment()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<MBSContainment> getListaRelacionesContainment();
 
 } // MBSClase

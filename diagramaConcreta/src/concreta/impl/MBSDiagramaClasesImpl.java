@@ -39,8 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
- *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaRelacionesHerencia <em>Lista Relaciones Herencia</em>}</li>
- *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaRelacionesContainment <em>Lista Relaciones Containment</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaPaquetes <em>Lista Paquetes</em>}</li>
  * </ul>
  *
@@ -126,26 +124,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 	 * @ordered
 	 */
 	protected EList<MBSRelacion> listaRelaciones;
-
-	/**
-	 * The cached value of the '{@link #getListaRelacionesHerencia() <em>Lista Relaciones Herencia</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getListaRelacionesHerencia()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MBSHerencia> listaRelacionesHerencia;
-
-	/**
-	 * The cached value of the '{@link #getListaRelacionesContainment() <em>Lista Relaciones Containment</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getListaRelacionesContainment()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MBSContainment> listaRelacionesContainment;
 
 	/**
 	 * The cached value of the '{@link #getListaPaquetes() <em>Lista Paquetes</em>}' containment reference list.
@@ -268,30 +246,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MBSHerencia> getListaRelacionesHerencia() {
-		if (listaRelacionesHerencia == null) {
-			listaRelacionesHerencia = new EObjectContainmentEList<MBSHerencia>(MBSHerencia.class, this, ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA);
-		}
-		return listaRelacionesHerencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MBSContainment> getListaRelacionesContainment() {
-		if (listaRelacionesContainment == null) {
-			listaRelacionesContainment = new EObjectContainmentEList<MBSContainment>(MBSContainment.class, this, ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT);
-		}
-		return listaRelacionesContainment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<MBSPaquete> getListaPaquetes() {
 		if (listaPaquetes == null) {
 			listaPaquetes = new EObjectContainmentEList<MBSPaquete>(MBSPaquete.class, this, ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES);
@@ -311,10 +265,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 				return ((InternalEList<?>)getListaClases()).basicRemove(otherEnd, msgs);
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES:
 				return ((InternalEList<?>)getListaRelaciones()).basicRemove(otherEnd, msgs);
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-				return ((InternalEList<?>)getListaRelacionesHerencia()).basicRemove(otherEnd, msgs);
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
-				return ((InternalEList<?>)getListaRelacionesContainment()).basicRemove(otherEnd, msgs);
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				return ((InternalEList<?>)getListaPaquetes()).basicRemove(otherEnd, msgs);
 		}
@@ -339,10 +289,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 				return getListaClases();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES:
 				return getListaRelaciones();
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-				return getListaRelacionesHerencia();
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
-				return getListaRelacionesContainment();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				return getListaPaquetes();
 		}
@@ -375,14 +321,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 				getListaRelaciones().clear();
 				getListaRelaciones().addAll((Collection<? extends MBSRelacion>)newValue);
 				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-				getListaRelacionesHerencia().clear();
-				getListaRelacionesHerencia().addAll((Collection<? extends MBSHerencia>)newValue);
-				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
-				getListaRelacionesContainment().clear();
-				getListaRelacionesContainment().addAll((Collection<? extends MBSContainment>)newValue);
-				return;
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				getListaPaquetes().clear();
 				getListaPaquetes().addAll((Collection<? extends MBSPaquete>)newValue);
@@ -414,12 +352,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES:
 				getListaRelaciones().clear();
 				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-				getListaRelacionesHerencia().clear();
-				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
-				getListaRelacionesContainment().clear();
-				return;
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				getListaPaquetes().clear();
 				return;
@@ -445,10 +377,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 				return listaClases != null && !listaClases.isEmpty();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES:
 				return listaRelaciones != null && !listaRelaciones.isEmpty();
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-				return listaRelacionesHerencia != null && !listaRelacionesHerencia.isEmpty();
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
-				return listaRelacionesContainment != null && !listaRelacionesContainment.isEmpty();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				return listaPaquetes != null && !listaPaquetes.isEmpty();
 		}

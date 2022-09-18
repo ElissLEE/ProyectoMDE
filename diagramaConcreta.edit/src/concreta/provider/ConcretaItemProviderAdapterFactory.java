@@ -233,52 +233,6 @@ public class ConcretaItemProviderAdapterFactory extends ConcretaAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link concreta.MBSHerencia} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MBSHerenciaItemProvider mbsHerenciaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link concreta.MBSHerencia}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMBSHerenciaAdapter() {
-		if (mbsHerenciaItemProvider == null) {
-			mbsHerenciaItemProvider = new MBSHerenciaItemProvider(this);
-		}
-
-		return mbsHerenciaItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link concreta.MBSContainment} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MBSContainmentItemProvider mbsContainmentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link concreta.MBSContainment}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMBSContainmentAdapter() {
-		if (mbsContainmentItemProvider == null) {
-			mbsContainmentItemProvider = new MBSContainmentItemProvider(this);
-		}
-
-		return mbsContainmentItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -384,8 +338,6 @@ public class ConcretaItemProviderAdapterFactory extends ConcretaAdapterFactory i
 		if (mbsMetodoItemProvider != null) mbsMetodoItemProvider.dispose();
 		if (mbsAtributoItemProvider != null) mbsAtributoItemProvider.dispose();
 		if (mbsRelacionItemProvider != null) mbsRelacionItemProvider.dispose();
-		if (mbsHerenciaItemProvider != null) mbsHerenciaItemProvider.dispose();
-		if (mbsContainmentItemProvider != null) mbsContainmentItemProvider.dispose();
 	}
 
 }

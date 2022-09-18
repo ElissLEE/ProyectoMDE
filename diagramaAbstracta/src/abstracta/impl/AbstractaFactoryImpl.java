@@ -62,8 +62,6 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 			case AbstractaPackage.MBS_METODO: return createMBSMetodo();
 			case AbstractaPackage.MBS_ATRIBUTO: return createMBSAtributo();
 			case AbstractaPackage.MBS_RELACION: return createMBSRelacion();
-			case AbstractaPackage.MBS_HERENCIA: return createMBSHerencia();
-			case AbstractaPackage.MBS_CONTAINMENT: return createMBSContainment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -127,26 +125,6 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	public MBSRelacion createMBSRelacion() {
 		MBSRelacionImpl mbsRelacion = new MBSRelacionImpl();
 		return mbsRelacion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSHerencia createMBSHerencia() {
-		MBSHerenciaImpl mbsHerencia = new MBSHerenciaImpl();
-		return mbsHerencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSContainment createMBSContainment() {
-		MBSContainmentImpl mbsContainment = new MBSContainmentImpl();
-		return mbsContainment;
 	}
 
 	/**

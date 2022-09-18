@@ -44,8 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link abstracta.impl.MBSClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.impl.MBSClaseImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
- *   <li>{@link abstracta.impl.MBSClaseImpl#getListaRelacionesHerencia <em>Lista Relaciones Herencia</em>}</li>
- *   <li>{@link abstracta.impl.MBSClaseImpl#getListaRelacionesContainment <em>Lista Relaciones Containment</em>}</li>
  * </ul>
  *
  * @generated
@@ -220,26 +218,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	 * @ordered
 	 */
 	protected EList<MBSRelacion> listaRelaciones;
-
-	/**
-	 * The cached value of the '{@link #getListaRelacionesHerencia() <em>Lista Relaciones Herencia</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getListaRelacionesHerencia()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MBSHerencia> listaRelacionesHerencia;
-
-	/**
-	 * The cached value of the '{@link #getListaRelacionesContainment() <em>Lista Relaciones Containment</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getListaRelacionesContainment()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MBSContainment> listaRelacionesContainment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -448,30 +426,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MBSHerencia> getListaRelacionesHerencia() {
-		if (listaRelacionesHerencia == null) {
-			listaRelacionesHerencia = new EObjectContainmentEList<MBSHerencia>(MBSHerencia.class, this, AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA);
-		}
-		return listaRelacionesHerencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MBSContainment> getListaRelacionesContainment() {
-		if (listaRelacionesContainment == null) {
-			listaRelacionesContainment = new EObjectContainmentEList<MBSContainment>(MBSContainment.class, this, AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT);
-		}
-		return listaRelacionesContainment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -481,10 +435,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 				return ((InternalEList<?>)getMetodos()).basicRemove(otherEnd, msgs);
 			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES:
 				return ((InternalEList<?>)getListaRelaciones()).basicRemove(otherEnd, msgs);
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-				return ((InternalEList<?>)getListaRelacionesHerencia()).basicRemove(otherEnd, msgs);
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
-				return ((InternalEList<?>)getListaRelacionesContainment()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -517,10 +467,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 				return getMetodos();
 			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES:
 				return getListaRelaciones();
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-				return getListaRelacionesHerencia();
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
-				return getListaRelacionesContainment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -567,14 +513,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 				getListaRelaciones().clear();
 				getListaRelaciones().addAll((Collection<? extends MBSRelacion>)newValue);
 				return;
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-				getListaRelacionesHerencia().clear();
-				getListaRelacionesHerencia().addAll((Collection<? extends MBSHerencia>)newValue);
-				return;
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
-				getListaRelacionesContainment().clear();
-				getListaRelacionesContainment().addAll((Collection<? extends MBSContainment>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -617,12 +555,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES:
 				getListaRelaciones().clear();
 				return;
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-				getListaRelacionesHerencia().clear();
-				return;
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
-				getListaRelacionesContainment().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -655,10 +587,6 @@ public class MBSClaseImpl extends EObjectImpl implements MBSClase {
 				return metodos != null && !metodos.isEmpty();
 			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES:
 				return listaRelaciones != null && !listaRelaciones.isEmpty();
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-				return listaRelacionesHerencia != null && !listaRelacionesHerencia.isEmpty();
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
-				return listaRelacionesContainment != null && !listaRelacionesContainment.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

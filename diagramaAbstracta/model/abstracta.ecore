@@ -30,10 +30,6 @@
         eType="#//MBSMetodo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelaciones" upperBound="-1"
         eType="#//MBSRelacion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelacionesHerencia"
-        upperBound="-1" eType="#//MBSHerencia" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelacionesContainment"
-        upperBound="-1" eType="#//MBSContainment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSMetodo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -51,22 +47,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MBSRelacion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidadB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MBSHerencia">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MBSContainment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MBSClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MBSClase"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

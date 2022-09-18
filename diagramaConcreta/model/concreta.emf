@@ -18,8 +18,6 @@ class MBSDiagramaClases {
 	attr String descripcion;
     val MBSClase[*] listaClases;
     val MBSRelacion[*] listaRelaciones;
-    val MBSHerencia[*] listaRelacionesHerencia;
-    val MBSContainment[*] listaRelacionesContainment;
     val MBSPaquete[*] listaPaquetes;
 }
 
@@ -83,29 +81,5 @@ class MBSRelacion {
     attr String navegabilidadA;
     attr String navegabilidadB;
     attr String labelName;
-
-}
-
-@gmf.link(source="source", target="target", style="dot", width="1", target.decoration="closedarrow")
-class MBSHerencia {
-   
-    ref MBSClase source;
-    ref MBSClase target;
-
-}
-
-@gmf.link(source="source", source.decoration="filledrhomb", target="target", style="solid", width="2")
-class MBSContainment {
-   
-    ref MBSClase source;
-    ref MBSClase target;
-   	attr String nombre;
-    attr String tipo;
-    attr String multiplicidadA;
-    attr String multiplicidadB;
-    attr String rolA;
-    attr String rolB;
-    attr String navegabilidadA;
-    attr String navegabilidadB;
 
 }

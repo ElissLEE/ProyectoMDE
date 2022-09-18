@@ -37,9 +37,7 @@ import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
 import concreta.ConcretaPackage;
 import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSClaseEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
 import concreta.diagram.edit.parts.MBSDiagramaClasesEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
@@ -301,20 +299,6 @@ public class MBSDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 		case MBSRelacionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(ConcretaDiagramUpdater.getMBSRelacion_4001ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
-		case MBSHerenciaEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(ConcretaDiagramUpdater.getMBSHerencia_4002ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
-		case MBSContainmentEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(ConcretaDiagramUpdater.getMBSContainment_4003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

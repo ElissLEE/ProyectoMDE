@@ -18,17 +18,11 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
-import concreta.diagram.edit.commands.MBSContainmentCreateCommand;
-import concreta.diagram.edit.commands.MBSContainmentReorientCommand;
-import concreta.diagram.edit.commands.MBSHerenciaCreateCommand;
-import concreta.diagram.edit.commands.MBSHerenciaReorientCommand;
 import concreta.diagram.edit.commands.MBSRelacionCreateCommand;
 import concreta.diagram.edit.commands.MBSRelacionReorientCommand;
 import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseMetodosCompartmentEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -61,34 +55,10 @@ public class MBSClaseItemSemanticEditPolicy extends ConcretaBaseItemSemanticEdit
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (ConcretaVisualIDRegistry.getVisualID(incomingLink) == MBSHerenciaEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (ConcretaVisualIDRegistry.getVisualID(incomingLink) == MBSContainmentEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (ConcretaVisualIDRegistry.getVisualID(outgoingLink) == MBSRelacionEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (ConcretaVisualIDRegistry.getVisualID(outgoingLink) == MBSHerenciaEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (ConcretaVisualIDRegistry.getVisualID(outgoingLink) == MBSContainmentEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
@@ -162,12 +132,6 @@ public class MBSClaseItemSemanticEditPolicy extends ConcretaBaseItemSemanticEdit
 		if (ConcretaElementTypes.MBSRelacion_4001 == req.getElementType()) {
 			return getGEFWrapper(new MBSRelacionCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ConcretaElementTypes.MBSHerencia_4002 == req.getElementType()) {
-			return getGEFWrapper(new MBSHerenciaCreateCommand(req, req.getSource(), req.getTarget()));
-		}
-		if (ConcretaElementTypes.MBSContainment_4003 == req.getElementType()) {
-			return getGEFWrapper(new MBSContainmentCreateCommand(req, req.getSource(), req.getTarget()));
-		}
 		return null;
 	}
 
@@ -177,12 +141,6 @@ public class MBSClaseItemSemanticEditPolicy extends ConcretaBaseItemSemanticEdit
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (ConcretaElementTypes.MBSRelacion_4001 == req.getElementType()) {
 			return getGEFWrapper(new MBSRelacionCreateCommand(req, req.getSource(), req.getTarget()));
-		}
-		if (ConcretaElementTypes.MBSHerencia_4002 == req.getElementType()) {
-			return getGEFWrapper(new MBSHerenciaCreateCommand(req, req.getSource(), req.getTarget()));
-		}
-		if (ConcretaElementTypes.MBSContainment_4003 == req.getElementType()) {
-			return getGEFWrapper(new MBSContainmentCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -197,10 +155,6 @@ public class MBSClaseItemSemanticEditPolicy extends ConcretaBaseItemSemanticEdit
 		switch (getVisualID(req)) {
 		case MBSRelacionEditPart.VISUAL_ID:
 			return getGEFWrapper(new MBSRelacionReorientCommand(req));
-		case MBSHerenciaEditPart.VISUAL_ID:
-			return getGEFWrapper(new MBSHerenciaReorientCommand(req));
-		case MBSContainmentEditPart.VISUAL_ID:
-			return getGEFWrapper(new MBSContainmentReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}

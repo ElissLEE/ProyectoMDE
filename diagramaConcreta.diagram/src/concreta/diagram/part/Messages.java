@@ -296,32 +296,12 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String MBSContainment1CreationTool_title;
+	public static String MBSRelacion1CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String MBSContainment1CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String MBSHerencia2CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String MBSHerencia2CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String MBSRelacion3CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String MBSRelacion3CreationTool_desc;
+	public static String MBSRelacion1CreationTool_desc;
 
 	/**
 	* @generated
@@ -362,26 +342,6 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_MBSRelacion_4001_source;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_MBSHerencia_4002_target;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_MBSHerencia_4002_source;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_MBSContainment_4003_target;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_MBSContainment_4003_source;
 
 	/**
 	* @generated

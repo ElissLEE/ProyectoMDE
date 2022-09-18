@@ -113,7 +113,7 @@
         href="concreta.ecore#//MBSDiagramaClases/listaRelaciones"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.2"/>
+        href="concreta.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
         href="concreta.gmfgraph#MBSRelacion"/>
     <sourceMetaFeature
@@ -122,40 +122,6 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="concreta.ecore#//MBSRelacion/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//MBSHerencia"/>
-    <containmentFeature
-        href="concreta.ecore#//MBSDiagramaClases/listaRelacionesHerencia"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.1"/>
-    <diagramLink
-        href="concreta.gmfgraph#MBSHerencia"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//MBSHerencia/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//MBSHerencia/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//MBSContainment"/>
-    <containmentFeature
-        href="concreta.ecore#//MBSDiagramaClases/listaRelacionesContainment"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.0"/>
-    <diagramLink
-        href="concreta.gmfgraph#MBSContainment"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//MBSContainment/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//MBSContainment/target"/>
   </links>
   <diagram>
     <diagramCanvas

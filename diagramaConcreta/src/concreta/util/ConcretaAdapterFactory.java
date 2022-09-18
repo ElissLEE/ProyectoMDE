@@ -96,14 +96,6 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 				return createMBSRelacionAdapter();
 			}
 			@Override
-			public Adapter caseMBSHerencia(MBSHerencia object) {
-				return createMBSHerenciaAdapter();
-			}
-			@Override
-			public Adapter caseMBSContainment(MBSContainment object) {
-				return createMBSContainmentAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -218,34 +210,6 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMBSRelacionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link concreta.MBSHerencia <em>MBS Herencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see concreta.MBSHerencia
-	 * @generated
-	 */
-	public Adapter createMBSHerenciaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link concreta.MBSContainment <em>MBS Containment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see concreta.MBSContainment
-	 * @generated
-	 */
-	public Adapter createMBSContainmentAdapter() {
 		return null;
 	}
 

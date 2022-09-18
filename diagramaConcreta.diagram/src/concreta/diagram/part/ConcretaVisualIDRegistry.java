@@ -18,9 +18,7 @@ import concreta.diagram.edit.parts.MBSClaseEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseMetodosCompartmentEditPart;
 import concreta.diagram.edit.parts.MBSClaseNombreEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
 import concreta.diagram.edit.parts.MBSDiagramaClasesEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
@@ -232,12 +230,6 @@ public class ConcretaVisualIDRegistry {
 		}
 		if (ConcretaPackage.eINSTANCE.getMBSRelacion().isSuperTypeOf(domainElement.eClass())) {
 			return MBSRelacionEditPart.VISUAL_ID;
-		}
-		if (ConcretaPackage.eINSTANCE.getMBSHerencia().isSuperTypeOf(domainElement.eClass())) {
-			return MBSHerenciaEditPart.VISUAL_ID;
-		}
-		if (ConcretaPackage.eINSTANCE.getMBSContainment().isSuperTypeOf(domainElement.eClass())) {
-			return MBSContainmentEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

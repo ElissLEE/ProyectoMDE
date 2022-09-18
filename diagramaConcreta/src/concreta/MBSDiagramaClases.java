@@ -20,8 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link concreta.MBSDiagramaClases#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getListaRelaciones <em>Lista Relaciones</em>}</li>
- *   <li>{@link concreta.MBSDiagramaClases#getListaRelacionesHerencia <em>Lista Relaciones Herencia</em>}</li>
- *   <li>{@link concreta.MBSDiagramaClases#getListaRelacionesContainment <em>Lista Relaciones Containment</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getListaPaquetes <em>Lista Paquetes</em>}</li>
  * </ul>
  *
@@ -139,38 +137,6 @@ public interface MBSDiagramaClases extends EObject {
 	 * @generated
 	 */
 	EList<MBSRelacion> getListaRelaciones();
-
-	/**
-	 * Returns the value of the '<em><b>Lista Relaciones Herencia</b></em>' containment reference list.
-	 * The list contents are of type {@link concreta.MBSHerencia}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lista Relaciones Herencia</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Relaciones Herencia</em>' containment reference list.
-	 * @see concreta.ConcretaPackage#getMBSDiagramaClases_ListaRelacionesHerencia()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<MBSHerencia> getListaRelacionesHerencia();
-
-	/**
-	 * Returns the value of the '<em><b>Lista Relaciones Containment</b></em>' containment reference list.
-	 * The list contents are of type {@link concreta.MBSContainment}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lista Relaciones Containment</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Relaciones Containment</em>' containment reference list.
-	 * @see concreta.ConcretaPackage#getMBSDiagramaClases_ListaRelacionesContainment()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<MBSContainment> getListaRelacionesContainment();
 
 	/**
 	 * Returns the value of the '<em><b>Lista Paquetes</b></em>' containment reference list.

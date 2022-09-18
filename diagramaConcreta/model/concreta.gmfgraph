@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="concreta">
   <figures name="Default">
-    <figures xsi:type="gmfgraph:PolygonDecoration" name="ClosedArrow">
-      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
-      <template/>
-      <template x="-2" y="2"/>
-      <template x="-2" y="-2"/>
-      <template/>
-    </figures>
-    <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledRhomb">
-      <template x="-1" y="1"/>
-      <template/>
-      <template x="-1" y="-1"/>
-      <template x="-2"/>
-      <template x="-1" y="1"/>
-    </figures>
     <descriptors name="MBSPaqueteFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MBSPaqueteFigure">
         <border xsi:type="gmfgraph:MarginBorder">
@@ -65,12 +51,6 @@
     <descriptors name="MBSRelacionLabelFigure">
       <actualFigure xsi:type="gmfgraph:Label" name="MBSRelacionLabelLabel" text="MBSRelacion"/>
     </descriptors>
-    <descriptors name="MBSHerenciaFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MBSHerenciaFigure" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.0"/>
-    </descriptors>
-    <descriptors name="MBSContainmentFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MBSContainmentFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.1"/>
-    </descriptors>
   </figures>
   <nodes name="MBSPaquete" figure="MBSPaqueteFigure"/>
   <nodes name="MBSClase" figure="MBSClaseFigure">
@@ -89,8 +69,6 @@
     </facets>
   </nodes>
   <connections name="MBSRelacion" figure="MBSRelacionFigure"/>
-  <connections name="MBSHerencia" figure="MBSHerenciaFigure"/>
-  <connections name="MBSContainment" figure="MBSContainmentFigure"/>
   <compartments name="MBSClaseAtributosCompartment" figure="MBSClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
   <compartments name="MBSClaseMetodosCompartment" figure="MBSClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
   <labels name="MBSPaqueteLabel" figure="MBSPaqueteFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>

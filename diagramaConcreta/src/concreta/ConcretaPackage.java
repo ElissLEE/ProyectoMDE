@@ -157,31 +157,13 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_DIAGRAMA_CLASES__LISTA_RELACIONES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Lista Relaciones Herencia</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA = 5;
-
-	/**
-	 * The feature id for the '<em><b>Lista Relaciones Containment</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT = 6;
-
-	/**
 	 * The feature id for the '<em><b>Lista Paquetes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_PAQUETES = 7;
+	int MBS_DIAGRAMA_CLASES__LISTA_PAQUETES = 5;
 
 	/**
 	 * The number of structural features of the '<em>MBS Diagrama Clases</em>' class.
@@ -190,7 +172,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES_FEATURE_COUNT = 8;
+	int MBS_DIAGRAMA_CLASES_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MBSPaqueteImpl <em>MBS Paquete</em>}' class.
@@ -577,153 +559,6 @@ public interface ConcretaPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link concreta.impl.MBSHerenciaImpl <em>MBS Herencia</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see concreta.impl.MBSHerenciaImpl
-	 * @see concreta.impl.ConcretaPackageImpl#getMBSHerencia()
-	 * @generated
-	 */
-	int MBS_HERENCIA = 7;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_HERENCIA__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_HERENCIA__TARGET = 1;
-
-	/**
-	 * The number of structural features of the '<em>MBS Herencia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_HERENCIA_FEATURE_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link concreta.impl.MBSContainmentImpl <em>MBS Containment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see concreta.impl.MBSContainmentImpl
-	 * @see concreta.impl.ConcretaPackageImpl#getMBSContainment()
-	 * @generated
-	 */
-	int MBS_CONTAINMENT = 8;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__TARGET = 1;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__NOMBRE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__TIPO = 3;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad A</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__MULTIPLICIDAD_A = 4;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad B</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__MULTIPLICIDAD_B = 5;
-
-	/**
-	 * The feature id for the '<em><b>Rol A</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__ROL_A = 6;
-
-	/**
-	 * The feature id for the '<em><b>Rol B</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__ROL_B = 7;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad A</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__NAVEGABILIDAD_A = 8;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad B</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT__NAVEGABILIDAD_B = 9;
-
-	/**
-	 * The number of structural features of the '<em>MBS Containment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CONTAINMENT_FEATURE_COUNT = 10;
-
-
-	/**
 	 * Returns the meta object for class '{@link concreta.ModelFactory <em>Model Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -830,28 +665,6 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMBSDiagramaClases_ListaRelaciones();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MBSDiagramaClases#getListaRelacionesHerencia <em>Lista Relaciones Herencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Relaciones Herencia</em>'.
-	 * @see concreta.MBSDiagramaClases#getListaRelacionesHerencia()
-	 * @see #getMBSDiagramaClases()
-	 * @generated
-	 */
-	EReference getMBSDiagramaClases_ListaRelacionesHerencia();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MBSDiagramaClases#getListaRelacionesContainment <em>Lista Relaciones Containment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Relaciones Containment</em>'.
-	 * @see concreta.MBSDiagramaClases#getListaRelacionesContainment()
-	 * @see #getMBSDiagramaClases()
-	 * @generated
-	 */
-	EReference getMBSDiagramaClases_ListaRelacionesContainment();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link concreta.MBSDiagramaClases#getListaPaquetes <em>Lista Paquetes</em>}'.
@@ -1267,158 +1080,6 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMBSRelacion_LabelName();
 
 	/**
-	 * Returns the meta object for class '{@link concreta.MBSHerencia <em>MBS Herencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MBS Herencia</em>'.
-	 * @see concreta.MBSHerencia
-	 * @generated
-	 */
-	EClass getMBSHerencia();
-
-	/**
-	 * Returns the meta object for the reference '{@link concreta.MBSHerencia#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see concreta.MBSHerencia#getSource()
-	 * @see #getMBSHerencia()
-	 * @generated
-	 */
-	EReference getMBSHerencia_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link concreta.MBSHerencia#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see concreta.MBSHerencia#getTarget()
-	 * @see #getMBSHerencia()
-	 * @generated
-	 */
-	EReference getMBSHerencia_Target();
-
-	/**
-	 * Returns the meta object for class '{@link concreta.MBSContainment <em>MBS Containment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MBS Containment</em>'.
-	 * @see concreta.MBSContainment
-	 * @generated
-	 */
-	EClass getMBSContainment();
-
-	/**
-	 * Returns the meta object for the reference '{@link concreta.MBSContainment#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see concreta.MBSContainment#getSource()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EReference getMBSContainment_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link concreta.MBSContainment#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see concreta.MBSContainment#getTarget()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EReference getMBSContainment_Target();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see concreta.MBSContainment#getNombre()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see concreta.MBSContainment#getTipo()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_Tipo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getMultiplicidadA <em>Multiplicidad A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad A</em>'.
-	 * @see concreta.MBSContainment#getMultiplicidadA()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_MultiplicidadA();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getMultiplicidadB <em>Multiplicidad B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad B</em>'.
-	 * @see concreta.MBSContainment#getMultiplicidadB()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_MultiplicidadB();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getRolA <em>Rol A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rol A</em>'.
-	 * @see concreta.MBSContainment#getRolA()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_RolA();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getRolB <em>Rol B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rol B</em>'.
-	 * @see concreta.MBSContainment#getRolB()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_RolB();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getNavegabilidadA <em>Navegabilidad A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Navegabilidad A</em>'.
-	 * @see concreta.MBSContainment#getNavegabilidadA()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_NavegabilidadA();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSContainment#getNavegabilidadB <em>Navegabilidad B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Navegabilidad B</em>'.
-	 * @see concreta.MBSContainment#getNavegabilidadB()
-	 * @see #getMBSContainment()
-	 * @generated
-	 */
-	EAttribute getMBSContainment_NavegabilidadB();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1523,22 +1184,6 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MBS_DIAGRAMA_CLASES__LISTA_RELACIONES = eINSTANCE.getMBSDiagramaClases_ListaRelaciones();
-
-		/**
-		 * The meta object literal for the '<em><b>Lista Relaciones Herencia</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA = eINSTANCE.getMBSDiagramaClases_ListaRelacionesHerencia();
-
-		/**
-		 * The meta object literal for the '<em><b>Lista Relaciones Containment</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT = eINSTANCE.getMBSDiagramaClases_ListaRelacionesContainment();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Paquetes</b></em>' containment reference list feature.
@@ -1853,122 +1498,6 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_RELACION__LABEL_NAME = eINSTANCE.getMBSRelacion_LabelName();
-
-		/**
-		 * The meta object literal for the '{@link concreta.impl.MBSHerenciaImpl <em>MBS Herencia</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see concreta.impl.MBSHerenciaImpl
-		 * @see concreta.impl.ConcretaPackageImpl#getMBSHerencia()
-		 * @generated
-		 */
-		EClass MBS_HERENCIA = eINSTANCE.getMBSHerencia();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_HERENCIA__SOURCE = eINSTANCE.getMBSHerencia_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_HERENCIA__TARGET = eINSTANCE.getMBSHerencia_Target();
-
-		/**
-		 * The meta object literal for the '{@link concreta.impl.MBSContainmentImpl <em>MBS Containment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see concreta.impl.MBSContainmentImpl
-		 * @see concreta.impl.ConcretaPackageImpl#getMBSContainment()
-		 * @generated
-		 */
-		EClass MBS_CONTAINMENT = eINSTANCE.getMBSContainment();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_CONTAINMENT__SOURCE = eINSTANCE.getMBSContainment_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MBS_CONTAINMENT__TARGET = eINSTANCE.getMBSContainment_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__NOMBRE = eINSTANCE.getMBSContainment_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__TIPO = eINSTANCE.getMBSContainment_Tipo();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad A</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__MULTIPLICIDAD_A = eINSTANCE.getMBSContainment_MultiplicidadA();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad B</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__MULTIPLICIDAD_B = eINSTANCE.getMBSContainment_MultiplicidadB();
-
-		/**
-		 * The meta object literal for the '<em><b>Rol A</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__ROL_A = eINSTANCE.getMBSContainment_RolA();
-
-		/**
-		 * The meta object literal for the '<em><b>Rol B</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__ROL_B = eINSTANCE.getMBSContainment_RolB();
-
-		/**
-		 * The meta object literal for the '<em><b>Navegabilidad A</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__NAVEGABILIDAD_A = eINSTANCE.getMBSContainment_NavegabilidadA();
-
-		/**
-		 * The meta object literal for the '<em><b>Navegabilidad B</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CONTAINMENT__NAVEGABILIDAD_B = eINSTANCE.getMBSContainment_NavegabilidadB();
 
 	}
 

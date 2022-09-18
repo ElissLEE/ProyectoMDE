@@ -49,9 +49,7 @@ public class ConcretaPaletteFactory {
 	private PaletteContainer createConnections2Group() {
 		PaletteDrawer paletteContainer = new PaletteDrawer(Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
-		paletteContainer.add(createMBSContainment1CreationTool());
-		paletteContainer.add(createMBSHerencia2CreationTool());
-		paletteContainer.add(createMBSRelacion3CreationTool());
+		paletteContainer.add(createMBSRelacion1CreationTool());
 		return paletteContainer;
 	}
 
@@ -107,37 +105,11 @@ public class ConcretaPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createMBSContainment1CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.MBSContainment1CreationTool_title,
-				Messages.MBSContainment1CreationTool_desc,
-				Collections.singletonList(ConcretaElementTypes.MBSContainment_4003));
-		entry.setId("createMBSContainment1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ConcretaElementTypes.getImageDescriptor(ConcretaElementTypes.MBSContainment_4003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createMBSHerencia2CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.MBSHerencia2CreationTool_title,
-				Messages.MBSHerencia2CreationTool_desc,
-				Collections.singletonList(ConcretaElementTypes.MBSHerencia_4002));
-		entry.setId("createMBSHerencia2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ConcretaElementTypes.getImageDescriptor(ConcretaElementTypes.MBSHerencia_4002));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createMBSRelacion3CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.MBSRelacion3CreationTool_title,
-				Messages.MBSRelacion3CreationTool_desc,
+	private ToolEntry createMBSRelacion1CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.MBSRelacion1CreationTool_title,
+				Messages.MBSRelacion1CreationTool_desc,
 				Collections.singletonList(ConcretaElementTypes.MBSRelacion_4001));
-		entry.setId("createMBSRelacion3CreationTool"); //$NON-NLS-1$
+		entry.setId("createMBSRelacion1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ConcretaElementTypes.getImageDescriptor(ConcretaElementTypes.MBSRelacion_4001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;

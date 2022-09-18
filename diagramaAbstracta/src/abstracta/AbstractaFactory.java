@@ -76,24 +76,6 @@ public interface AbstractaFactory extends EFactory {
 	MBSRelacion createMBSRelacion();
 
 	/**
-	 * Returns a new object of class '<em>MBS Herencia</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MBS Herencia</em>'.
-	 * @generated
-	 */
-	MBSHerencia createMBSHerencia();
-
-	/**
-	 * Returns a new object of class '<em>MBS Containment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MBS Containment</em>'.
-	 * @generated
-	 */
-	MBSContainment createMBSContainment();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -259,7 +259,7 @@
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Concreta"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
       </viewProvider>
    </extension>
 
@@ -274,7 +274,7 @@
             <method name="getType()" value="2001,2002,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003"/>
+            <method name="getType()" value="4001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5003,5004,5001,5002"/>
@@ -405,26 +405,6 @@
             <param name="semanticHint" value="4001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="concreta">
-         <metamodelType
-               id="diagramaConcreta.diagram.MBSHerencia_4002"
-               name="%metatype.name.MBSHerencia_4002"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="MBSHerencia"
-               edithelper="concreta.diagram.edit.helpers.MBSHerenciaEditHelper">
-            <param name="semanticHint" value="4002"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="concreta">
-         <metamodelType
-               id="diagramaConcreta.diagram.MBSContainment_4003"
-               name="%metatype.name.MBSContainment_4003"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="MBSContainment"
-               edithelper="concreta.diagram.edit.helpers.MBSContainmentEditHelper">
-            <param name="semanticHint" value="4003"/>
-         </metamodelType>
-      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -443,8 +423,6 @@
          <elementType ref="diagramaConcreta.diagram.MBSAtributo_3001"/>
          <elementType ref="diagramaConcreta.diagram.MBSMetodo_3002"/>
          <elementType ref="diagramaConcreta.diagram.MBSRelacion_4001"/>
-         <elementType ref="diagramaConcreta.diagram.MBSHerencia_4002"/>
-         <elementType ref="diagramaConcreta.diagram.MBSContainment_4003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

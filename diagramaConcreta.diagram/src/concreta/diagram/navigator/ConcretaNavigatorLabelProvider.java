@@ -20,15 +20,12 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
-import concreta.MBSContainment;
 import concreta.MBSDiagramaClases;
 import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MBSClaseEditPart;
 import concreta.diagram.edit.parts.MBSClaseNombreEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
 import concreta.diagram.edit.parts.MBSDiagramaClasesEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
@@ -114,10 +111,6 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 			return getImage("Navigator?Node?concreta?MBSMetodo", ConcretaElementTypes.MBSMetodo_3002); //$NON-NLS-1$
 		case MBSRelacionEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?concreta?MBSRelacion", ConcretaElementTypes.MBSRelacion_4001); //$NON-NLS-1$
-		case MBSHerenciaEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?concreta?MBSHerencia", ConcretaElementTypes.MBSHerencia_4002); //$NON-NLS-1$
-		case MBSContainmentEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?concreta?MBSContainment", ConcretaElementTypes.MBSContainment_4003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -188,10 +181,6 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 			return getMBSMetodo_3002Text(view);
 		case MBSRelacionEditPart.VISUAL_ID:
 			return getMBSRelacion_4001Text(view);
-		case MBSHerenciaEditPart.VISUAL_ID:
-			return getMBSHerencia_4002Text(view);
-		case MBSContainmentEditPart.VISUAL_ID:
-			return getMBSContainment_4003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -285,26 +274,6 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ConcretaDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	* @generated
-	*/
-	private String getMBSHerencia_4002Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	* @generated
-	*/
-	private String getMBSContainment_4003Text(View view) {
-		MBSContainment domainModelElement = (MBSContainment) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombre();
-		} else {
-			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -150,8 +150,6 @@ public class MBSDiagramaClasesItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_CLASES);
 			childrenFeatures.add(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES);
-			childrenFeatures.add(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA);
-			childrenFeatures.add(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT);
 			childrenFeatures.add(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES);
 		}
 		return childrenFeatures;
@@ -215,8 +213,6 @@ public class MBSDiagramaClasesItemProvider
 				return;
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_CLASES:
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES:
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA:
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT:
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_PAQUETES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -244,16 +240,6 @@ public class MBSDiagramaClasesItemProvider
 			(createChildParameter
 				(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES,
 				 ConcretaFactory.eINSTANCE.createMBSRelacion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_HERENCIA,
-				 ConcretaFactory.eINSTANCE.createMBSHerencia()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__LISTA_RELACIONES_CONTAINMENT,
-				 ConcretaFactory.eINSTANCE.createMBSContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter

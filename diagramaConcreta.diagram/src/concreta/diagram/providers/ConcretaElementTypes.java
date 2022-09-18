@@ -20,9 +20,7 @@ import org.eclipse.swt.graphics.Image;
 import concreta.ConcretaPackage;
 import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSClaseEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
 import concreta.diagram.edit.parts.MBSDiagramaClasesEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
@@ -80,15 +78,6 @@ public class ConcretaElementTypes {
 	* @generated
 	*/
 	public static final IElementType MBSRelacion_4001 = getElementType("diagramaConcreta.diagram.MBSRelacion_4001"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType MBSHerencia_4002 = getElementType("diagramaConcreta.diagram.MBSHerencia_4002"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType MBSContainment_4003 = getElementType(
-			"diagramaConcreta.diagram.MBSContainment_4003"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -139,10 +128,6 @@ public class ConcretaElementTypes {
 			elements.put(MBSMetodo_3002, ConcretaPackage.eINSTANCE.getMBSMetodo());
 
 			elements.put(MBSRelacion_4001, ConcretaPackage.eINSTANCE.getMBSRelacion());
-
-			elements.put(MBSHerencia_4002, ConcretaPackage.eINSTANCE.getMBSHerencia());
-
-			elements.put(MBSContainment_4003, ConcretaPackage.eINSTANCE.getMBSContainment());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -166,8 +151,6 @@ public class ConcretaElementTypes {
 			KNOWN_ELEMENT_TYPES.add(MBSAtributo_3001);
 			KNOWN_ELEMENT_TYPES.add(MBSMetodo_3002);
 			KNOWN_ELEMENT_TYPES.add(MBSRelacion_4001);
-			KNOWN_ELEMENT_TYPES.add(MBSHerencia_4002);
-			KNOWN_ELEMENT_TYPES.add(MBSContainment_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -189,10 +172,6 @@ public class ConcretaElementTypes {
 			return MBSMetodo_3002;
 		case MBSRelacionEditPart.VISUAL_ID:
 			return MBSRelacion_4001;
-		case MBSHerenciaEditPart.VISUAL_ID:
-			return MBSHerencia_4002;
-		case MBSContainmentEditPart.VISUAL_ID:
-			return MBSContainment_4003;
 		}
 		return null;
 	}

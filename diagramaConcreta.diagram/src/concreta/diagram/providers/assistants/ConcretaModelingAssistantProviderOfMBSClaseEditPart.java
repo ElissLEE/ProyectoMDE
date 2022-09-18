@@ -46,10 +46,8 @@ public class ConcretaModelingAssistantProviderOfMBSClaseEditPart extends Concret
 	* @generated
 	*/
 	public List<IElementType> doGetRelTypesOnSource(MBSClaseEditPart source) {
-		List<IElementType> types = new ArrayList<IElementType>(3);
+		List<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(ConcretaElementTypes.MBSRelacion_4001);
-		types.add(ConcretaElementTypes.MBSHerencia_4002);
-		types.add(ConcretaElementTypes.MBSContainment_4003);
 		return types;
 	}
 
@@ -73,12 +71,6 @@ public class ConcretaModelingAssistantProviderOfMBSClaseEditPart extends Concret
 		if (targetEditPart instanceof MBSClaseEditPart) {
 			types.add(ConcretaElementTypes.MBSRelacion_4001);
 		}
-		if (targetEditPart instanceof MBSClaseEditPart) {
-			types.add(ConcretaElementTypes.MBSHerencia_4002);
-		}
-		if (targetEditPart instanceof MBSClaseEditPart) {
-			types.add(ConcretaElementTypes.MBSContainment_4003);
-		}
 		return types;
 	}
 
@@ -99,10 +91,6 @@ public class ConcretaModelingAssistantProviderOfMBSClaseEditPart extends Concret
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == ConcretaElementTypes.MBSRelacion_4001) {
 			types.add(ConcretaElementTypes.MBSClase_2001);
-		} else if (relationshipType == ConcretaElementTypes.MBSHerencia_4002) {
-			types.add(ConcretaElementTypes.MBSClase_2001);
-		} else if (relationshipType == ConcretaElementTypes.MBSContainment_4003) {
-			types.add(ConcretaElementTypes.MBSClase_2001);
 		}
 		return types;
 	}
@@ -121,10 +109,8 @@ public class ConcretaModelingAssistantProviderOfMBSClaseEditPart extends Concret
 	* @generated
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(MBSClaseEditPart target) {
-		List<IElementType> types = new ArrayList<IElementType>(3);
+		List<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(ConcretaElementTypes.MBSRelacion_4001);
-		types.add(ConcretaElementTypes.MBSHerencia_4002);
-		types.add(ConcretaElementTypes.MBSContainment_4003);
 		return types;
 	}
 
@@ -144,10 +130,6 @@ public class ConcretaModelingAssistantProviderOfMBSClaseEditPart extends Concret
 	public List<IElementType> doGetTypesForSource(MBSClaseEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == ConcretaElementTypes.MBSRelacion_4001) {
-			types.add(ConcretaElementTypes.MBSClase_2001);
-		} else if (relationshipType == ConcretaElementTypes.MBSHerencia_4002) {
-			types.add(ConcretaElementTypes.MBSClase_2001);
-		} else if (relationshipType == ConcretaElementTypes.MBSContainment_4003) {
 			types.add(ConcretaElementTypes.MBSClase_2001);
 		}
 		return types;

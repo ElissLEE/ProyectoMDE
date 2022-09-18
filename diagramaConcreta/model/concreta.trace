@@ -44,10 +44,4 @@
         visualID="6001"
         queryText="true"/>
   </linkTraces>
-  <linkTraces
-      visualID="4002"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'concreta' and _eClass_.name = 'MBSHerencia')"/>
-  <linkTraces
-      visualID="4003"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'concreta' and _eClass_.name = 'MBSContainment')"/>
 </trace:TraceModel>

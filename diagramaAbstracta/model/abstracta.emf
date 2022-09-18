@@ -30,9 +30,6 @@ class MBSClase  {
 	val MBSAtributo[*] atributos;
 	val MBSMetodo[*] metodos;
 	val MBSRelacion [*]listaRelaciones;
-	val MBSHerencia[*] listaRelacionesHerencia;
-    val MBSContainment[*] listaRelacionesContainment;
-	
 }
 
 class MBSMetodo {
@@ -68,26 +65,4 @@ class MBSRelacion {
     attr String navegabilidadA;
     attr String navegabilidadB;
        
-}
-
-class MBSHerencia {
-   
-    ref MBSClase source;
-    ref MBSClase target;
-
-}
-
-class MBSContainment {
-   
-    ref MBSClase source;
-    ref MBSClase target;
-   	attr String nombre;
-    attr String tipo;
-    attr String multiplicidadA;
-    attr String multiplicidadB;
-    attr String rolA;
-    attr String rolB;
-    attr String navegabilidadA;
-    attr String navegabilidadB;
-
 }

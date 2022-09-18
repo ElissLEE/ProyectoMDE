@@ -63,8 +63,6 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 			case ConcretaPackage.MBS_METODO: return createMBSMetodo();
 			case ConcretaPackage.MBS_ATRIBUTO: return createMBSAtributo();
 			case ConcretaPackage.MBS_RELACION: return createMBSRelacion();
-			case ConcretaPackage.MBS_HERENCIA: return createMBSHerencia();
-			case ConcretaPackage.MBS_CONTAINMENT: return createMBSContainment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,26 +136,6 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	public MBSRelacion createMBSRelacion() {
 		MBSRelacionImpl mbsRelacion = new MBSRelacionImpl();
 		return mbsRelacion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSHerencia createMBSHerencia() {
-		MBSHerenciaImpl mbsHerencia = new MBSHerenciaImpl();
-		return mbsHerencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MBSContainment createMBSContainment() {
-		MBSContainmentImpl mbsContainment = new MBSContainmentImpl();
-		return mbsContainment;
 	}
 
 	/**

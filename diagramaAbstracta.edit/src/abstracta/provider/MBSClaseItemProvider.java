@@ -75,28 +75,6 @@ public class MBSClaseItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Id Clase feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdClasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MBSClase_idClase_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSClase_idClase_feature", "_UI_MBSClase_type"),
-				 AbstractaPackage.Literals.MBS_CLASE__ID_CLASE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Nombre feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +88,28 @@ public class MBSClaseItemProvider
 				 getString("_UI_MBSClase_nombre_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MBSClase_nombre_feature", "_UI_MBSClase_type"),
 				 AbstractaPackage.Literals.MBS_CLASE__NOMBRE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id Clase feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdClasePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSClase_idClase_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSClase_idClase_feature", "_UI_MBSClase_type"),
+				 AbstractaPackage.Literals.MBS_CLASE__ID_CLASE,
 				 true,
 				 false,
 				 false,
@@ -243,8 +243,6 @@ public class MBSClaseItemProvider
 			childrenFeatures.add(AbstractaPackage.Literals.MBS_CLASE__ATRIBUTOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MBS_CLASE__METODOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES);
-			childrenFeatures.add(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES_HERENCIA);
-			childrenFeatures.add(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT);
 		}
 		return childrenFeatures;
 	}
@@ -312,8 +310,6 @@ public class MBSClaseItemProvider
 			case AbstractaPackage.MBS_CLASE__ATRIBUTOS:
 			case AbstractaPackage.MBS_CLASE__METODOS:
 			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES:
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_HERENCIA:
-			case AbstractaPackage.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -345,16 +341,6 @@ public class MBSClaseItemProvider
 			(createChildParameter
 				(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES,
 				 AbstractaFactory.eINSTANCE.createMBSRelacion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES_HERENCIA,
-				 AbstractaFactory.eINSTANCE.createMBSHerencia()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AbstractaPackage.Literals.MBS_CLASE__LISTA_RELACIONES_CONTAINMENT,
-				 AbstractaFactory.eINSTANCE.createMBSContainment()));
 	}
 
 	/**

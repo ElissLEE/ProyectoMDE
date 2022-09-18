@@ -32,9 +32,7 @@ import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSClaseEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MBSClaseMBSClaseMetodosCompartmentEditPart;
-import concreta.diagram.edit.parts.MBSContainmentEditPart;
 import concreta.diagram.edit.parts.MBSDiagramaClasesEditPart;
-import concreta.diagram.edit.parts.MBSHerenciaEditPart;
 import concreta.diagram.edit.parts.MBSMetodoEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
@@ -250,12 +248,6 @@ public class ConcretaNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					ConcretaVisualIDRegistry.getType(MBSRelacionEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSHerenciaEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSContainmentEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
 			}
@@ -288,18 +280,6 @@ public class ConcretaNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					ConcretaVisualIDRegistry.getType(MBSRelacionEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSHerenciaEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSHerenciaEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSContainmentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSContainmentEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
 			}
@@ -317,56 +297,6 @@ public class ConcretaNavigatorContentProvider implements ICommonContentProvider 
 					parentElement);
 			ConcretaNavigatorGroup source = new ConcretaNavigatorGroup(
 					Messages.NavigatorGroupName_MBSRelacion_4001_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
-					parentElement);
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSClaseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSClaseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case MBSHerenciaEditPart.VISUAL_ID: {
-			LinkedList<ConcretaAbstractNavigatorItem> result = new LinkedList<ConcretaAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			ConcretaNavigatorGroup target = new ConcretaNavigatorGroup(
-					Messages.NavigatorGroupName_MBSHerencia_4002_target, "icons/linkTargetNavigatorGroup.gif", //$NON-NLS-1$
-					parentElement);
-			ConcretaNavigatorGroup source = new ConcretaNavigatorGroup(
-					Messages.NavigatorGroupName_MBSHerencia_4002_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
-					parentElement);
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSClaseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ConcretaVisualIDRegistry.getType(MBSClaseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case MBSContainmentEditPart.VISUAL_ID: {
-			LinkedList<ConcretaAbstractNavigatorItem> result = new LinkedList<ConcretaAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			ConcretaNavigatorGroup target = new ConcretaNavigatorGroup(
-					Messages.NavigatorGroupName_MBSContainment_4003_target, "icons/linkTargetNavigatorGroup.gif", //$NON-NLS-1$
-					parentElement);
-			ConcretaNavigatorGroup source = new ConcretaNavigatorGroup(
-					Messages.NavigatorGroupName_MBSContainment_4003_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),

@@ -36,9 +36,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
 import concreta.MBSClase;
-import concreta.MBSContainment;
 import concreta.MBSDiagramaClases;
-import concreta.MBSHerencia;
 import concreta.MBSRelacion;
 import concreta.diagram.part.ConcretaDiagramEditorPlugin;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -319,40 +317,10 @@ public class ConcretaBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
-		 * @generated
-		 */
-		public boolean canCreateMBSHerencia_4002(MBSDiagramaClases container, MBSClase source, MBSClase target) {
-			return canExistMBSHerencia_4002(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateMBSContainment_4003(MBSDiagramaClases container, MBSClase source, MBSClase target) {
-			return canExistMBSContainment_4003(container, null, source, target);
-		}
-
-		/**
 		* @generated
 		*/
 		public boolean canExistMBSRelacion_4001(MBSDiagramaClases container, MBSRelacion linkInstance, MBSClase source,
 				MBSClase target) {
-			return true;
-		}
-
-		/**
-		* @generated
-		*/
-		public boolean canExistMBSHerencia_4002(MBSDiagramaClases container, MBSHerencia linkInstance, MBSClase source,
-				MBSClase target) {
-			return true;
-		}
-
-		/**
-		* @generated
-		*/
-		public boolean canExistMBSContainment_4003(MBSDiagramaClases container, MBSContainment linkInstance,
-				MBSClase source, MBSClase target) {
 			return true;
 		}
 	}
