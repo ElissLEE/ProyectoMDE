@@ -478,7 +478,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSRelacion_Source() {
-		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(0);
+		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -487,7 +487,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSRelacion_Target() {
-		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(1);
+		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -496,7 +496,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_Nombre() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -505,7 +505,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_Tipo() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -514,7 +514,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_MultiplicidadA() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -523,7 +523,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_MultiplicidadB() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -532,7 +532,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_RolA() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -541,7 +541,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_RolB() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -550,7 +550,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_NavegabilidadA() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -559,7 +559,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_NavegabilidadB() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -568,7 +568,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSRelacion_LabelName() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(10);
+		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -642,8 +642,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__RUTA);
 
 		mbsRelacionEClass = createEClass(MBS_RELACION);
-		createEReference(mbsRelacionEClass, MBS_RELACION__SOURCE);
-		createEReference(mbsRelacionEClass, MBS_RELACION__TARGET);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NOMBRE);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__TIPO);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__MULTIPLICIDAD_A);
@@ -653,6 +651,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__LABEL_NAME);
+		createEReference(mbsRelacionEClass, MBS_RELACION__SOURCE);
+		createEReference(mbsRelacionEClass, MBS_RELACION__TARGET);
 	}
 
 	/**
@@ -728,8 +728,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		initEAttribute(getMBSAtributo_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsRelacionEClass, MBSRelacion.class, "MBSRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMBSRelacion_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMBSRelacion_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_MultiplicidadA(), ecorePackage.getEString(), "multiplicidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -739,6 +737,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_LabelName(), ecorePackage.getEString(), "labelName", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMBSRelacion_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMBSRelacion_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

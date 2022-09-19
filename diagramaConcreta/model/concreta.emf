@@ -70,9 +70,7 @@ class MBSAtributo {
 @gmf.link(source="source", target="target", style="solid", width="2", label="labelName")
 class MBSRelacion {
    
-    ref MBSClase source;
-    ref MBSClase target;
-    attr String nombre;
+   	attr String nombre;
     attr String tipo;
     attr String multiplicidadA;
     attr String multiplicidadB;
@@ -81,5 +79,7 @@ class MBSRelacion {
     attr String navegabilidadA;
     attr String navegabilidadB;
     attr String labelName;
+    ref MBSClase source;
+    ref MBSClase target;
 
 }

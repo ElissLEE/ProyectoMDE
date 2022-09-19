@@ -22,8 +22,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link concreta.impl.MBSRelacionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link concreta.impl.MBSRelacionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getMultiplicidadA <em>Multiplicidad A</em>}</li>
@@ -33,31 +31,13 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link concreta.impl.MBSRelacionImpl#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getNavegabilidadB <em>Navegabilidad B</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getLabelName <em>Label Name</em>}</li>
+ *   <li>{@link concreta.impl.MBSRelacionImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link concreta.impl.MBSRelacionImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
-	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSource()
-	 * @generated
-	 * @ordered
-	 */
-	protected MBSClase source;
-
-	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTarget()
-	 * @generated
-	 * @ordered
-	 */
-	protected MBSClase target;
-
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -237,6 +217,26 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @ordered
 	 */
 	protected String labelName = LABEL_NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected MBSClase source;
+
+	/**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected MBSClase target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -530,12 +530,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ConcretaPackage.MBS_RELACION__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
-			case ConcretaPackage.MBS_RELACION__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
 			case ConcretaPackage.MBS_RELACION__NOMBRE:
 				return getNombre();
 			case ConcretaPackage.MBS_RELACION__TIPO:
@@ -554,6 +548,12 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return getNavegabilidadB();
 			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
 				return getLabelName();
+			case ConcretaPackage.MBS_RELACION__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
+			case ConcretaPackage.MBS_RELACION__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -566,12 +566,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ConcretaPackage.MBS_RELACION__SOURCE:
-				setSource((MBSClase)newValue);
-				return;
-			case ConcretaPackage.MBS_RELACION__TARGET:
-				setTarget((MBSClase)newValue);
-				return;
 			case ConcretaPackage.MBS_RELACION__NOMBRE:
 				setNombre((String)newValue);
 				return;
@@ -599,6 +593,12 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
 				setLabelName((String)newValue);
 				return;
+			case ConcretaPackage.MBS_RELACION__SOURCE:
+				setSource((MBSClase)newValue);
+				return;
+			case ConcretaPackage.MBS_RELACION__TARGET:
+				setTarget((MBSClase)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -611,12 +611,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MBS_RELACION__SOURCE:
-				setSource((MBSClase)null);
-				return;
-			case ConcretaPackage.MBS_RELACION__TARGET:
-				setTarget((MBSClase)null);
-				return;
 			case ConcretaPackage.MBS_RELACION__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
@@ -644,6 +638,12 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
 				setLabelName(LABEL_NAME_EDEFAULT);
 				return;
+			case ConcretaPackage.MBS_RELACION__SOURCE:
+				setSource((MBSClase)null);
+				return;
+			case ConcretaPackage.MBS_RELACION__TARGET:
+				setTarget((MBSClase)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -656,10 +656,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MBS_RELACION__SOURCE:
-				return source != null;
-			case ConcretaPackage.MBS_RELACION__TARGET:
-				return target != null;
 			case ConcretaPackage.MBS_RELACION__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case ConcretaPackage.MBS_RELACION__TIPO:
@@ -678,6 +674,10 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return NAVEGABILIDAD_B_EDEFAULT == null ? navegabilidadB != null : !NAVEGABILIDAD_B_EDEFAULT.equals(navegabilidadB);
 			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
 				return LABEL_NAME_EDEFAULT == null ? labelName != null : !LABEL_NAME_EDEFAULT.equals(labelName);
+			case ConcretaPackage.MBS_RELACION__SOURCE:
+				return source != null;
+			case ConcretaPackage.MBS_RELACION__TARGET:
+				return target != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -60,8 +60,6 @@ public class MBSRelacionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSourcePropertyDescriptor(object);
-			addTargetPropertyDescriptor(object);
 			addNombrePropertyDescriptor(object);
 			addTipoPropertyDescriptor(object);
 			addMultiplicidadAPropertyDescriptor(object);
@@ -71,6 +69,8 @@ public class MBSRelacionItemProvider
 			addNavegabilidadAPropertyDescriptor(object);
 			addNavegabilidadBPropertyDescriptor(object);
 			addLabelNamePropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}

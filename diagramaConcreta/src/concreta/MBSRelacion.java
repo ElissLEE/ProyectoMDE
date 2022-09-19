@@ -13,8 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link concreta.MBSRelacion#getSource <em>Source</em>}</li>
- *   <li>{@link concreta.MBSRelacion#getTarget <em>Target</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getTipo <em>Tipo</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getMultiplicidadA <em>Multiplicidad A</em>}</li>
@@ -24,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link concreta.MBSRelacion#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getNavegabilidadB <em>Navegabilidad B</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getLabelName <em>Label Name</em>}</li>
+ *   <li>{@link concreta.MBSRelacion#getSource <em>Source</em>}</li>
+ *   <li>{@link concreta.MBSRelacion#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMBSRelacion()

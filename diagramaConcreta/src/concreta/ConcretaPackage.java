@@ -450,31 +450,13 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_RELACION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_RELACION__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_RELACION__TARGET = 1;
-
-	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__NOMBRE = 2;
+	int MBS_RELACION__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
@@ -483,7 +465,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__TIPO = 3;
+	int MBS_RELACION__TIPO = 1;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad A</b></em>' attribute.
@@ -492,7 +474,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__MULTIPLICIDAD_A = 4;
+	int MBS_RELACION__MULTIPLICIDAD_A = 2;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad B</b></em>' attribute.
@@ -501,7 +483,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__MULTIPLICIDAD_B = 5;
+	int MBS_RELACION__MULTIPLICIDAD_B = 3;
 
 	/**
 	 * The feature id for the '<em><b>Rol A</b></em>' attribute.
@@ -510,7 +492,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__ROL_A = 6;
+	int MBS_RELACION__ROL_A = 4;
 
 	/**
 	 * The feature id for the '<em><b>Rol B</b></em>' attribute.
@@ -519,7 +501,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__ROL_B = 7;
+	int MBS_RELACION__ROL_B = 5;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad A</b></em>' attribute.
@@ -528,7 +510,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__NAVEGABILIDAD_A = 8;
+	int MBS_RELACION__NAVEGABILIDAD_A = 6;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad B</b></em>' attribute.
@@ -537,7 +519,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__NAVEGABILIDAD_B = 9;
+	int MBS_RELACION__NAVEGABILIDAD_B = 7;
 
 	/**
 	 * The feature id for the '<em><b>Label Name</b></em>' attribute.
@@ -546,7 +528,25 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__LABEL_NAME = 10;
+	int MBS_RELACION__LABEL_NAME = 8;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_RELACION__SOURCE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_RELACION__TARGET = 10;
 
 	/**
 	 * The number of structural features of the '<em>MBS Relacion</em>' class.
