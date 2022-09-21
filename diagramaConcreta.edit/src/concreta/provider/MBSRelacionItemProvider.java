@@ -68,55 +68,10 @@ public class MBSRelacionItemProvider
 			addRolBPropertyDescriptor(object);
 			addNavegabilidadAPropertyDescriptor(object);
 			addNavegabilidadBPropertyDescriptor(object);
-			addLabelNamePropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Source feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MBSRelacion_source_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_source_feature", "_UI_MBSRelacion_type"),
-				 ConcretaPackage.Literals.MBS_RELACION__SOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MBSRelacion_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_target_feature", "_UI_MBSRelacion_type"),
-				 ConcretaPackage.Literals.MBS_RELACION__TARGET,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -296,23 +251,45 @@ public class MBSRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Label Name feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLabelNamePropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MBSRelacion_labelName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_labelName_feature", "_UI_MBSRelacion_type"),
-				 ConcretaPackage.Literals.MBS_RELACION__LABEL_NAME,
+				 getString("_UI_MBSRelacion_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_source_feature", "_UI_MBSRelacion_type"),
+				 ConcretaPackage.Literals.MBS_RELACION__SOURCE,
 				 true,
 				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSRelacion_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSRelacion_target_feature", "_UI_MBSRelacion_type"),
+				 ConcretaPackage.Literals.MBS_RELACION__TARGET,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -336,7 +313,7 @@ public class MBSRelacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MBSRelacion)object).getLabelName();
+		String label = ((MBSRelacion)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MBSRelacion_type") :
 			getString("_UI_MBSRelacion_type") + " " + label;
@@ -363,7 +340,6 @@ public class MBSRelacionItemProvider
 			case ConcretaPackage.MBS_RELACION__ROL_B:
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_A:
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
-			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -7,6 +7,8 @@ class ModelFactory  {
 	attr String nombre;
 	attr String ruta;
 	val MBSPaquete[*] listaPaquetes;
+	ref MBSClase[*] listaTodasLasClases;
+	ref MBSPaquete[*] listaTodosLosPaquetes;
 }
 
 class MBSPaquete  {
@@ -20,7 +22,6 @@ class MBSPaquete  {
 class MBSClase  {
 	
 	attr String nombre;
-	attr String idClase;
 	attr String estereotipo;
 	attr String modificadorAcceso;
 	attr boolean abstracta;
@@ -62,7 +63,7 @@ class MBSRelacion {
     attr String multiplicidadB;
     attr String rolA;
     attr String rolB;
-    attr String navegabilidadA;
-    attr String navegabilidadB;
+    attr Boolean navegabilidadA;
+    attr Boolean navegabilidadB;
        
 }

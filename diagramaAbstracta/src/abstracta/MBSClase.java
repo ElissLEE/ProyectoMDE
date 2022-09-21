@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link abstracta.MBSClase#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.MBSClase#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link abstracta.MBSClase#getEstereotipo <em>Estereotipo</em>}</li>
  *   <li>{@link abstracta.MBSClase#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.MBSClase#isAbstracta <em>Abstracta</em>}</li>
@@ -32,32 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MBSClase extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id Clase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Clase</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Clase</em>' attribute.
-	 * @see #setIdClase(String)
-	 * @see abstracta.AbstractaPackage#getMBSClase_IdClase()
-	 * @model
-	 * @generated
-	 */
-	String getIdClase();
-
-	/**
-	 * Sets the value of the '{@link abstracta.MBSClase#getIdClase <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Clase</em>' attribute.
-	 * @see #getIdClase()
-	 * @generated
-	 */
-	void setIdClase(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->

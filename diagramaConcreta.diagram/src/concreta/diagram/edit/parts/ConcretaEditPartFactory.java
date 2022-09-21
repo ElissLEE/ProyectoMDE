@@ -61,9 +61,6 @@ public class ConcretaEditPartFactory implements EditPartFactory {
 			case MBSRelacionEditPart.VISUAL_ID:
 				return new MBSRelacionEditPart(view);
 
-			case MBSRelacionLabelNameEditPart.VISUAL_ID:
-				return new MBSRelacionLabelNameEditPart(view);
-
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link concreta.impl.MBSDiagramaClasesImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
@@ -64,26 +63,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 	 * @ordered
 	 */
 	protected String nombre = NOMBRE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdClase()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_CLASE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIdClase() <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdClase()
-	 * @generated
-	 * @ordered
-	 */
-	protected String idClase = ID_CLASE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
@@ -152,27 +131,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 	@Override
 	protected EClass eStaticClass() {
 		return ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getIdClase() {
-		return idClase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdClase(String newIdClase) {
-		String oldIdClase = idClase;
-		idClase = newIdClase;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE, oldIdClase, idClase));
 	}
 
 	/**
@@ -281,8 +239,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 		switch (featureID) {
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__NOMBRE:
 				return getNombre();
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE:
-				return getIdClase();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__DESCRIPCION:
 				return getDescripcion();
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_CLASES:
@@ -306,9 +262,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 		switch (featureID) {
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__NOMBRE:
 				setNombre((String)newValue);
-				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE:
-				setIdClase((String)newValue);
 				return;
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__DESCRIPCION:
 				setDescripcion((String)newValue);
@@ -340,9 +293,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE:
-				setIdClase(ID_CLASE_EDEFAULT);
-				return;
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__DESCRIPCION:
 				setDescripcion(DESCRIPCION_EDEFAULT);
 				return;
@@ -369,8 +319,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 		switch (featureID) {
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE:
-				return ID_CLASE_EDEFAULT == null ? idClase != null : !ID_CLASE_EDEFAULT.equals(idClase);
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__DESCRIPCION:
 				return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__LISTA_CLASES:
@@ -395,8 +343,6 @@ public class MBSDiagramaClasesImpl extends EObjectImpl implements MBSDiagramaCla
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nombre: ");
 		result.append(nombre);
-		result.append(", idClase: ");
-		result.append(idClase);
 		result.append(", descripcion: ");
 		result.append(descripcion);
 		result.append(')');

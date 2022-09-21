@@ -24,7 +24,6 @@ import concreta.diagram.edit.parts.MBSMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteNombreEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
-import concreta.diagram.edit.parts.MBSRelacionLabelNameEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -209,11 +208,6 @@ public class ConcretaVisualIDRegistry {
 			break;
 		case MBSClaseMBSClaseMetodosCompartmentEditPart.VISUAL_ID:
 			if (MBSMetodoEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case MBSRelacionEditPart.VISUAL_ID:
-			if (MBSRelacionLabelNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link concreta.MBSDiagramaClases#getNombre <em>Nombre</em>}</li>
- *   <li>{@link concreta.MBSDiagramaClases#getIdClase <em>Id Clase</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link concreta.MBSDiagramaClases#getListaRelaciones <em>Lista Relaciones</em>}</li>
@@ -28,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MBSDiagramaClases extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id Clase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Clase</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Clase</em>' attribute.
-	 * @see #setIdClase(String)
-	 * @see concreta.ConcretaPackage#getMBSDiagramaClases_IdClase()
-	 * @model
-	 * @generated
-	 */
-	String getIdClase();
-
-	/**
-	 * Sets the value of the '{@link concreta.MBSDiagramaClases#getIdClase <em>Id Clase</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Clase</em>' attribute.
-	 * @see #getIdClase()
-	 * @generated
-	 */
-	void setIdClase(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->

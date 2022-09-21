@@ -64,7 +64,6 @@ public class MBSClaseItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNombrePropertyDescriptor(object);
-			addIdClasePropertyDescriptor(object);
 			addEstereotipoPropertyDescriptor(object);
 			addModificadorAccesoPropertyDescriptor(object);
 			addAbstractaPropertyDescriptor(object);
@@ -88,28 +87,6 @@ public class MBSClaseItemProvider
 				 getString("_UI_MBSClase_nombre_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MBSClase_nombre_feature", "_UI_MBSClase_type"),
 				 AbstractaPackage.Literals.MBS_CLASE__NOMBRE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Id Clase feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdClasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MBSClase_idClase_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSClase_idClase_feature", "_UI_MBSClase_type"),
-				 AbstractaPackage.Literals.MBS_CLASE__ID_CLASE,
 				 true,
 				 false,
 				 false,
@@ -299,7 +276,6 @@ public class MBSClaseItemProvider
 
 		switch (notification.getFeatureID(MBSClase.class)) {
 			case AbstractaPackage.MBS_CLASE__NOMBRE:
-			case AbstractaPackage.MBS_CLASE__ID_CLASE:
 			case AbstractaPackage.MBS_CLASE__ESTEREOTIPO:
 			case AbstractaPackage.MBS_CLASE__MODIFICADOR_ACCESO:
 			case AbstractaPackage.MBS_CLASE__ABSTRACTA:

@@ -14,7 +14,6 @@ package concreta;
 class MBSDiagramaClases {
 
 	attr String nombre;
-	attr String idClase;
 	attr String descripcion;
     val MBSClase[*] listaClases;
     val MBSRelacion[*] listaRelaciones;
@@ -67,7 +66,7 @@ class MBSAtributo {
 	
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2", label="labelName")
+@gmf.link(source="source", target="target", style="solid", width="2")
 class MBSRelacion {
    
    	attr String nombre;
@@ -76,9 +75,8 @@ class MBSRelacion {
     attr String multiplicidadB;
     attr String rolA;
     attr String rolB;
-    attr String navegabilidadA;
-    attr String navegabilidadB;
-    attr String labelName;
+    attr Boolean navegabilidadA;
+    attr Boolean navegabilidadB;
     ref MBSClase source;
     ref MBSClase target;
 

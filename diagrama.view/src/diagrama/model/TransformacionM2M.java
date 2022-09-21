@@ -4,6 +4,7 @@ import abstracta.AbstractaFactory;
 import concreta.MBSAtributo;
 import concreta.MBSClase;
 import concreta.MBSPaquete;
+import concreta.MBSRelacion;
 import concreta.MBSDiagramaClases;
 import concreta.MBSMetodo;
 import concreta.ModelFactory;
@@ -22,6 +23,28 @@ public class TransformacionM2M {
 	
 	public String transformarM2M() {
 		String mensaje = "Se ha realizado la transformacion M2M";
+		
+		
+		if(modelFactoryAbstracta.getListaPaquetes().size()>0) {
+			
+			if(modelFactoryAbstracta.getListaPaquetes().get(0).getListaClases().size()>0) {
+				
+				modelFactoryAbstracta.getListaPaquetes().get(0).getListaClases().clear();
+			}
+			
+			modelFactoryAbstracta.getListaPaquetes().get(0).getListaPaquetes().clear();
+		}
+		
+		if(modelFactoryAbstracta.getListaTodasLasClases().size()>0) {
+			
+			modelFactoryAbstracta.getListaTodasLasClases().clear();
+		}
+		
+		if(modelFactoryAbstracta.getListaTodosLosPaquetes().size()>0) {
+			
+			modelFactoryAbstracta.getListaTodosLosPaquetes().clear();
+		}
+		
 		
 		for (MBSDiagramaClases diagramaConcreta : modelFactoryConcreta.getListaDiagramas()){
 			
@@ -63,6 +86,13 @@ public class TransformacionM2M {
 						crearMetodo(clase.getNombre(), clase.getRuta(), metodo);
 					}
 				}
+			}
+			
+			//Crear relaciones
+			for(MBSRelacion relacion : diagramaConcreta.getListaRelaciones()) {
+				
+				System.out.println("Relacion: "+relacion.getNombre());
+				crearRelacion(relacion);
 			}
 			
 	
@@ -110,7 +140,9 @@ public class TransformacionM2M {
 			nuevaClase.setEstereotipo(clase.getEstereotipo());
 			nuevaClase.setModificadorAcceso(clase.getModificadorAcceso());
 			nuevaClase.setDescripcion(clase.getDescripcion());
+			nuevaClase.setAbstracta(clase.isAbstracta());
 			nuevaClase.setRuta(clase.getRuta());
+			modelFactoryAbstracta.getListaTodasLasClases().add(nuevaClase);
 			paqueteAbstracta.getListaClases().add(nuevaClase);
 		}
 		
@@ -132,6 +164,7 @@ public class TransformacionM2M {
 				atributoNuevo.setModificadorAcesso(atributo.getModificadorAcesso());
 				atributoNuevo.setRuta(atributo.getRuta());
 				atributoNuevo.setTipo(atributo.getTipo());
+				atributoNuevo.setConstante(atributo.isConstante());
 				atributoNuevo.setValorDefecto(atributo.getValorDefecto());
 				claseAbstracta.getAtributos().add(atributoNuevo);
 			}
@@ -158,6 +191,43 @@ public class TransformacionM2M {
 				claseAbstracta.getMetodos().add(metodoNuevo);
 			}
 		}
+	}
+	
+	private void crearRelacion(MBSRelacion relacion) {
+		
+		MBSClase sourceConcreta = relacion.getSource();
+		MBSClase targetConcreta = relacion.getTarget();
+		
+		abstracta.MBSPaquete paqueteAbstractaSource = buscarPaqueteClase(sourceConcreta.getRuta());
+		abstracta.MBSPaquete paqueteAbstractaTarget = buscarPaqueteClase(targetConcreta.getRuta());
+		abstracta.MBSClase claseAbstractaSource = obtenerClaseAbstracta(sourceConcreta.getRuta(), sourceConcreta.getNombre(), paqueteAbstractaSource);
+		abstracta.MBSClase claseAbstractaTarget = obtenerClaseAbstracta(targetConcreta.getRuta(), targetConcreta.getNombre(), paqueteAbstractaTarget);
+		
+		abstracta.MBSRelacion relacionSource = AbstractaFactory.eINSTANCE.createMBSRelacion();
+		relacionSource.setNombre(relacion.getNombre());
+		relacionSource.setMultiplicidadA(relacion.getMultiplicidadA());
+		relacionSource.setMultiplicidadB(relacion.getMultiplicidadB());
+		relacionSource.setNavegabilidadA(relacion.getNavegabilidadA());
+		relacionSource.setNavegabilidadB(relacion.getNavegabilidadB());
+		relacionSource.setRolA(relacion.getRolA());
+		relacionSource.setRolB(relacion.getRolB());
+		relacionSource.setTipo(relacion.getTipo());
+		relacionSource.setSource(claseAbstractaSource);
+		relacionSource.setTarget(claseAbstractaTarget);
+		claseAbstractaSource.getListaRelaciones().add(relacionSource);
+		
+		abstracta.MBSRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMBSRelacion();
+		relacionTarget.setNombre(relacion.getNombre());
+		relacionTarget.setMultiplicidadA(relacion.getMultiplicidadB());
+		relacionTarget.setMultiplicidadB(relacion.getMultiplicidadA());
+		relacionTarget.setNavegabilidadA(relacion.getNavegabilidadB());
+		relacionTarget.setNavegabilidadB(relacion.getNavegabilidadA());
+		relacionTarget.setRolA(relacion.getRolB());
+		relacionTarget.setRolB(relacion.getRolA());
+		relacionTarget.setTipo(relacion.getTipo());
+		relacionTarget.setSource(claseAbstractaTarget);
+		relacionTarget.setTarget(claseAbstractaSource);
+		claseAbstractaTarget.getListaRelaciones().add(relacionTarget);
 	}
 	
 	private abstracta.MBSPaquete buscarPaqueteClase(String ruta){
@@ -222,6 +292,7 @@ public class TransformacionM2M {
 			nuevoPackage.setNombre(nombrePaquete);
 			nuevoPackage.setRuta(nuevaRuta);
 			modelFactoryAbstracta.getListaPaquetes().add(nuevoPackage);
+			modelFactoryAbstracta.getListaTodosLosPaquetes().add(nuevoPackage);
 			return nuevoPackage;
 
 		}else{
@@ -242,9 +313,11 @@ public class TransformacionM2M {
 		nuevoPackage.setNombre(nombrePaquete);
 		nuevoPackage.setRuta(nuevaRuta);
 		paqueteParent.getListaPaquetes().add(nuevoPackage);
+		modelFactoryAbstracta.getListaTodosLosPaquetes().add(nuevoPackage);
 		
 		return nuevoPackage;
 	}
+	
 	
 	private abstracta.MBSClase obtenerClaseAbstracta(String ruta, String nombre, abstracta.MBSPaquete MBSPaquete) {
 		

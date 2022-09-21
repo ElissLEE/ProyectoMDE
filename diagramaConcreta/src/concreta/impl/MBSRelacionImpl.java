@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link concreta.impl.MBSRelacionImpl#getRolB <em>Rol B</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getNavegabilidadB <em>Navegabilidad B</em>}</li>
- *   <li>{@link concreta.impl.MBSRelacionImpl#getLabelName <em>Label Name</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link concreta.impl.MBSRelacionImpl#getTarget <em>Target</em>}</li>
  * </ul>
@@ -166,7 +165,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAVEGABILIDAD_A_EDEFAULT = null;
+	protected static final Boolean NAVEGABILIDAD_A_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNavegabilidadA() <em>Navegabilidad A</em>}' attribute.
@@ -176,7 +175,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected String navegabilidadA = NAVEGABILIDAD_A_EDEFAULT;
+	protected Boolean navegabilidadA = NAVEGABILIDAD_A_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNavegabilidadB() <em>Navegabilidad B</em>}' attribute.
@@ -186,7 +185,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAVEGABILIDAD_B_EDEFAULT = null;
+	protected static final Boolean NAVEGABILIDAD_B_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNavegabilidadB() <em>Navegabilidad B</em>}' attribute.
@@ -196,27 +195,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected String navegabilidadB = NAVEGABILIDAD_B_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLabelName() <em>Label Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabelName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LABEL_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLabelName() <em>Label Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabelName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String labelName = LABEL_NAME_EDEFAULT;
+	protected Boolean navegabilidadB = NAVEGABILIDAD_B_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
@@ -464,7 +443,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNavegabilidadA() {
+	public Boolean getNavegabilidadA() {
 		return navegabilidadA;
 	}
 
@@ -473,8 +452,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNavegabilidadA(String newNavegabilidadA) {
-		String oldNavegabilidadA = navegabilidadA;
+	public void setNavegabilidadA(Boolean newNavegabilidadA) {
+		Boolean oldNavegabilidadA = navegabilidadA;
 		navegabilidadA = newNavegabilidadA;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_A, oldNavegabilidadA, navegabilidadA));
@@ -485,7 +464,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNavegabilidadB() {
+	public Boolean getNavegabilidadB() {
 		return navegabilidadB;
 	}
 
@@ -494,32 +473,11 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNavegabilidadB(String newNavegabilidadB) {
-		String oldNavegabilidadB = navegabilidadB;
+	public void setNavegabilidadB(Boolean newNavegabilidadB) {
+		Boolean oldNavegabilidadB = navegabilidadB;
 		navegabilidadB = newNavegabilidadB;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B, oldNavegabilidadB, navegabilidadB));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLabelName() {
-		return labelName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLabelName(String newLabelName) {
-		String oldLabelName = labelName;
-		labelName = newLabelName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_RELACION__LABEL_NAME, oldLabelName, labelName));
 	}
 
 	/**
@@ -546,8 +504,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return getNavegabilidadA();
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				return getNavegabilidadB();
-			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
-				return getLabelName();
 			case ConcretaPackage.MBS_RELACION__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
@@ -585,13 +541,10 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				setRolB((String)newValue);
 				return;
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_A:
-				setNavegabilidadA((String)newValue);
+				setNavegabilidadA((Boolean)newValue);
 				return;
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
-				setNavegabilidadB((String)newValue);
-				return;
-			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
-				setLabelName((String)newValue);
+				setNavegabilidadB((Boolean)newValue);
 				return;
 			case ConcretaPackage.MBS_RELACION__SOURCE:
 				setSource((MBSClase)newValue);
@@ -635,9 +588,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				setNavegabilidadB(NAVEGABILIDAD_B_EDEFAULT);
 				return;
-			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
-				setLabelName(LABEL_NAME_EDEFAULT);
-				return;
 			case ConcretaPackage.MBS_RELACION__SOURCE:
 				setSource((MBSClase)null);
 				return;
@@ -672,8 +622,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				return NAVEGABILIDAD_A_EDEFAULT == null ? navegabilidadA != null : !NAVEGABILIDAD_A_EDEFAULT.equals(navegabilidadA);
 			case ConcretaPackage.MBS_RELACION__NAVEGABILIDAD_B:
 				return NAVEGABILIDAD_B_EDEFAULT == null ? navegabilidadB != null : !NAVEGABILIDAD_B_EDEFAULT.equals(navegabilidadB);
-			case ConcretaPackage.MBS_RELACION__LABEL_NAME:
-				return LABEL_NAME_EDEFAULT == null ? labelName != null : !LABEL_NAME_EDEFAULT.equals(labelName);
 			case ConcretaPackage.MBS_RELACION__SOURCE:
 				return source != null;
 			case ConcretaPackage.MBS_RELACION__TARGET:
@@ -708,8 +656,6 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 		result.append(navegabilidadA);
 		result.append(", navegabilidadB: ");
 		result.append(navegabilidadB);
-		result.append(", labelName: ");
-		result.append(labelName);
 		result.append(')');
 		return result.toString();
 	}

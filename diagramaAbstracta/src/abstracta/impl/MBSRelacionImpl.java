@@ -185,7 +185,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAVEGABILIDAD_A_EDEFAULT = null;
+	protected static final Boolean NAVEGABILIDAD_A_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNavegabilidadA() <em>Navegabilidad A</em>}' attribute.
@@ -195,7 +195,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected String navegabilidadA = NAVEGABILIDAD_A_EDEFAULT;
+	protected Boolean navegabilidadA = NAVEGABILIDAD_A_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNavegabilidadB() <em>Navegabilidad B</em>}' attribute.
@@ -205,7 +205,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAVEGABILIDAD_B_EDEFAULT = null;
+	protected static final Boolean NAVEGABILIDAD_B_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNavegabilidadB() <em>Navegabilidad B</em>}' attribute.
@@ -215,7 +215,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected String navegabilidadB = NAVEGABILIDAD_B_EDEFAULT;
+	protected Boolean navegabilidadB = NAVEGABILIDAD_B_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -443,7 +443,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNavegabilidadA() {
+	public Boolean getNavegabilidadA() {
 		return navegabilidadA;
 	}
 
@@ -452,8 +452,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNavegabilidadA(String newNavegabilidadA) {
-		String oldNavegabilidadA = navegabilidadA;
+	public void setNavegabilidadA(Boolean newNavegabilidadA) {
+		Boolean oldNavegabilidadA = navegabilidadA;
 		navegabilidadA = newNavegabilidadA;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MBS_RELACION__NAVEGABILIDAD_A, oldNavegabilidadA, navegabilidadA));
@@ -464,7 +464,7 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNavegabilidadB() {
+	public Boolean getNavegabilidadB() {
 		return navegabilidadB;
 	}
 
@@ -473,8 +473,8 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNavegabilidadB(String newNavegabilidadB) {
-		String oldNavegabilidadB = navegabilidadB;
+	public void setNavegabilidadB(Boolean newNavegabilidadB) {
+		Boolean oldNavegabilidadB = navegabilidadB;
 		navegabilidadB = newNavegabilidadB;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MBS_RELACION__NAVEGABILIDAD_B, oldNavegabilidadB, navegabilidadB));
@@ -547,10 +547,10 @@ public class MBSRelacionImpl extends EObjectImpl implements MBSRelacion {
 				setRolB((String)newValue);
 				return;
 			case AbstractaPackage.MBS_RELACION__NAVEGABILIDAD_A:
-				setNavegabilidadA((String)newValue);
+				setNavegabilidadA((Boolean)newValue);
 				return;
 			case AbstractaPackage.MBS_RELACION__NAVEGABILIDAD_B:
-				setNavegabilidadB((String)newValue);
+				setNavegabilidadB((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

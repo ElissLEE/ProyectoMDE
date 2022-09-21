@@ -96,15 +96,6 @@
         <sourceMetaFeature href="concreta.genmodel#//concreta/MBSRelacion/source"/>
         <targetMetaFeature href="concreta.genmodel#//concreta/MBSRelacion/target"/>
       </modelFacet>
-      <labels visualID="6001" editPartClassName="MBSRelacionLabelNameEditPart" itemSemanticEditPolicyClassName="MBSRelacionLabelNameItemSemanticEditPolicy">
-        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MBSRelacionLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MBSRelacionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MBSRelacionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;MBSRelacion&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
-        </viewmap>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//concreta/MBSRelacion/labelName"/>
-        </modelFacet>
-      </labels>
     </links>
     <compartments visualID="7001" editPartClassName="MBSClaseMBSClaseAtributosCompartmentEditPart" itemSemanticEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MBSClaseMBSClaseAtributosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="MBSClaseAtributosCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -164,7 +155,7 @@
   </propertySheet>
   <domainGenModel href="concreta.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

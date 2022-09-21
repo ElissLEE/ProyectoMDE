@@ -48,9 +48,6 @@
     <descriptors name="MBSRelacionFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MBSRelacionFigure" lineWidth="2"/>
     </descriptors>
-    <descriptors name="MBSRelacionLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="MBSRelacionLabelLabel" text="MBSRelacion"/>
-    </descriptors>
   </figures>
   <nodes name="MBSPaquete" figure="MBSPaqueteFigure"/>
   <nodes name="MBSClase" figure="MBSClaseFigure">
@@ -75,5 +72,4 @@
   <labels name="MBSClaseLabel" figure="MBSClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="MBSMetodoLabel" figure="MBSMetodoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="MBSAtributoLabel" figure="MBSAtributoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels name="MBSRelacionLabel" figure="MBSRelacionLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

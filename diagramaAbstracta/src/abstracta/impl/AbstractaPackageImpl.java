@@ -172,6 +172,24 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModelFactory_ListaTodasLasClases() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaTodosLosPaquetes() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMBSPaquete() {
 		return mbsPaqueteEClass;
 	}
@@ -226,15 +244,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSClase_IdClase() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getMBSClase_Nombre() {
 		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(0);
 	}
@@ -245,7 +254,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_Estereotipo() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -254,7 +263,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_ModificadorAcceso() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -263,7 +272,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_Abstracta() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -272,7 +281,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_Descripcion() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -281,7 +290,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EAttribute getMBSClase_Ruta() {
-		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)mbsClaseEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -290,7 +299,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EReference getMBSClase_Atributos() {
-		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(7);
+		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -299,7 +308,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EReference getMBSClase_Metodos() {
-		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(8);
+		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -308,7 +317,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	public EReference getMBSClase_ListaRelaciones() {
-		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(9);
+		return (EReference)mbsClaseEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -559,6 +568,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(modelFactoryEClass, MODEL_FACTORY__NOMBRE);
 		createEAttribute(modelFactoryEClass, MODEL_FACTORY__RUTA);
 		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_PAQUETES);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_TODAS_LAS_CLASES);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES);
 
 		mbsPaqueteEClass = createEClass(MBS_PAQUETE);
 		createEAttribute(mbsPaqueteEClass, MBS_PAQUETE__NOMBRE);
@@ -568,7 +579,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 
 		mbsClaseEClass = createEClass(MBS_CLASE);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__NOMBRE);
-		createEAttribute(mbsClaseEClass, MBS_CLASE__ID_CLASE);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__ESTEREOTIPO);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__MODIFICADOR_ACCESO);
 		createEAttribute(mbsClaseEClass, MBS_CLASE__ABSTRACTA);
@@ -640,6 +650,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getModelFactory_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelFactory_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelFactory_ListaPaquetes(), this.getMBSPaquete(), null, "listaPaquetes", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaTodasLasClases(), this.getMBSClase(), null, "listaTodasLasClases", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaTodosLosPaquetes(), this.getMBSPaquete(), null, "listaTodosLosPaquetes", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsPaqueteEClass, MBSPaquete.class, "MBSPaquete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSPaquete_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -649,7 +661,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 
 		initEClass(mbsClaseEClass, MBSClase.class, "MBSClase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSClase_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSClase_IdClase(), ecorePackage.getEString(), "idClase", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_Estereotipo(), ecorePackage.getEString(), "estereotipo", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_ModificadorAcceso(), ecorePackage.getEString(), "modificadorAcceso", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSClase_Abstracta(), ecorePackage.getEBoolean(), "abstracta", null, 0, 1, MBSClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -683,8 +694,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMBSRelacion_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolA(), ecorePackage.getEString(), "rolA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEBooleanObject(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEBooleanObject(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

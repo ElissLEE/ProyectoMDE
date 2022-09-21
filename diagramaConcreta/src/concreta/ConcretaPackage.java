@@ -121,22 +121,13 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_DIAGRAMA_CLASES__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id Clase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_DIAGRAMA_CLASES__ID_CLASE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES__DESCRIPCION = 2;
+	int MBS_DIAGRAMA_CLASES__DESCRIPCION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Lista Clases</b></em>' containment reference list.
@@ -145,7 +136,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_CLASES = 3;
+	int MBS_DIAGRAMA_CLASES__LISTA_CLASES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Lista Relaciones</b></em>' containment reference list.
@@ -154,7 +145,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_RELACIONES = 4;
+	int MBS_DIAGRAMA_CLASES__LISTA_RELACIONES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Lista Paquetes</b></em>' containment reference list.
@@ -163,7 +154,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES__LISTA_PAQUETES = 5;
+	int MBS_DIAGRAMA_CLASES__LISTA_PAQUETES = 4;
 
 	/**
 	 * The number of structural features of the '<em>MBS Diagrama Clases</em>' class.
@@ -172,7 +163,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_DIAGRAMA_CLASES_FEATURE_COUNT = 6;
+	int MBS_DIAGRAMA_CLASES_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MBSPaqueteImpl <em>MBS Paquete</em>}' class.
@@ -522,22 +513,13 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_RELACION__NAVEGABILIDAD_B = 7;
 
 	/**
-	 * The feature id for the '<em><b>Label Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_RELACION__LABEL_NAME = 8;
-
-	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__SOURCE = 9;
+	int MBS_RELACION__SOURCE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -546,7 +528,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION__TARGET = 10;
+	int MBS_RELACION__TARGET = 9;
 
 	/**
 	 * The number of structural features of the '<em>MBS Relacion</em>' class.
@@ -555,7 +537,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_RELACION_FEATURE_COUNT = 11;
+	int MBS_RELACION_FEATURE_COUNT = 10;
 
 
 	/**
@@ -610,17 +592,6 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMBSDiagramaClases();
-
-	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSDiagramaClases#getIdClase <em>Id Clase</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Clase</em>'.
-	 * @see concreta.MBSDiagramaClases#getIdClase()
-	 * @see #getMBSDiagramaClases()
-	 * @generated
-	 */
-	EAttribute getMBSDiagramaClases_IdClase();
 
 	/**
 	 * Returns the meta object for the attribute '{@link concreta.MBSDiagramaClases#getNombre <em>Nombre</em>}'.
@@ -1069,17 +1040,6 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMBSRelacion_NavegabilidadB();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MBSRelacion#getLabelName <em>Label Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Label Name</em>'.
-	 * @see concreta.MBSRelacion#getLabelName()
-	 * @see #getMBSRelacion()
-	 * @generated
-	 */
-	EAttribute getMBSRelacion_LabelName();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1144,14 +1104,6 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MBS_DIAGRAMA_CLASES = eINSTANCE.getMBSDiagramaClases();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Clase</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_DIAGRAMA_CLASES__ID_CLASE = eINSTANCE.getMBSDiagramaClases_IdClase();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1490,14 +1442,6 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_RELACION__NAVEGABILIDAD_B = eINSTANCE.getMBSRelacion_NavegabilidadB();
-
-		/**
-		 * The meta object literal for the '<em><b>Label Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_RELACION__LABEL_NAME = eINSTANCE.getMBSRelacion_LabelName();
 
 	}
 

@@ -21,6 +21,7 @@ import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
 import concreta.MBSDiagramaClases;
+import concreta.MBSRelacion;
 import concreta.diagram.edit.parts.MBSAtributoEditPart;
 import concreta.diagram.edit.parts.MBSAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MBSClaseEditPart;
@@ -31,7 +32,6 @@ import concreta.diagram.edit.parts.MBSMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteNombreEditPart;
 import concreta.diagram.edit.parts.MBSRelacionEditPart;
-import concreta.diagram.edit.parts.MBSRelacionLabelNameEditPart;
 import concreta.diagram.part.ConcretaDiagramEditorPlugin;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
 import concreta.diagram.providers.ConcretaElementTypes;
@@ -266,14 +266,11 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getMBSRelacion_4001Text(View view) {
-		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MBSRelacion_4001,
-				view.getElement() != null ? view.getElement() : view,
-				ConcretaVisualIDRegistry.getType(MBSRelacionLabelNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
+		MBSRelacion domainModelElement = (MBSRelacion) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getNombre();
 		} else {
-			ConcretaDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

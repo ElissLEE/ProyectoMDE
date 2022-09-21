@@ -93,13 +93,31 @@ public interface AbstractaPackage extends EPackage {
 	int MODEL_FACTORY__LISTA_PAQUETES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Lista Todas Las Clases</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_TODAS_LAS_CLASES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lista Todos Los Paquetes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Model Factory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FACTORY_FEATURE_COUNT = 3;
+	int MODEL_FACTORY_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MBSPaqueteImpl <em>MBS Paquete</em>}' class.
@@ -176,22 +194,13 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_CLASE__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id Clase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MBS_CLASE__ID_CLASE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Estereotipo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__ESTEREOTIPO = 2;
+	int MBS_CLASE__ESTEREOTIPO = 1;
 
 	/**
 	 * The feature id for the '<em><b>Modificador Acceso</b></em>' attribute.
@@ -200,7 +209,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__MODIFICADOR_ACCESO = 3;
+	int MBS_CLASE__MODIFICADOR_ACCESO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Abstracta</b></em>' attribute.
@@ -209,7 +218,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__ABSTRACTA = 4;
+	int MBS_CLASE__ABSTRACTA = 3;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -218,7 +227,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__DESCRIPCION = 5;
+	int MBS_CLASE__DESCRIPCION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -227,7 +236,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__RUTA = 6;
+	int MBS_CLASE__RUTA = 5;
 
 	/**
 	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
@@ -236,7 +245,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__ATRIBUTOS = 7;
+	int MBS_CLASE__ATRIBUTOS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Metodos</b></em>' containment reference list.
@@ -245,7 +254,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__METODOS = 8;
+	int MBS_CLASE__METODOS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Lista Relaciones</b></em>' containment reference list.
@@ -254,7 +263,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE__LISTA_RELACIONES = 9;
+	int MBS_CLASE__LISTA_RELACIONES = 8;
 
 	/**
 	 * The number of structural features of the '<em>MBS Clase</em>' class.
@@ -263,7 +272,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_CLASE_FEATURE_COUNT = 10;
+	int MBS_CLASE_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MBSMetodoImpl <em>MBS Metodo</em>}' class.
@@ -556,6 +565,28 @@ public interface AbstractaPackage extends EPackage {
 	EReference getModelFactory_ListaPaquetes();
 
 	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaTodasLasClases <em>Lista Todas Las Clases</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Todas Las Clases</em>'.
+	 * @see abstracta.ModelFactory#getListaTodasLasClases()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaTodasLasClases();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaTodosLosPaquetes <em>Lista Todos Los Paquetes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Todos Los Paquetes</em>'.
+	 * @see abstracta.ModelFactory#getListaTodosLosPaquetes()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaTodosLosPaquetes();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MBSPaquete <em>MBS Paquete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -618,17 +649,6 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMBSClase();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MBSClase#getIdClase <em>Id Clase</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Clase</em>'.
-	 * @see abstracta.MBSClase#getIdClase()
-	 * @see #getMBSClase()
-	 * @generated
-	 */
-	EAttribute getMBSClase_IdClase();
 
 	/**
 	 * Returns the meta object for the attribute '{@link abstracta.MBSClase#getNombre <em>Nombre</em>}'.
@@ -1047,6 +1067,22 @@ public interface AbstractaPackage extends EPackage {
 		EReference MODEL_FACTORY__LISTA_PAQUETES = eINSTANCE.getModelFactory_ListaPaquetes();
 
 		/**
+		 * The meta object literal for the '<em><b>Lista Todas Las Clases</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_TODAS_LAS_CLASES = eINSTANCE.getModelFactory_ListaTodasLasClases();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Todos Los Paquetes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = eINSTANCE.getModelFactory_ListaTodosLosPaquetes();
+
+		/**
 		 * The meta object literal for the '{@link abstracta.impl.MBSPaqueteImpl <em>MBS Paquete</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1097,14 +1133,6 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MBS_CLASE = eINSTANCE.getMBSClase();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Clase</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MBS_CLASE__ID_CLASE = eINSTANCE.getMBSClase_IdClase();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.

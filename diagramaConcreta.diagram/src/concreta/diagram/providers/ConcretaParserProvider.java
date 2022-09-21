@@ -21,7 +21,6 @@ import concreta.diagram.edit.parts.MBSAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MBSClaseNombreEditPart;
 import concreta.diagram.edit.parts.MBSMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MBSPaqueteNombreEditPart;
-import concreta.diagram.edit.parts.MBSRelacionLabelNameEditPart;
 import concreta.diagram.parsers.MessageFormatParser;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
 
@@ -101,23 +100,6 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser mBSRelacionLabelName_6001Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getMBSRelacionLabelName_6001Parser() {
-		if (mBSRelacionLabelName_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMBSRelacion_LabelName() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			mBSRelacionLabelName_6001Parser = parser;
-		}
-		return mBSRelacionLabelName_6001Parser;
-	}
-
-	/**
-	* @generated
-	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case MBSClaseNombreEditPart.VISUAL_ID:
@@ -128,8 +110,6 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 			return getMBSAtributoNombre_5001Parser();
 		case MBSMetodoNombreEditPart.VISUAL_ID:
 			return getMBSMetodoNombre_5002Parser();
-		case MBSRelacionLabelNameEditPart.VISUAL_ID:
-			return getMBSRelacionLabelName_6001Parser();
 		}
 		return null;
 	}

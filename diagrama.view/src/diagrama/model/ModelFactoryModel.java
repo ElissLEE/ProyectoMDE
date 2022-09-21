@@ -95,34 +95,13 @@ public class ModelFactoryModel {
 		salvarAbstracta();
 	}
 
-
-//	private ArrayList<Object> obtenerRelacionesSalientes(String nombreClase) {
-//		ArrayList<Object> listaRelaciones = new ArrayList<>();
-//		for(MBSdiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-//			for (MBSRelacion mbsRelacion : diagrama.getListaRelaciones()) {
-//				if(mbsRelacion.getSource().getNombre().equals(nombreClase)) {
-//					listaRelaciones.add(mbsRelacion);
-//				}
-//			}
-//		}
-//		return listaRelaciones;
-//	}
-
-	/**
-	 * Busca una clase
-	 * @param nombre
-	 * @return
-	 */
-//	private MBSClase obtenerClase(String nombre) {
-//		MBSClase clase = null;
-//		for (MBSdiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-//			for (MBSClase mbsClase : diagrama.getListaClases()) {
-//				if(mbsClase.getNombre().equals(nombre)) {
-//					return mbsClase;
-//				}
-//			}
-//		}
-//		return clase;
-//	}
+	public void generarModelToText() {
+		
+		modelFactoryConcreta = cargarConcreta();
+		modelFactoryAbstracta = cargarAbstracta();
+		TransformacionM2T transformacionM2T = new TransformacionM2T(modelFactoryAbstracta);
+		transformacionM2T.transformarM2T();
+		salvarAbstracta();
+	}
 
 }

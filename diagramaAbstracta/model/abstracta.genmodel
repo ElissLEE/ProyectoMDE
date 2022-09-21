@@ -9,6 +9,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//ModelFactory/listaPaquetes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//ModelFactory/listaTodasLasClases"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//ModelFactory/listaTodosLosPaquetes"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MBSPaquete">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSPaquete/nombre"/>
@@ -18,7 +20,6 @@
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MBSClase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/idClase"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/estereotipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/modificadorAcceso"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MBSClase/abstracta"/>

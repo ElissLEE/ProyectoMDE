@@ -64,7 +64,6 @@ public class MBSDiagramaClasesItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNombrePropertyDescriptor(object);
-			addIdClasePropertyDescriptor(object);
 			addDescripcionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -84,28 +83,6 @@ public class MBSDiagramaClasesItemProvider
 				 getString("_UI_MBSDiagramaClases_nombre_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MBSDiagramaClases_nombre_feature", "_UI_MBSDiagramaClases_type"),
 				 ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__NOMBRE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Id Clase feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdClasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MBSDiagramaClases_idClase_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MBSDiagramaClases_idClase_feature", "_UI_MBSDiagramaClases_type"),
-				 ConcretaPackage.Literals.MBS_DIAGRAMA_CLASES__ID_CLASE,
 				 true,
 				 false,
 				 false,
@@ -207,7 +184,6 @@ public class MBSDiagramaClasesItemProvider
 
 		switch (notification.getFeatureID(MBSDiagramaClases.class)) {
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__NOMBRE:
-			case ConcretaPackage.MBS_DIAGRAMA_CLASES__ID_CLASE:
 			case ConcretaPackage.MBS_DIAGRAMA_CLASES__DESCRIPCION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

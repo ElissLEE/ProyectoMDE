@@ -247,12 +247,12 @@ public interface MBSRelacion extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Navegabilidad A</em>' attribute.
-	 * @see #setNavegabilidadA(String)
+	 * @see #setNavegabilidadA(Boolean)
 	 * @see abstracta.AbstractaPackage#getMBSRelacion_NavegabilidadA()
 	 * @model
 	 * @generated
 	 */
-	String getNavegabilidadA();
+	Boolean getNavegabilidadA();
 
 	/**
 	 * Sets the value of the '{@link abstracta.MBSRelacion#getNavegabilidadA <em>Navegabilidad A</em>}' attribute.
@@ -262,7 +262,7 @@ public interface MBSRelacion extends EObject {
 	 * @see #getNavegabilidadA()
 	 * @generated
 	 */
-	void setNavegabilidadA(String value);
+	void setNavegabilidadA(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Navegabilidad B</b></em>' attribute.
@@ -273,12 +273,12 @@ public interface MBSRelacion extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Navegabilidad B</em>' attribute.
-	 * @see #setNavegabilidadB(String)
+	 * @see #setNavegabilidadB(Boolean)
 	 * @see abstracta.AbstractaPackage#getMBSRelacion_NavegabilidadB()
 	 * @model
 	 * @generated
 	 */
-	String getNavegabilidadB();
+	Boolean getNavegabilidadB();
 
 	/**
 	 * Sets the value of the '{@link abstracta.MBSRelacion#getNavegabilidadB <em>Navegabilidad B</em>}' attribute.
@@ -288,6 +288,6 @@ public interface MBSRelacion extends EObject {
 	 * @see #getNavegabilidadB()
 	 * @generated
 	 */
-	void setNavegabilidadB(String value);
+	void setNavegabilidadB(Boolean value);
 
 } // MBSRelacion

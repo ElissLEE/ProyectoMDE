@@ -21,13 +21,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link concreta.MBSRelacion#getRolB <em>Rol B</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getNavegabilidadA <em>Navegabilidad A</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getNavegabilidadB <em>Navegabilidad B</em>}</li>
- *   <li>{@link concreta.MBSRelacion#getLabelName <em>Label Name</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getSource <em>Source</em>}</li>
  *   <li>{@link concreta.MBSRelacion#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMBSRelacion()
- * @model annotation="gmf.link source='source' target='target' style='solid' width='2' label='labelName'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2'"
  * @generated
  */
 public interface MBSRelacion extends EObject {
@@ -248,12 +247,12 @@ public interface MBSRelacion extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Navegabilidad A</em>' attribute.
-	 * @see #setNavegabilidadA(String)
+	 * @see #setNavegabilidadA(Boolean)
 	 * @see concreta.ConcretaPackage#getMBSRelacion_NavegabilidadA()
 	 * @model
 	 * @generated
 	 */
-	String getNavegabilidadA();
+	Boolean getNavegabilidadA();
 
 	/**
 	 * Sets the value of the '{@link concreta.MBSRelacion#getNavegabilidadA <em>Navegabilidad A</em>}' attribute.
@@ -263,7 +262,7 @@ public interface MBSRelacion extends EObject {
 	 * @see #getNavegabilidadA()
 	 * @generated
 	 */
-	void setNavegabilidadA(String value);
+	void setNavegabilidadA(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Navegabilidad B</b></em>' attribute.
@@ -274,12 +273,12 @@ public interface MBSRelacion extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Navegabilidad B</em>' attribute.
-	 * @see #setNavegabilidadB(String)
+	 * @see #setNavegabilidadB(Boolean)
 	 * @see concreta.ConcretaPackage#getMBSRelacion_NavegabilidadB()
 	 * @model
 	 * @generated
 	 */
-	String getNavegabilidadB();
+	Boolean getNavegabilidadB();
 
 	/**
 	 * Sets the value of the '{@link concreta.MBSRelacion#getNavegabilidadB <em>Navegabilidad B</em>}' attribute.
@@ -289,32 +288,6 @@ public interface MBSRelacion extends EObject {
 	 * @see #getNavegabilidadB()
 	 * @generated
 	 */
-	void setNavegabilidadB(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Label Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Label Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Label Name</em>' attribute.
-	 * @see #setLabelName(String)
-	 * @see concreta.ConcretaPackage#getMBSRelacion_LabelName()
-	 * @model
-	 * @generated
-	 */
-	String getLabelName();
-
-	/**
-	 * Sets the value of the '{@link concreta.MBSRelacion#getLabelName <em>Label Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label Name</em>' attribute.
-	 * @see #getLabelName()
-	 * @generated
-	 */
-	void setLabelName(String value);
+	void setNavegabilidadB(Boolean value);
 
 } // MBSRelacion

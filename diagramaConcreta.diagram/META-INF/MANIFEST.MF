@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: concreta.diagram.part.ConcretaDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: concreta.diagram.edit.parts,
+Export-Package: concreta.diagram.edit.parts, 
  concreta.diagram.part,
  concreta.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

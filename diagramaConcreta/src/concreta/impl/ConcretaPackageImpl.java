@@ -189,15 +189,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSDiagramaClases_IdClase() {
-		return (EAttribute)mbsDiagramaClasesEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getMBSDiagramaClases_Nombre() {
 		return (EAttribute)mbsDiagramaClasesEClass.getEStructuralFeatures().get(0);
 	}
@@ -208,7 +199,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EAttribute getMBSDiagramaClases_Descripcion() {
-		return (EAttribute)mbsDiagramaClasesEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)mbsDiagramaClasesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -217,7 +208,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSDiagramaClases_ListaClases() {
-		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(3);
+		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -226,7 +217,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSDiagramaClases_ListaRelaciones() {
-		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(4);
+		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -235,7 +226,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSDiagramaClases_ListaPaquetes() {
-		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(5);
+		return (EReference)mbsDiagramaClasesEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -478,7 +469,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSRelacion_Source() {
-		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(9);
+		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -487,7 +478,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMBSRelacion_Target() {
-		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(10);
+		return (EReference)mbsRelacionEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -567,15 +558,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSRelacion_LabelName() {
-		return (EAttribute)mbsRelacionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ConcretaFactory getConcretaFactory() {
 		return (ConcretaFactory)getEFactoryInstance();
 	}
@@ -606,7 +588,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		mbsDiagramaClasesEClass = createEClass(MBS_DIAGRAMA_CLASES);
 		createEAttribute(mbsDiagramaClasesEClass, MBS_DIAGRAMA_CLASES__NOMBRE);
-		createEAttribute(mbsDiagramaClasesEClass, MBS_DIAGRAMA_CLASES__ID_CLASE);
 		createEAttribute(mbsDiagramaClasesEClass, MBS_DIAGRAMA_CLASES__DESCRIPCION);
 		createEReference(mbsDiagramaClasesEClass, MBS_DIAGRAMA_CLASES__LISTA_CLASES);
 		createEReference(mbsDiagramaClasesEClass, MBS_DIAGRAMA_CLASES__LISTA_RELACIONES);
@@ -650,7 +631,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__ROL_B);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_A);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NAVEGABILIDAD_B);
-		createEAttribute(mbsRelacionEClass, MBS_RELACION__LABEL_NAME);
 		createEReference(mbsRelacionEClass, MBS_RELACION__SOURCE);
 		createEReference(mbsRelacionEClass, MBS_RELACION__TARGET);
 	}
@@ -692,7 +672,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		initEClass(mbsDiagramaClasesEClass, MBSDiagramaClases.class, "MBSDiagramaClases", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSDiagramaClases_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSDiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSDiagramaClases_IdClase(), ecorePackage.getEString(), "idClase", null, 0, 1, MBSDiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSDiagramaClases_Descripcion(), ecorePackage.getEString(), "descripcion", null, 0, 1, MBSDiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSDiagramaClases_ListaClases(), this.getMBSClase(), null, "listaClases", null, 0, -1, MBSDiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSDiagramaClases_ListaRelaciones(), this.getMBSRelacion(), null, "listaRelaciones", null, 0, -1, MBSDiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -734,9 +713,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		initEAttribute(getMBSRelacion_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolA(), ecorePackage.getEString(), "rolA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSRelacion_RolB(), ecorePackage.getEString(), "rolB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEString(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEString(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMBSRelacion_LabelName(), ecorePackage.getEString(), "labelName", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_NavegabilidadA(), ecorePackage.getEBooleanObject(), "navegabilidadA", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSRelacion_NavegabilidadB(), ecorePackage.getEBooleanObject(), "navegabilidadB", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSRelacion_Source(), this.getMBSClase(), null, "source", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMBSRelacion_Target(), this.getMBSClase(), null, "target", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -870,8 +848,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 			 "source", "source",
 			 "target", "target",
 			 "style", "solid",
-			 "width", "2",
-			 "label", "labelName"
+			 "width", "2"
 		   });
 	}
 
