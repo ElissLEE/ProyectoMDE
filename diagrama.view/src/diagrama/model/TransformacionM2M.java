@@ -216,18 +216,22 @@ public class TransformacionM2M {
 		relacionSource.setTarget(claseAbstractaTarget);
 		claseAbstractaSource.getListaRelaciones().add(relacionSource);
 		
-		abstracta.MBSRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMBSRelacion();
-		relacionTarget.setNombre(relacion.getNombre());
-		relacionTarget.setMultiplicidadA(relacion.getMultiplicidadB());
-		relacionTarget.setMultiplicidadB(relacion.getMultiplicidadA());
-		relacionTarget.setNavegabilidadA(relacion.getNavegabilidadB());
-		relacionTarget.setNavegabilidadB(relacion.getNavegabilidadA());
-		relacionTarget.setRolA(relacion.getRolB());
-		relacionTarget.setRolB(relacion.getRolA());
-		relacionTarget.setTipo(relacion.getTipo());
-		relacionTarget.setSource(claseAbstractaTarget);
-		relacionTarget.setTarget(claseAbstractaSource);
-		claseAbstractaTarget.getListaRelaciones().add(relacionTarget);
+		if(relacion.getNavegabilidadB()==true) {
+			
+			abstracta.MBSRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMBSRelacion();
+			relacionTarget.setNombre(relacion.getNombre());
+			relacionTarget.setMultiplicidadA(relacion.getMultiplicidadB());
+			relacionTarget.setMultiplicidadB(relacion.getMultiplicidadA());
+			relacionTarget.setNavegabilidadA(relacion.getNavegabilidadB());
+			relacionTarget.setNavegabilidadB(relacion.getNavegabilidadA());
+			relacionTarget.setRolA(relacion.getRolB());
+			relacionTarget.setRolB(relacion.getRolA());
+			relacionTarget.setTipo(relacion.getTipo());
+			relacionTarget.setSource(claseAbstractaTarget);
+			relacionTarget.setTarget(claseAbstractaSource);
+			claseAbstractaTarget.getListaRelaciones().add(relacionTarget);
+		}
+		
 	}
 	
 	private abstracta.MBSPaquete buscarPaqueteClase(String ruta){

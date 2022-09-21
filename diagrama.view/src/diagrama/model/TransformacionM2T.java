@@ -38,83 +38,135 @@ public class TransformacionM2T {
 		//Agregar la declaracion del paquete
 		textoCodigo.append("package "+clase.getRuta()+"\n\n");
 		
+		//Agregar el encabezado de la clase
 		agregarEncabezado(clase, textoCodigo);
+		
+		//Agregar los atributos de la clase
 		agregarAtributos(clase, textoCodigo);
+		
+		//Agregar el constructor de la clase
 		agregarConstructor(clase, textoCodigo);
+		
+		//Agregar los set y get de los atributos
 		agregarSetyGet(clase, textoCodigo);
+		
+		//Agregar los metodos de la clase
 		agregarMetodos(clase, textoCodigo);
+		
+		textoCodigo.append("}");
 		
 	}
 
 	private void agregarMetodos(abstracta.MBSClase clase, StringBuilder textoCodigo) {
-		// TODO Auto-generated method stub
+		
+		for (abstracta.MBSMetodo metodo : clase.getMetodos()) {
+			
+			if(metodo.getTipoRetorno().equals("") || metodo.getTipoRetorno().equals("void")) {
+				
+				textoCodigo.append(metodo.getModificadorAcceso()+" fun "+metodo.getNombre()+"("+metodo.getParametros()+"){\n");
+				textoCodigo.append("\t"+"// TODO: Autogenerado");
+				textoCodigo.append("}\n");
+			}else {
+				
+				textoCodigo.append(metodo.getModificadorAcceso()+" fun "+metodo.getNombre()+"("+metodo.getParametros()+")"+": "+metodo.getTipoRetorno()+" {\n");
+				
+				if(metodo.getTipoRetorno().equals("String")) {
+					
+					textoCodigo.append("\t"+"// TODO: Autogenerado\n");
+					textoCodigo.append("\t"+"return "+"\"\"");
+				}else if(metodo.getTipoRetorno().equals("Int")) {
+					
+					textoCodigo.append("\t"+"// TODO: Autogenerado\n");
+					textoCodigo.append("\t"+"return 0");
+				}else if(metodo.getTipoRetorno().equals("Float") || metodo.getTipoRetorno().equals("Double")) {
+					
+					textoCodigo.append("\t"+"// TODO: Autogenerado\n");
+					textoCodigo.append("\t"+"return 0.0");
+				}else if(metodo.getTipoRetorno().equals("Char")) {
+					
+					textoCodigo.append("\t"+"// TODO: Autogenerado\n");
+					textoCodigo.append("\t"+"return "+"\'\'");
+				}else if(metodo.getTipoRetorno().equals("Boolean")) {
+					
+					textoCodigo.append("\t"+"// TODO: Autogenerado\n");
+					textoCodigo.append("\t"+"return True");
+				}
+				
+				textoCodigo.append("}\n");
+			}
+			
+		}
 		
 	}
 
 	private void agregarSetyGet(abstracta.MBSClase clase, StringBuilder textoCodigo) {
-		// TODO Auto-generated method stub
+		
+		for (abstracta.MBSAtributo atributo : clase.getAtributos()) {
+			
+			textoCodigo.append("public fun "+"get"+atributo.getNombre()+"(): "+atributo.getTipo()+"{\n");
+			textoCodigo.append("\t"+"return "+atributo.getNombre()+"\n");
+			textoCodigo.append("}\n\n");
+			
+			textoCodigo.append("public fun "+"set"+atributo.getNombre()+"("+atributo.getNombre()+": "+atributo.getTipo()+"){\n");
+			textoCodigo.append("\t"+"this."+atributo.getNombre()+" = "+atributo.getNombre()+"\n");
+			textoCodigo.append("}\n\n");
+		}
+		
+		for(abstracta.MBSRelacion relacion : clase.getListaRelaciones()) {
+			
+			if(!relacion.getTipo().equals("herencia")) {
+				
+				if(relacion.getMultiplicidadB().equals("*")) {
+					textoCodigo.append("\t"+"public fun "+"get"+relacion.getRolB()+"():"+" List<"+relacion.getTarget().getNombre()+">"+"{\n");
+					textoCodigo.append("\t"+"return "+relacion.getRolB()+"\n");
+					textoCodigo.append("}\n\n");
+					
+					textoCodigo.append("\t"+"public fun "+"set"+relacion.getRolB()+"("+relacion.getRolB()+": List<"+relacion.getTarget().getNombre()+">"+")"+"{\n");
+					textoCodigo.append("\t"+"this."+relacion.getRolB()+" = "+relacion.getRolB()+"\n");
+					textoCodigo.append("}\n\n");
+				}else {
+					textoCodigo.append("\t"+"public fun "+"get"+relacion.getRolB()+"(): "+relacion.getTarget().getNombre()+"{\n");
+					textoCodigo.append("\t"+"return "+relacion.getRolB()+"\n");
+					textoCodigo.append("}\n\n");
+					
+					textoCodigo.append("\t"+"public fun "+"set"+relacion.getRolB()+"("+relacion.getRolB()+": "+relacion.getTarget().getNombre()+")"+"{\n");
+					textoCodigo.append("\t"+"this."+relacion.getRolB()+" = "+relacion.getRolB()+"\n");
+					textoCodigo.append("}\n\n");
+				}
+			}
+		}
 		
 	}
 
 	private void agregarConstructor(abstracta.MBSClase clase, StringBuilder textoCodigo) {
 		
-		boolean flagHerencia = false;
+		abstracta.MBSRelacion herencia=obtenerHerencia(clase);
 		
-		for (abstracta.MBSRelacion relacion : clase.getListaRelaciones()) {
+		textoCodigo.append("\t"+"constructor(");
+		
+		if(herencia!=null) {
 			
-			if(relacion.getTipo().equals("herencia") && relacion.getNavegabilidadA()==true) {
-				
-				abstracta.MBSClase claseTarget = relacion.getTarget();
-				textoCodigo.append("constructor(");
-				
-				for(int i=0;i<claseTarget.getAtributos().size();i++) {
-					
-					textoCodigo.append(claseTarget.getAtributos().get(i).getNombre()+": "+claseTarget.getAtributos().get(i).getTipo());
-					
-					if(i!=claseTarget.getAtributos().size()-1) {
-						textoCodigo.append(", ");
-					}
-				}
-				
-				for(int i=0;i<clase.getAtributos().size();i++) {
-					
-					textoCodigo.append(clase.getAtributos().get(i).getNombre()+": "+clase.getAtributos().get(i).getTipo());
-					
-					if(i!=clase.getAtributos().size()-1) {
-						textoCodigo.append(", ");
-					}
-				}
-				
-				textoCodigo.append("){\n");
-				textoCodigo.append("super(");
-				
-				for(int i=0;i<claseTarget.getAtributos().size();i++) {
-					
-					textoCodigo.append(claseTarget.getAtributos().get(i).getNombre());
-					
-					if(i!=claseTarget.getAtributos().size()-1) {
-						textoCodigo.append(", ");
-					}
-					
-					if(i==claseTarget.getAtributos().size()-1) {
-						textoCodigo.append(")\n");
-					}
-				}
-				
-				for(int i=0;i<clase.getAtributos().size();i++) {
-					
-					textoCodigo.append("this."+clase.getAtributos().get(i).getNombre()+" = "+clase.getAtributos().get(i).getNombre()+"\n");
-				}
+			abstracta.MBSClase claseTarget = herencia.getTarget();
 			
-				textoCodigo.append("}\n");
-				flagHerencia = true;
+			for(int i=0;i<claseTarget.getAtributos().size();i++) {
 				
+				textoCodigo.append(claseTarget.getAtributos().get(i).getNombre()+": "+claseTarget.getAtributos().get(i).getTipo()+", ");
 			}
-		}
-		
-		if(flagHerencia==false) {
 			
-			textoCodigo.append("constructor(");
+			for(int i=0;i<clase.getListaRelaciones().size();i++) {
+				
+				if(!clase.getListaRelaciones().get(i).getTipo().equals("herencia")) {
+					
+					if(clase.getListaRelaciones().get(i).getMultiplicidadB().equals("*")) {
+						
+						textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": List<"+clase.getListaRelaciones().get(i).getTarget().getNombre()+">, ");
+						
+					}else {
+						
+						textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": "+clase.getListaRelaciones().get(i).getTarget().getNombre()+", ");
+					}
+				}
+			}
 			
 			for(int i=0;i<clase.getAtributos().size();i++) {
 				
@@ -125,35 +177,80 @@ public class TransformacionM2T {
 				}
 			}
 			
-			for(int i=0;i<clase.getListaRelaciones().size();i++) {
+			textoCodigo.append("){\n");
+			textoCodigo.append("\t\t"+"super(");
+			
+			for(int i=0;i<claseTarget.getAtributos().size();i++) {
 				
-				if(!clase.getListaRelaciones().get(i).getTipo().equals("herencia") && clase.getListaRelaciones().get(i).getMultiplicidadB().equals("*")) {
-					textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": List<"+clase.getListaRelaciones().get(i).getTarget().getNombre()+">\n");
-				}else {
-					textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": "+clase.getListaRelaciones().get(i).getTarget().getNombre()+"\n");
-				}
+				textoCodigo.append(claseTarget.getAtributos().get(i).getNombre());
 				
-				if(i!=clase.getListaRelaciones().size()-1) {
+				if(i!=claseTarget.getAtributos().size()-1) {
 					textoCodigo.append(", ");
 				}
-			}
-			
-			textoCodigo.append("){\n");
-			textoCodigo.append("super()\n");
-			
-			for(int i=0;i<clase.getAtributos().size();i++) {
 				
-				textoCodigo.append("this."+clase.getAtributos().get(i).getNombre()+" = "+clase.getAtributos().get(i).getNombre()+"\n");
+				if(i==claseTarget.getAtributos().size()-1) {
+					textoCodigo.append(")\n");
+				}
 			}
 			
 			for(int i=0;i<clase.getListaRelaciones().size();i++) {
 				
 				if(!clase.getListaRelaciones().get(i).getTipo().equals("herencia")) {
-					textoCodigo.append("this."+clase.getListaRelaciones().get(i).getRolB()+" = "+clase.getListaRelaciones().get(i).getRolB()+"\n");
+					
+					textoCodigo.append("\t\t"+"this."+clase.getListaRelaciones().get(i).getRolB()+" = "+clase.getListaRelaciones().get(i).getRolB()+"\n");
 				}
 			}
-		
-			textoCodigo.append("}\n\n");
+			
+			for(int i=0;i<clase.getAtributos().size();i++) {
+				
+				textoCodigo.append("\t\t"+"this."+clase.getAtributos().get(i).getNombre()+" = "+clase.getAtributos().get(i).getNombre()+"\n");
+			}
+			
+			textoCodigo.append("\t"+"}\n\n");
+			
+		}else {
+			
+			for(int i=0;i<clase.getListaRelaciones().size();i++) {
+				
+				if(!clase.getListaRelaciones().get(i).getTipo().equals("herencia")) {
+					
+					if(clase.getListaRelaciones().get(i).getMultiplicidadB().equals("*")) {
+						
+						textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": List<"+clase.getListaRelaciones().get(i).getTarget().getNombre()+">, ");
+						
+					}else {
+						
+						textoCodigo.append(clase.getListaRelaciones().get(i).getRolB()+": "+clase.getListaRelaciones().get(i).getTarget().getNombre()+", ");
+					}
+				}
+			}
+			
+			for(int i=0;i<clase.getAtributos().size();i++) {
+				
+				textoCodigo.append(clase.getAtributos().get(i).getNombre()+": "+clase.getAtributos().get(i).getTipo());
+				
+				if(i!=clase.getAtributos().size()-1) {
+					textoCodigo.append(", ");
+				}
+			}
+			
+			textoCodigo.append("){\n");
+			textoCodigo.append("\t\t"+"super()\n");
+			
+			for(int i=0;i<clase.getListaRelaciones().size();i++) {
+				
+				if(!clase.getListaRelaciones().get(i).getTipo().equals("herencia")) {
+					
+					textoCodigo.append("\t\t"+"this."+clase.getListaRelaciones().get(i).getRolB()+" = "+clase.getListaRelaciones().get(i).getRolB()+"\n");
+				}
+			}
+			
+			for(int i=0;i<clase.getAtributos().size();i++) {
+				
+				textoCodigo.append("\t\t"+"this."+clase.getAtributos().get(i).getNombre()+" = "+clase.getAtributos().get(i).getNombre()+"\n");
+			}
+			
+			textoCodigo.append("\t"+"}\n\n");
 		}
 		
 	}
@@ -161,14 +258,14 @@ public class TransformacionM2T {
 	private void agregarAtributos(abstracta.MBSClase clase, StringBuilder textoCodigo) {
 		
 		for (abstracta.MBSAtributo atributo : clase.getAtributos()) {
-			textoCodigo.append(atributo.getModificadorAcesso()+" val "+atributo.getNombre()+": "+atributo.getTipo() +"\n");
+			textoCodigo.append("\t"+atributo.getModificadorAcesso()+" val "+atributo.getNombre()+": "+atributo.getTipo() +"\n");
 		}
 		
 		for (abstracta.MBSRelacion relacion : clase.getListaRelaciones()) {
 			if(!relacion.getTipo().equals("herencia") && relacion.getMultiplicidadB().equals("*")) {
-				textoCodigo.append("private val "+relacion.getRolB()+": List<"+relacion.getTarget().getNombre()+">"+"\n");
+				textoCodigo.append("\t"+"private val "+relacion.getRolB()+": List<"+relacion.getTarget().getNombre()+">"+"\n");
 			}else {
-				textoCodigo.append("private val "+relacion.getRolB()+": "+relacion.getTarget().getNombre()+"\n");
+				textoCodigo.append("\t"+"private val "+relacion.getRolB()+": "+relacion.getTarget().getNombre()+"\n");
 			}
 		}
 		
@@ -178,25 +275,35 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MBSClase clase, StringBuilder textoCodigo) {
 		
-		boolean flagHerencia = false;
-		
 		if(clase.getListaRelaciones().size()>0) {
 			
-			for (abstracta.MBSRelacion relacion : clase.getListaRelaciones()) {
+			abstracta.MBSRelacion herencia = obtenerHerencia(clase);
+			
+			if(herencia!=null) {
 				
-				if(relacion.getTipo().equals("herencia") && relacion.getNavegabilidadA() == true) {
-					
-					textoCodigo.append(clase.getModificadorAcceso()+" class "+clase.getNombre()+" : "+relacion.getTarget().getNombre()+" {\n\n");
-					flagHerencia = true;
-				}
+				abstracta.MBSClase claseTarget = herencia.getTarget();
+				textoCodigo.append(clase.getModificadorAcceso()+" class "+clase.getNombre()+" : "+claseTarget.getNombre()+" {\n\n");
+				
+			}else {
+				
+				textoCodigo.append(clase.getModificadorAcceso()+" class "+clase.getNombre()+" {\n\n");
+			}
+			
+		}
+		
+	}
+	
+	private abstracta.MBSRelacion obtenerHerencia(abstracta.MBSClase clase){
+		
+		for (abstracta.MBSRelacion relacion : clase.getListaRelaciones()) {
+			
+			if(relacion.getTipo()=="herencia") {
+				
+				return relacion;
 			}
 		}
 		
-		if(flagHerencia==false) {
-			
-			textoCodigo.append(clase.getModificadorAcceso()+" class "+clase.getNombre()+" {\n\n");
-		}
-		
+		return null;
 	}
 	
 	private void guardarArchivo(String cadena, String ruta ,String nombre) {
